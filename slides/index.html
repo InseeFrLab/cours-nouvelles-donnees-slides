@@ -7,7 +7,9 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.549">
 
   <title>Nouvelles sources de données pour la statistique publique</title>
@@ -28,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/InseeFrLab/onyxia/logo.css">
@@ -323,6 +390,8 @@
       margin-right: 0; 
     }
   </style>
+  <script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 </head>
 <body class="quarto-light">
@@ -337,18 +406,418 @@
 </div>
 
 </section>
-<section id="introduction" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Introduction</h1>
+<section>
+<section id="contexte" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Contexte</h1>
+
+</section>
+<section id="prolifération-des-données" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Prolifération des données</h2>
 <ul>
-<li class="fragment">Ceci est une introduction</li>
+<li>Numérisation et innovations technologiques ont réduit le coût de production de la donnée ;
+<ul>
+<li>Volume de données produites en explosion</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>L’utilisation des statistiques n’est pas nouvelle (cf.&nbsp;<a href="https://www.cairn.info/la-politique-des-grands-nombres--9782707165046.htm">Desrosières</a>)…</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>… mais une place accrue :
+<ul>
+<li>Dans le débat public et l’action publique (<a href="https://www.fayard.fr/sciences-humaines/la-gouvernance-par-les-nombres-9782213681092">Supiot</a>, <a href="https://www.cairn.info/l-empire-des-chiffres--9782200625719.htm">Martin</a>) ;</li>
+<li>Dans les stratégies d’entreprise.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="diversification-des-données" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Diversification des données</h2>
+<ul>
+<li>Des données de nature très différentes:
+<ul>
+<li>Données structurées classiques ;</li>
+<li>Données géolocalisées ;</li>
+<li>Données textuelles et non structurées ;</li>
+<li>Images, sons et vidéos.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Besoin de nouvelles méthodes pour valoriser ces données :
+<ul>
+<li><em>Machine learning</em> (re)devenu un outil classique ;</li>
+<li>Réseaux de neurone pour les problèmes complexes (NLP, CV)…</li>
+</ul></li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Pourquoi le <em>machine learning</em> ?</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Meilleure prise en compte des non-linéarités que statistique paramétrique ;</li>
+<li>Simplicité à mise en oeuvre opérationnelle ;</li>
+<li>…</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="diversification-des-données-14" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Diversification des données (1/4)</h2>
+<h3 data-background-image="background.svg" data-background-size="contain" id="données-administratives">Données administratives</h3>
+<ul>
+<li><strong>Enregistrements automatisés</strong> de systèmes de gestion</li>
+<li>Données <strong>structurées</strong> sous forme de tableau</li>
 </ul>
 
-<div class="quarto-auto-generated-content">
+<img data-src="https://r4ds.hadley.nz/images/tidy-1.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://r4ds.hadley.nz/data-tidy.html">Hadley Wickham, <em>R for data science</em></a></p></section>
+<section id="diversification-des-données-14-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Diversification des données (1/4)</h2>
+<h3 data-background-image="background.svg" data-background-size="contain" id="données-administratives-1">Données administratives</h3>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="75" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 74;"><span id="cb1-75"><a></a>viewof info_mutations <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>(</span>
+<span id="cb1-76"><a></a>  [<span class="st">"Tableau"</span><span class="op">,</span> <span class="st">"Graphique"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"Tableau"</span>}</span>
+<span id="cb1-77"><a></a>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="81" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 80;"><span id="cb2-81"><a></a>info_mutations <span class="op">==</span> <span class="st">"Tableau"</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;div&gt;</span><span class="sc">${</span>table_mutations1<span class="sc">}</span><span class="vs">&lt;div&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;div&gt;</span><span class="sc">${</span>plot_mutations<span class="sc">}</span><span class="vs">&lt;div&gt;`</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell hidden">
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="87" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 86;"><span id="cb3-87"><a></a>url <span class="op">=</span> <span class="st">"https://files.data.gouv.fr/geo-dvf/latest/csv/2020/communes/92/92049.csv"</span></span>
+<span id="cb3-88"><a></a>proxy <span class="op">=</span> <span class="st">"https://corsproxy.io/?"</span></span>
+<span id="cb3-89"><a></a>dvf <span class="op">=</span> d3<span class="op">.</span><span class="fu">csv</span>(proxy <span class="op">+</span> url)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-3-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell hidden">
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="94" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 93;"><span id="cb4-94"><a></a>table_mutations1 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">table</span>(dvf<span class="op">,</span> {<span class="st">"columns"</span><span class="op">:</span> [<span class="st">'date_mutation'</span><span class="op">,</span> <span class="st">'valeur_fonciere'</span><span class="op">,</span> <span class="st">'adresse_nom_voie'</span>]})</span>
+<span id="cb4-95"><a></a>plot_mutations <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb4-96"><a></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Nombre de transactions"</span>}<span class="op">,</span></span>
+<span id="cb4-97"><a></a>  <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb4-98"><a></a>    <span class="dt">ticks</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span></span>
+<span id="cb4-99"><a></a>    <span class="dt">transform</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(<span class="dv">10</span><span class="op">,</span> d)<span class="op">,</span></span>
+<span id="cb4-100"><a></a>    <span class="dt">type</span><span class="op">:</span> <span class="st">"log"</span><span class="op">,</span></span>
+<span id="cb4-101"><a></a>    <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">"~s"</span><span class="op">,</span></span>
+<span id="cb4-102"><a></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Prix (échelle log) →"</span></span>
+<span id="cb4-103"><a></a>  }<span class="op">,</span></span>
+<span id="cb4-104"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb4-105"><a></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(</span>
+<span id="cb4-106"><a></a>      dvf<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">valeur_fonciere</span> <span class="op">&gt;</span> <span class="dv">10000</span>)<span class="op">,</span></span>
+<span id="cb4-107"><a></a>      Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span></span>
+<span id="cb4-108"><a></a>      {</span>
+<span id="cb4-109"><a></a>        <span class="dt">x</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">log10</span>(d<span class="op">.</span><span class="at">valeur_fonciere</span>)<span class="op">,</span></span>
+<span id="cb4-110"><a></a>        <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb4-111"><a></a>      })</span>
+<span id="cb4-112"><a></a>    )<span class="op">,</span></span>
+<span id="cb4-113"><a></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])</span>
+<span id="cb4-114"><a></a>  ]</span>
+<span id="cb4-115"><a></a>})</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-4-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-4-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="118" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 117;"><span id="cb5-118"><a></a>Plot <span class="op">=</span> <span class="pp">require</span>(<span class="st">"https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.10/dist/plot.umd.min.js"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<p><em>Exemple</em>: les données DVF</p>
+</section>
+<section id="diversification-des-données-24" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Diversification des données (2/4)</h2>
+<h3>
+Données géolocalisées
+</h3>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="128" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 127;"><span id="cb6-128"><a></a>viewof info_power_plants <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>(</span>
+<span id="cb6-129"><a></a>  [<span class="st">"Tableau"</span><span class="op">,</span> <span class="st">"Carte"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"Tableau"</span>}</span>
+<span id="cb6-130"><a></a>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="134" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 133;"><span id="cb7-134"><a></a>info_power_plants <span class="op">==</span> <span class="st">"Tableau"</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;div&gt;</span><span class="sc">${</span>table_power_plants<span class="sc">}</span><span class="vs">&lt;div&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;div&gt;</span><span class="sc">${</span>plot_power_plants<span class="sc">}</span><span class="vs">&lt;div&gt;`</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-7" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell hidden">
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="141" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 140;"><span id="cb8-141"><a></a><span class="im">import</span> {us_power_plants<span class="op">,</span> states} <span class="im">from</span> <span class="st">"@observablehq/build-your-first-map-with-observable-plot"</span></span>
+<span id="cb8-142"><a></a></span>
+<span id="cb8-143"><a></a>table_power_plants <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">table</span>(</span>
+<span id="cb8-144"><a></a>  us_power_plants</span>
+<span id="cb8-145"><a></a>)</span>
+<span id="cb8-146"><a></a></span>
+<span id="cb8-147"><a></a></span>
+<span id="cb8-148"><a></a>plot_power_plants <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb8-149"><a></a>  <span class="dt">projection</span><span class="op">:</span> <span class="st">"albers-usa"</span><span class="op">,</span></span>
+<span id="cb8-150"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb8-151"><a></a>    Plot<span class="op">.</span><span class="fu">geo</span>(states<span class="op">,</span> { <span class="dt">fill</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#e2e2e2"</span>  })<span class="op">,</span></span>
+<span id="cb8-152"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(us_power_plants<span class="op">,</span> {</span>
+<span id="cb8-153"><a></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"longitude"</span><span class="op">,</span></span>
+<span id="cb8-154"><a></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"latitude"</span><span class="op">,</span></span>
+<span id="cb8-155"><a></a>      <span class="dt">r</span><span class="op">:</span> <span class="st">"Total_MW"</span><span class="op">,</span></span>
+<span id="cb8-156"><a></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"PrimSource"</span><span class="op">,</span></span>
+<span id="cb8-157"><a></a>      <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span></span>
+<span id="cb8-158"><a></a>      <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb8-159"><a></a>    })<span class="op">,</span></span>
+<span id="cb8-160"><a></a>    Plot<span class="op">.</span><span class="fu">dot</span>(us_power_plants<span class="op">,</span> { <span class="co">// Can you figure out what this additional Plot.dot layer adds?</span></span>
+<span id="cb8-161"><a></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"longitude"</span><span class="op">,</span></span>
+<span id="cb8-162"><a></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"latitude"</span><span class="op">,</span></span>
+<span id="cb8-163"><a></a>      <span class="dt">r</span><span class="op">:</span> <span class="st">"Total_MW"</span><span class="op">,</span></span>
+<span id="cb8-164"><a></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"PrimSource"</span><span class="op">,</span></span>
+<span id="cb8-165"><a></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"black"</span><span class="op">,</span></span>
+<span id="cb8-166"><a></a>      <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">Total_MW</span> <span class="op">&gt;</span> <span class="dv">3500</span><span class="op">,</span></span>
+<span id="cb8-167"><a></a>    })<span class="op">,</span></span>
+<span id="cb8-168"><a></a>    Plot<span class="op">.</span><span class="fu">text</span>(us_power_plants<span class="op">,</span> { <span class="co">// Add text to the map using data from us_power_plants</span></span>
+<span id="cb8-169"><a></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"longitude"</span><span class="op">,</span> <span class="co">// Place text horizontally at plant longitude</span></span>
+<span id="cb8-170"><a></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"latitude"</span><span class="op">,</span> <span class="co">// Place text vertically at plant latitude</span></span>
+<span id="cb8-171"><a></a>      <span class="dt">text</span><span class="op">:</span> <span class="st">"Plant_Name"</span><span class="op">,</span> <span class="co">// The text that appears is the value from the Plant_Name column,</span></span>
+<span id="cb8-172"><a></a>      <span class="dt">filter</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">Total_MW</span> <span class="op">&gt;</span> <span class="dv">3500</span><span class="op">,</span> <span class="co">// Only add text for plants with capacity exceeding 3500 MW</span></span>
+<span id="cb8-173"><a></a>      <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="co">// Increased font size</span></span>
+<span id="cb8-174"><a></a>      <span class="dt">fontWeight</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span> <span class="co">// Increased font weight</span></span>
+<span id="cb8-175"><a></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span> <span class="co">// Adds white outer stroke to text (for readability)</span></span>
+<span id="cb8-176"><a></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"black"</span><span class="op">,</span> <span class="co">// Text fill color</span></span>
+<span id="cb8-177"><a></a>      <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span> <span class="co">// Left align text with the x- and y-coordinates</span></span>
+<span id="cb8-178"><a></a>      <span class="dt">dx</span><span class="op">:</span> <span class="dv">15</span> <span class="co">// Shifts text to the right (starting from left alignment with coordinate)</span></span>
+<span id="cb8-179"><a></a>    })</span>
+<span id="cb8-180"><a></a>  ]<span class="op">,</span></span>
+<span id="cb8-181"><a></a>  <span class="dt">r</span><span class="op">:</span> { <span class="dt">range</span><span class="op">:</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">15</span>] }<span class="op">,</span></span>
+<span id="cb8-182"><a></a>  <span class="dt">color</span><span class="op">:</span> { <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb8-183"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb8-184"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">800</span><span class="op">,</span></span>
+<span id="cb8-185"><a></a>  <span class="dt">margin</span><span class="op">:</span> <span class="dv">50</span></span>
+<span id="cb8-186"><a></a>})</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-8-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-8-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-8-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="diversification-des-données-24-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Diversification des données (2/4)</h2>
+<h3>
+Données géolocalisées
+</h3>
+<ul>
+<li>Données tabulaires avec une dimension spatiale supplémentaire
+<ul>
+<li>Dimension géographique prend des formes multiples:</li>
+<li>Points, lignes, polygones…</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><i class="fa-brands fa-python" aria-label="python"></i> et <i class="fa-brands fa-r-project" aria-label="r-project"></i> très bien outillés pour ces données</li>
+</ul>
+</div>
+</section>
+<section id="diversification-des-données-34" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Diversification des données (3/4)</h2>
+<h3>
+Données textuelles et non structurées
+</h3>
+<ul>
+<li>Techniques statistiques anciennes (<a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein 1957</a>, <a href="https://fr.wikipedia.org/wiki/Perceptron">perceptron</a>) ;</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Applications limitées jusqu’aux années 2010 ;</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Développement très rapide de la recherche :
+<ul>
+<li>Collecte accrue : réseaux sociaux, enquêtes…</li>
+<li>Baisse coûts stockage &amp; augmentation ressources traitement ;</li>
+<li>Nouvelles techniques statistiques: <em>webscraping</em>, LLM…</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Utilisation intensive dans l’administration, la recherche et le secteur privé</li>
+</ul>
+</div>
+</section>
+<section id="diversification-des-données-34-1" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Diversification des données (3/4)</h2>
+<h3>
+Données textuelles et non structurées
+</h3>
+<ul>
+<li>Les <strong><span class="blue2">LLM</span></strong> bien sûr…</li>
+<li>… Mais pas que !</li>
+</ul>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="233" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 232;"><span id="cb9-233"><a></a>viewof activite <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">text</span>( </span>
+<span id="cb9-234"><a></a>  {<span class="dt">label</span><span class="op">:</span> <span class="st">''</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">'data scientist'</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">800</span>}</span>
+<span id="cb9-235"><a></a>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-9" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="240" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 239;"><span id="cb10-240"><a></a>d3<span class="op">.</span><span class="fu">json</span>(urlApe)<span class="op">.</span><span class="fu">then</span>(res <span class="kw">=&gt;</span> {</span>
+<span id="cb10-241"><a></a>  <span class="kw">var</span> IC<span class="op">,</span> results<span class="op">;</span></span>
+<span id="cb10-242"><a></a></span>
+<span id="cb10-243"><a></a>  ({ IC<span class="op">,</span> <span class="op">...</span>results } <span class="op">=</span> res)<span class="op">;</span></span>
+<span id="cb10-244"><a></a></span>
+<span id="cb10-245"><a></a>  IC <span class="op">=</span> <span class="pp">parseFloat</span>(IC)<span class="op">;</span></span>
+<span id="cb10-246"><a></a></span>
+<span id="cb10-247"><a></a>  <span class="kw">const</span> rows <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">values</span>(results)<span class="op">.</span><span class="fu">map</span>(obj <span class="kw">=&gt;</span> {</span>
+<span id="cb10-248"><a></a>    <span class="cf">return</span> <span class="vs">`</span></span>
+<span id="cb10-249"><a></a><span class="vs">    &lt;tr&gt;</span></span>
+<span id="cb10-250"><a></a><span class="vs">      &lt;td&gt;</span><span class="sc">${</span>obj<span class="op">.</span><span class="at">code</span><span class="sc">}</span><span class="vs"> | </span><span class="sc">${</span>obj<span class="op">.</span><span class="at">libelle</span><span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb10-251"><a></a><span class="vs">      &lt;td&gt;</span><span class="sc">${</span>obj<span class="op">.</span><span class="at">probabilite</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb10-252"><a></a><span class="vs">    &lt;/tr&gt;</span></span>
+<span id="cb10-253"><a></a><span class="vs">  `</span><span class="op">;</span></span>
+<span id="cb10-254"><a></a>  })<span class="op">.</span><span class="fu">join</span>(<span class="st">''</span>)<span class="op">;</span></span>
+<span id="cb10-255"><a></a></span>
+<span id="cb10-256"><a></a>  <span class="kw">const</span> confidenceRow <span class="op">=</span> <span class="vs">`&lt;tr&gt;</span></span>
+<span id="cb10-257"><a></a><span class="vs">    &lt;td colspan="2" style="text-align:left; "&gt;&lt;em&gt;Indice de confiance : </span><span class="sc">${</span>IC<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">&lt;/em&gt;&lt;/td&gt;</span></span>
+<span id="cb10-258"><a></a><span class="vs">  &lt;/tr&gt;`</span><span class="op">;</span></span>
+<span id="cb10-259"><a></a></span>
+<span id="cb10-260"><a></a>  <span class="kw">const</span> tableHTML <span class="op">=</span> <span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb10-261"><a></a><span class="vs">  &lt;table&gt;</span></span>
+<span id="cb10-262"><a></a><span class="vs">    &lt;caption&gt;</span></span>
+<span id="cb10-263"><a></a><span class="vs">      Prédiction de l'activité</span></span>
+<span id="cb10-264"><a></a><span class="vs">    &lt;/caption&gt;</span></span>
+<span id="cb10-265"><a></a><span class="vs">    &lt;tr&gt;</span></span>
+<span id="cb10-266"><a></a><span class="vs">      &lt;th style="text-align:center;"&gt;Libellé (NA2008)&lt;/th&gt;</span></span>
+<span id="cb10-267"><a></a><span class="vs">      &lt;th&gt;Probabilité&lt;/th&gt;</span></span>
+<span id="cb10-268"><a></a><span class="vs">    &lt;/tr&gt;</span></span>
+<span id="cb10-269"><a></a><span class="vs">      </span><span class="sc">${</span>rows<span class="sc">}</span></span>
+<span id="cb10-270"><a></a><span class="vs">      </span><span class="sc">${</span>confidenceRow<span class="sc">}</span></span>
+<span id="cb10-271"><a></a><span class="vs">  &lt;/table&gt;`</span><span class="op">;</span></span>
+<span id="cb10-272"><a></a></span>
+<span id="cb10-273"><a></a>  <span class="co">// Now you can use the tableHTML as needed, for example, inserting it into the DOM.</span></span>
+<span id="cb10-274"><a></a>  <span class="co">// For example, assuming you have a container with the id "tableContainer":</span></span>
+<span id="cb10-275"><a></a>  <span class="cf">return</span> tableHTML<span class="op">;</span></span>
+<span id="cb10-276"><a></a>})<span class="op">;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-10" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="281" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 280;"><span id="cb11-281"><a></a>activite_debounce <span class="op">=</span> <span class="fu">debounce</span>(viewof activite<span class="op">,</span> <span class="dv">2000</span>)</span>
+<span id="cb11-282"><a></a>urlApe <span class="op">=</span> <span class="vs">`https://codification-ape-test.lab.sspcloud.fr/predict?nb_echos_max=3&amp;prob_min=0&amp;text_feature=</span><span class="sc">${</span>activite_debounce<span class="sc">}</span><span class="vs">`</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-11-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-11-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="285" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 284;"><span id="cb12-285"><a></a><span class="im">import</span> {debounce} <span class="im">from</span> <span class="st">"@mbostock/debouncing-input"</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-12" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</section>
+<section id="diversification-des-données-44" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Diversification des données (4/4)</h2>
+<h3 data-background-image="background.svg" data-background-size="contain" id="images-sons-et-vidéos">Images, sons et vidéos</h3>
+
+
+<img data-src="https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -560,6 +1029,17 @@
           RevealZoom
         ]
       });
+    </script>
+    <script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBpbmZvX211dGF0aW9ucyA9IElucHV0cy5yYWRpbyhcbiAgW1wiVGFibGVhdVwiLCBcIkdyYXBoaXF1ZVwiXSwge3ZhbHVlOiBcIlRhYmxlYXVcIn1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImluZm9fbXV0YXRpb25zID09IFwiVGFibGVhdVwiID8gaHRtbGA8ZGl2PiR7dGFibGVfbXV0YXRpb25zMX08ZGl2PmAgOiBodG1sYDxkaXY+JHtwbG90X211dGF0aW9uc308ZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InVybCA9IFwiaHR0cHM6Ly9maWxlcy5kYXRhLmdvdXYuZnIvZ2VvLWR2Zi9sYXRlc3QvY3N2LzIwMjAvY29tbXVuZXMvOTIvOTIwNDkuY3N2XCJcbnByb3h5ID0gXCJodHRwczovL2NvcnNwcm94eS5pby8/XCJcbmR2ZiA9IGQzLmNzdihwcm94eSArIHVybClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRhYmxlX211dGF0aW9uczEgPSBJbnB1dHMudGFibGUoZHZmLCB7XCJjb2x1bW5zXCI6IFsnZGF0ZV9tdXRhdGlvbicsICd2YWxldXJfZm9uY2llcmUnLCAnYWRyZXNzZV9ub21fdm9pZSddfSlcbnBsb3RfbXV0YXRpb25zID0gUGxvdC5wbG90KHtcbiAgeToge2dyaWQ6IHRydWUsIGxhYmVsOiBcIk5vbWJyZSBkZSB0cmFuc2FjdGlvbnNcIn0sXG4gIHg6IHtcbiAgICB0aWNrczogMTIsXG4gICAgdHJhbnNmb3JtOiAoZCkgPT4gTWF0aC5wb3coMTAsIGQpLFxuICAgIHR5cGU6IFwibG9nXCIsXG4gICAgdGlja0Zvcm1hdDogXCJ+c1wiLFxuICAgIGxhYmVsOiBcIlByaXggKMOpY2hlbGxlIGxvZykg4oaSXCJcbiAgfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LnJlY3RZKFxuICAgICAgZHZmLmZpbHRlcihkID0+IGQudmFsZXVyX2ZvbmNpZXJlID4gMTAwMDApLFxuICAgICAgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LFxuICAgICAge1xuICAgICAgICB4OiBkID0+IE1hdGgubG9nMTAoZC52YWxldXJfZm9uY2llcmUpLFxuICAgICAgICB0aXA6IHRydWVcbiAgICAgIH0pXG4gICAgKSxcbiAgICBQbG90LnJ1bGVZKFswXSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QgPSByZXF1aXJlKFwiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9Ab2JzZXJ2YWJsZWhxL3Bsb3RAMC42LjEwL2Rpc3QvcGxvdC51bWQubWluLmpzXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgaW5mb19wb3dlcl9wbGFudHMgPSBJbnB1dHMucmFkaW8oXG4gIFtcIlRhYmxlYXVcIiwgXCJDYXJ0ZVwiXSwge3ZhbHVlOiBcIlRhYmxlYXVcIn1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImluZm9fcG93ZXJfcGxhbnRzID09IFwiVGFibGVhdVwiID8gaHRtbGA8ZGl2PiR7dGFibGVfcG93ZXJfcGxhbnRzfTxkaXY+YCA6IGh0bWxgPGRpdj4ke3Bsb3RfcG93ZXJfcGxhbnRzfTxkaXY+YFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaW1wb3J0IHt1c19wb3dlcl9wbGFudHMsIHN0YXRlc30gZnJvbSBcIkBvYnNlcnZhYmxlaHEvYnVpbGQteW91ci1maXJzdC1tYXAtd2l0aC1vYnNlcnZhYmxlLXBsb3RcIlxuXG50YWJsZV9wb3dlcl9wbGFudHMgPSBJbnB1dHMudGFibGUoXG4gIHVzX3Bvd2VyX3BsYW50c1xuKVxuXG5cbnBsb3RfcG93ZXJfcGxhbnRzID0gUGxvdC5wbG90KHtcbiAgcHJvamVjdGlvbjogXCJhbGJlcnMtdXNhXCIsXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5nZW8oc3RhdGVzLCB7IGZpbGw6IFwid2hpdGVcIiwgc3Ryb2tlOiBcIiNlMmUyZTJcIiAgfSksXG4gICAgUGxvdC5kb3QodXNfcG93ZXJfcGxhbnRzLCB7XG4gICAgICB4OiBcImxvbmdpdHVkZVwiLFxuICAgICAgeTogXCJsYXRpdHVkZVwiLFxuICAgICAgcjogXCJUb3RhbF9NV1wiLFxuICAgICAgZmlsbDogXCJQcmltU291cmNlXCIsXG4gICAgICBvcGFjaXR5OiAwLjcsXG4gICAgICB0aXA6IHRydWVcbiAgICB9KSxcbiAgICBQbG90LmRvdCh1c19wb3dlcl9wbGFudHMsIHsgLy8gQ2FuIHlvdSBmaWd1cmUgb3V0IHdoYXQgdGhpcyBhZGRpdGlvbmFsIFBsb3QuZG90IGxheWVyIGFkZHM/XG4gICAgICB4OiBcImxvbmdpdHVkZVwiLFxuICAgICAgeTogXCJsYXRpdHVkZVwiLFxuICAgICAgcjogXCJUb3RhbF9NV1wiLFxuICAgICAgZmlsbDogXCJQcmltU291cmNlXCIsXG4gICAgICBzdHJva2U6IFwiYmxhY2tcIixcbiAgICAgIGZpbHRlcjogZCA9PiBkLlRvdGFsX01XID4gMzUwMCxcbiAgICB9KSxcbiAgICBQbG90LnRleHQodXNfcG93ZXJfcGxhbnRzLCB7IC8vIEFkZCB0ZXh0IHRvIHRoZSBtYXAgdXNpbmcgZGF0YSBmcm9tIHVzX3Bvd2VyX3BsYW50c1xuICAgICAgeDogXCJsb25naXR1ZGVcIiwgLy8gUGxhY2UgdGV4dCBob3Jpem9udGFsbHkgYXQgcGxhbnQgbG9uZ2l0dWRlXG4gICAgICB5OiBcImxhdGl0dWRlXCIsIC8vIFBsYWNlIHRleHQgdmVydGljYWxseSBhdCBwbGFudCBsYXRpdHVkZVxuICAgICAgdGV4dDogXCJQbGFudF9OYW1lXCIsIC8vIFRoZSB0ZXh0IHRoYXQgYXBwZWFycyBpcyB0aGUgdmFsdWUgZnJvbSB0aGUgUGxhbnRfTmFtZSBjb2x1bW4sXG4gICAgICBmaWx0ZXI6IChkKSA9PiBkLlRvdGFsX01XID4gMzUwMCwgLy8gT25seSBhZGQgdGV4dCBmb3IgcGxhbnRzIHdpdGggY2FwYWNpdHkgZXhjZWVkaW5nIDM1MDAgTVdcbiAgICAgIGZvbnRTaXplOiAxMiwgLy8gSW5jcmVhc2VkIGZvbnQgc2l6ZVxuICAgICAgZm9udFdlaWdodDogNjAwLCAvLyBJbmNyZWFzZWQgZm9udCB3ZWlnaHRcbiAgICAgIHN0cm9rZTogXCJ3aGl0ZVwiLCAvLyBBZGRzIHdoaXRlIG91dGVyIHN0cm9rZSB0byB0ZXh0IChmb3IgcmVhZGFiaWxpdHkpXG4gICAgICBmaWxsOiBcImJsYWNrXCIsIC8vIFRleHQgZmlsbCBjb2xvclxuICAgICAgdGV4dEFuY2hvcjogXCJzdGFydFwiLCAvLyBMZWZ0IGFsaWduIHRleHQgd2l0aCB0aGUgeC0gYW5kIHktY29vcmRpbmF0ZXNcbiAgICAgIGR4OiAxNSAvLyBTaGlmdHMgdGV4dCB0byB0aGUgcmlnaHQgKHN0YXJ0aW5nIGZyb20gbGVmdCBhbGlnbm1lbnQgd2l0aCBjb29yZGluYXRlKVxuICAgIH0pXG4gIF0sXG4gIHI6IHsgcmFuZ2U6IFsxLCAxNV0gfSxcbiAgY29sb3I6IHsgbGVnZW5kOiB0cnVlIH0sXG4gIGhlaWdodDogNTAwLFxuICB3aWR0aDogODAwLFxuICBtYXJnaW46IDUwXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGFjdGl2aXRlID0gSW5wdXRzLnRleHQoIFxuICB7bGFiZWw6ICcnLCB2YWx1ZTogJ2RhdGEgc2NpZW50aXN0Jywgd2lkdGg6IDgwMH1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJkMy5qc29uKHVybEFwZSkudGhlbihyZXMgPT4ge1xuICB2YXIgSUMsIHJlc3VsdHM7XG5cbiAgKHsgSUMsIC4uLnJlc3VsdHMgfSA9IHJlcyk7XG5cbiAgSUMgPSBwYXJzZUZsb2F0KElDKTtcblxuICBjb25zdCByb3dzID0gT2JqZWN0LnZhbHVlcyhyZXN1bHRzKS5tYXAob2JqID0+IHtcbiAgICByZXR1cm4gYFxuICAgIDx0cj5cbiAgICAgIDx0ZD4ke29iai5jb2RlfSB8ICR7b2JqLmxpYmVsbGV9PC90ZD5cbiAgICAgIDx0ZD4ke29iai5wcm9iYWJpbGl0ZS50b0ZpeGVkKDMpfTwvdGQ+XG4gICAgPC90cj5cbiAgYDtcbiAgfSkuam9pbignJyk7XG5cbiAgY29uc3QgY29uZmlkZW5jZVJvdyA9IGA8dHI+XG4gICAgPHRkIGNvbHNwYW49XCIyXCIgc3R5bGU9XCJ0ZXh0LWFsaWduOmxlZnQ7IFwiPjxlbT5JbmRpY2UgZGUgY29uZmlhbmNlIDogJHtJQy50b0ZpeGVkKDMpfTwvZW0+PC90ZD5cbiAgPC90cj5gO1xuXG4gIGNvbnN0IHRhYmxlSFRNTCA9IGh0bWxgXG4gIDx0YWJsZT5cbiAgICA8Y2FwdGlvbj5cbiAgICAgIFByw6lkaWN0aW9uIGRlIGwnYWN0aXZpdMOpXG4gICAgPC9jYXB0aW9uPlxuICAgIDx0cj5cbiAgICAgIDx0aCBzdHlsZT1cInRleHQtYWxpZ246Y2VudGVyO1wiPkxpYmVsbMOpIChOQTIwMDgpPC90aD5cbiAgICAgIDx0aD5Qcm9iYWJpbGl0w6k8L3RoPlxuICAgIDwvdHI+XG4gICAgICAke3Jvd3N9XG4gICAgICAke2NvbmZpZGVuY2VSb3d9XG4gIDwvdGFibGU+YDtcblxuICAvLyBOb3cgeW91IGNhbiB1c2UgdGhlIHRhYmxlSFRNTCBhcyBuZWVkZWQsIGZvciBleGFtcGxlLCBpbnNlcnRpbmcgaXQgaW50byB0aGUgRE9NLlxuICAvLyBGb3IgZXhhbXBsZSwgYXNzdW1pbmcgeW91IGhhdmUgYSBjb250YWluZXIgd2l0aCB0aGUgaWQgXCJ0YWJsZUNvbnRhaW5lclwiOlxuICByZXR1cm4gdGFibGVIVE1MO1xufSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTExIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiYWN0aXZpdGVfZGVib3VuY2UgPSBkZWJvdW5jZSh2aWV3b2YgYWN0aXZpdGUsIDIwMDApXG51cmxBcGUgPSBgaHR0cHM6Ly9jb2RpZmljYXRpb24tYXBlLXRlc3QubGFiLnNzcGNsb3VkLmZyL3ByZWRpY3Q/bmJfZWNob3NfbWF4PTMmcHJvYl9taW49MCZ0ZXh0X2ZlYXR1cmU9JHthY3Rpdml0ZV9kZWJvdW5jZX1gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaW1wb3J0IHtkZWJvdW5jZX0gZnJvbSBcIkBtYm9zdG9jay9kZWJvdW5jaW5nLWlucHV0XCJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaW5mb19tdXRhdGlvbnMnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaW5mb19wb3dlcl9wbGFudHMnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnYWN0aXZpdGUnKSJ9XX0=
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../../slides";
+    window._ojs.paths.runtimeToRoot = "../..";
+    window._ojs.paths.docToRoot = "..";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {

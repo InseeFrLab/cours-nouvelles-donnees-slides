@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "slides/index.html#prolifération-des-données",
+    "href": "slides/index.html#prolifération-des-données",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Prolifération des données",
+    "text": "Prolifération des données\n\nNumérisation et innovations technologiques ont réduit le coût de production de la donnée ;\n\nVolume de données produites en explosion\n\n\n\n\nL’utilisation des statistiques n’est pas nouvelle (cf. Desrosières)…\n\n\n\n\n… mais une place accrue :\n\nDans le débat public et l’action publique (Supiot, Martin) ;\nDans les stratégies d’entreprise."
+  },
+  {
+    "objectID": "slides/index.html#diversification-des-données",
+    "href": "slides/index.html#diversification-des-données",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Diversification des données",
+    "text": "Diversification des données\n\nDes données de nature très différentes:\n\nDonnées structurées classiques ;\nDonnées géolocalisées ;\nDonnées textuelles et non structurées ;\nImages, sons et vidéos.\n\n\n\n\nBesoin de nouvelles méthodes pour valoriser ces données :\n\nMachine learning (re)devenu un outil classique ;\nRéseaux de neurone pour les problèmes complexes (NLP, CV)…\n\n\n\n\n\n\n\n\nPourquoi le machine learning ?\n\n\n\nMeilleure prise en compte des non-linéarités que statistique paramétrique ;\nSimplicité à mise en oeuvre opérationnelle ;\n…"
+  },
+  {
+    "objectID": "slides/index.html#diversification-des-données-14",
+    "href": "slides/index.html#diversification-des-données-14",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Diversification des données (1/4)",
+    "text": "Diversification des données (1/4)\nDonnées administratives\n\nEnregistrements automatisés de systèmes de gestion\nDonnées structurées sous forme de tableau\n\n\nSource: Hadley Wickham, R for data science"
+  },
+  {
+    "objectID": "slides/index.html#diversification-des-données-14-1",
+    "href": "slides/index.html#diversification-des-données-14-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Diversification des données (1/4)",
+    "text": "Diversification des données (1/4)\nDonnées administratives\n\nviewof info_mutations = Inputs.radio(\n  [\"Tableau\", \"Graphique\"], {value: \"Tableau\"}\n)\n\n\n\n\n\n\n\ninfo_mutations == \"Tableau\" ? html`&lt;div&gt;${table_mutations1}&lt;div&gt;` : html`&lt;div&gt;${plot_mutations}&lt;div&gt;`\n\n\n\n\n\n\n\nurl = \"https://files.data.gouv.fr/geo-dvf/latest/csv/2020/communes/92/92049.csv\"\nproxy = \"https://corsproxy.io/?\"\ndvf = d3.csv(proxy + url)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntable_mutations1 = Inputs.table(dvf, {\"columns\": ['date_mutation', 'valeur_fonciere', 'adresse_nom_voie']})\nplot_mutations = Plot.plot({\n  y: {grid: true, label: \"Nombre de transactions\"},\n  x: {\n    ticks: 12,\n    transform: (d) =&gt; Math.pow(10, d),\n    type: \"log\",\n    tickFormat: \"~s\",\n    label: \"Prix (échelle log) →\"\n  },\n  marks: [\n    Plot.rectY(\n      dvf.filter(d =&gt; d.valeur_fonciere &gt; 10000),\n      Plot.binX({y: \"count\"},\n      {\n        x: d =&gt; Math.log10(d.valeur_fonciere),\n        tip: true\n      })\n    ),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot = require(\"https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.10/dist/plot.umd.min.js\")\n\n\n\n\n\n\nExemple: les données DVF"
+  },
+  {
+    "objectID": "slides/index.html#diversification-des-données-24",
+    "href": "slides/index.html#diversification-des-données-24",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Diversification des données (2/4)",
+    "text": "Diversification des données (2/4)\n\nDonnées géolocalisées\n\n\nviewof info_power_plants = Inputs.radio(\n  [\"Tableau\", \"Carte\"], {value: \"Tableau\"}\n)\n\n\n\n\n\n\n\ninfo_power_plants == \"Tableau\" ? html`&lt;div&gt;${table_power_plants}&lt;div&gt;` : html`&lt;div&gt;${plot_power_plants}&lt;div&gt;`\n\n\n\n\n\n\n\nimport {us_power_plants, states} from \"@observablehq/build-your-first-map-with-observable-plot\"\n\ntable_power_plants = Inputs.table(\n  us_power_plants\n)\n\n\nplot_power_plants = Plot.plot({\n  projection: \"albers-usa\",\n  marks: [\n    Plot.geo(states, { fill: \"white\", stroke: \"#e2e2e2\"  }),\n    Plot.dot(us_power_plants, {\n      x: \"longitude\",\n      y: \"latitude\",\n      r: \"Total_MW\",\n      fill: \"PrimSource\",\n      opacity: 0.7,\n      tip: true\n    }),\n    Plot.dot(us_power_plants, { // Can you figure out what this additional Plot.dot layer adds?\n      x: \"longitude\",\n      y: \"latitude\",\n      r: \"Total_MW\",\n      fill: \"PrimSource\",\n      stroke: \"black\",\n      filter: d =&gt; d.Total_MW &gt; 3500,\n    }),\n    Plot.text(us_power_plants, { // Add text to the map using data from us_power_plants\n      x: \"longitude\", // Place text horizontally at plant longitude\n      y: \"latitude\", // Place text vertically at plant latitude\n      text: \"Plant_Name\", // The text that appears is the value from the Plant_Name column,\n      filter: (d) =&gt; d.Total_MW &gt; 3500, // Only add text for plants with capacity exceeding 3500 MW\n      fontSize: 12, // Increased font size\n      fontWeight: 600, // Increased font weight\n      stroke: \"white\", // Adds white outer stroke to text (for readability)\n      fill: \"black\", // Text fill color\n      textAnchor: \"start\", // Left align text with the x- and y-coordinates\n      dx: 15 // Shifts text to the right (starting from left alignment with coordinate)\n    })\n  ],\n  r: { range: [1, 15] },\n  color: { legend: true },\n  height: 500,\n  width: 800,\n  margin: 50\n})"
+  },
+  {
+    "objectID": "slides/index.html#diversification-des-données-24-1",
+    "href": "slides/index.html#diversification-des-données-24-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Diversification des données (2/4)",
+    "text": "Diversification des données (2/4)\n\nDonnées géolocalisées\n\n\nDonnées tabulaires avec une dimension spatiale supplémentaire\n\nDimension géographique prend des formes multiples:\nPoints, lignes, polygones…\n\n\n\n\n et  très bien outillés pour ces données"
+  },
+  {
+    "objectID": "slides/index.html#diversification-des-données-34",
+    "href": "slides/index.html#diversification-des-données-34",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Diversification des données (3/4)",
+    "text": "Diversification des données (3/4)\n\nDonnées textuelles et non structurées\n\n\nTechniques statistiques anciennes (Levenshtein 1957, perceptron) ;\n\n\n\nApplications limitées jusqu’aux années 2010 ;\n\n\n\n\nDéveloppement très rapide de la recherche :\n\nCollecte accrue : réseaux sociaux, enquêtes…\nBaisse coûts stockage & augmentation ressources traitement ;\nNouvelles techniques statistiques: webscraping, LLM…\n\n\n\n\n\nUtilisation intensive dans l’administration, la recherche et le secteur privé"
+  },
+  {
+    "objectID": "slides/index.html#diversification-des-données-34-1",
+    "href": "slides/index.html#diversification-des-données-34-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Diversification des données (3/4)",
+    "text": "Diversification des données (3/4)\n\nDonnées textuelles et non structurées\n\n\nLes LLM bien sûr…\n… Mais pas que !\n\n\n\nviewof activite = Inputs.text( \n  {label: '', value: 'data scientist', width: 800}\n)\n\n\n\n\n\n\n\nd3.json(urlApe).then(res =&gt; {\n  var IC, results;\n\n  ({ IC, ...results } = res);\n\n  IC = parseFloat(IC);\n\n  const rows = Object.values(results).map(obj =&gt; {\n    return `\n    &lt;tr&gt;\n      &lt;td&gt;${obj.code} | ${obj.libelle}&lt;/td&gt;\n      &lt;td&gt;${obj.probabilite.toFixed(3)}&lt;/td&gt;\n    &lt;/tr&gt;\n  `;\n  }).join('');\n\n  const confidenceRow = `&lt;tr&gt;\n    &lt;td colspan=\"2\" style=\"text-align:left; \"&gt;&lt;em&gt;Indice de confiance : ${IC.toFixed(3)}&lt;/em&gt;&lt;/td&gt;\n  &lt;/tr&gt;`;\n\n  const tableHTML = html`\n  &lt;table&gt;\n    &lt;caption&gt;\n      Prédiction de l'activité\n    &lt;/caption&gt;\n    &lt;tr&gt;\n      &lt;th style=\"text-align:center;\"&gt;Libellé (NA2008)&lt;/th&gt;\n      &lt;th&gt;Probabilité&lt;/th&gt;\n    &lt;/tr&gt;\n      ${rows}\n      ${confidenceRow}\n  &lt;/table&gt;`;\n\n  // Now you can use the tableHTML as needed, for example, inserting it into the DOM.\n  // For example, assuming you have a container with the id \"tableContainer\":\n  return tableHTML;\n});\n\n\n\n\n\n\n\nactivite_debounce = debounce(viewof activite, 2000)\nurlApe = `https://codification-ape-test.lab.sspcloud.fr/predict?nb_echos_max=3&prob_min=0&text_feature=${activite_debounce}`\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nimport {debounce} from \"@mbostock/debouncing-input\""
+  },
+  {
+    "objectID": "slides/index.html#diversification-des-données-44",
+    "href": "slides/index.html#diversification-des-données-44",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Diversification des données (4/4)",
+    "text": "Diversification des données (4/4)\nImages, sons et vidéos"
+  }
+]
