@@ -95,7 +95,27 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/InseeFrLab/onyxia/logo.css">
   <link rel="stylesheet" href="custom.css">
@@ -811,10 +831,332 @@ Données textuelles et non structurées
 <h2>Diversification des données (4/4)</h2>
 <h3 data-background-image="background.svg" data-background-size="contain" id="images-sons-et-vidéos">Images, sons et vidéos</h3>
 
+<img data-src="https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg" class="r-stretch"></section></section>
+<section>
+<section id="les-données-administratives" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Les données administratives</h1>
 
-<img data-src="https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg" class="r-stretch"><div class="quarto-auto-generated-content">
+</section>
+<section id="contexte-1" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Contexte</h2>
+<ul>
+<li>Baisse généralisée des taux de réponse aux enquêtes <span class="citation" data-cites="LuitenHoxde beck2022">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Luiten, Hox, et Leeuw 2020</a>; <a href="#/bibliographie" role="doc-biblioref" onclick="">Beck et al. 2022</a>)</span>
+<ul>
+<li>Enquête “Cadre de vie et sécurité”: 72% (2012) à 66% (2021).</li>
+<li>SRCV: 85% (2010) à 80% (2019)</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Données statistiques traditionnelles (sondage ou recensement) produites pour informer :
+<ul>
+<li>Cette finalité guide la conception</li>
+<li>Mesurer le plus objectivement possible un phénomène cible</li>
+<li>Processus de réflexion en amont, échantillonnage <em>ad hoc</em>, post traitement…</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Numérisation a facilité l’automatisation des systèmes de gestion:
+<ul>
+<li>Exploitation statistique ou recherche n’est pas la finalité initiale</li>
+<li>Finalité: enregistrement d’événements pour déclencher des actions (remboursement, paiement, etc.)</li>
+<li>Opportunité mais perte de contrôle dans la conception</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="nature-des-données-administratives" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Nature des données administratives</h2>
+<ul>
+<li><p>Aspect transactionnel</p></li>
+<li><p>Donnée n’est stabilisée qu’après plusieurs cycles de gestion</p>
+<ul>
+<li>Continuité, au niveau de l’unité statistique, ne va pas de soi.</li>
+</ul></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La collecte devient un processus vivant</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Données mises à jour à plusieurs échéances</li>
+<li>Structure du fichier de données évolue
+<ul>
+<li>Nouveau crédit d’impôt = ajout d’une catégorie dans les déclarations fiscales</li>
+<li>-&gt; changement du fichier de gestion</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="nature-des-données-administratives-1" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Nature des données administratives</h2>
+<h3 data-background-image="background.svg" data-background-size="contain" id="les-déclarations-administratives">Les déclarations administratives</h3>
+<p><br></p>
+<ul>
+<li>Pouvoir coercitif pouvant aller jusqu’aux poursuites judiciaires
+<ul>
+<li>Réduit le risque de non-déclaration ou de déclaration faussée</li>
+<li>Information exhaustive et honnête sur la sous-population concernée par la donnée</li>
+</ul></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Les déclarations administratives <span class="citation" data-cites="riviere2018">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Rivière 2018</a>)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Obligation est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.</p>
+<p>Par exemple, les déclarations fiscales des ménages sont annuelles, avec un calendrier déterminé à l’avance (qui dépend du format, papier ou internet).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="quelle-différence-avec-les-autres-sources-numériques" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Quelle différence avec les autres sources numériques ?</h2>
+<ul>
+<li>Coût marginal faible
+<ul>
+<li>Comme les “<em>big data</em>” !</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Différence principale: la population cible est connue
+<ul>
+<li>Prérogatives légales obligent à identifier la population cible</li>
+<li>Donnée privée: population dépend de la part de marché (évolutive, biaisée)</li>
+<li>Donnée privée: Même quand population cible est large, risque de biais (âge, territoire…)</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Différence secondaire: la fréquence de collecte
+<ul>
+<li>Généralement fréquence moindre des données administratives</li>
+<li>Mais certaines données quasi temps réel (SIVIC, SNDS, GIE CB…)</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="aparté-les-5v-sappliquent-aussi-aux-données-administratives" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Aparté: les 5V s’appliquent aussi aux données administratives</h2>
+<p>MacKinsey définissait les propriétés du <em>big data</em> selon 5V:</p>
+<ol type="1">
+<li>Volume: DSN &gt; 1To de données par an ;</li>
+</ol>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Vélocité: Données assurance maladie ou GIE CB sont à haute fréquence ;</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Variété: l’État collecte et exploite des données de natures très différentes ;</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="4" type="1">
+<li>Véracité: erreurs (volontaires ou non) coûteuses permet des données de meilleure qualité que celles auto-déclarées sans contrôle ex-post ;</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="5" type="1">
+<li>Valeur: données collectées par l’État sont d’une grande valeur même si elles ne sont pas monétisées (bien public, sans valeur de marché mais avec une valeur sociale)</li>
+</ol>
+</div>
+</section>
+<section id="une-donnée-plus-sensible" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Une donnée plus sensible</h2>
+<ul>
+<li>Enquête: réidentification après la phase d’anonymisation est compliquée</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Données administratives:
+<ul>
+<li>Information moins précise…</li>
+<li>… mais réidentification facilitée en combinant plusieurs sources de données</li>
+<li>Champ de recherche: <em>differential privacy</em></li>
+</ul></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Le secret statistique (article 7bis de la loi de 1951)</strong></p>
+</div>
+<div class="callout-content">
+<p>Le secret statistique crée une obligation spéciale dans le cas de données confidentielles collectées, détenues ou produites pour des usages statistiques. Il interdit strictement la communication de données individuelles ou susceptibles d’identifier les personnes, issues de traitements à finalités statistiques, que ces traitements proviennent d’enquêtes ou de bases de données. En dérogation aux règles communes applicables au secret professionnel, le secret statistique est en effet opposable à toute réquisition judiciaire ou émanant d’autorités administratives (fiscale ou douanière par exemple).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="processus-de-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Processus de production</h2>
+<ul>
+<li>Place centrale d’une autorité gestionnaire, qui centralise la donnée
+<ul>
+<li>distingué de l’administration qui exploite le flux (à des fins de gestion ou d’exploitation statistique).</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Donnée</th>
+<th>Autorité centralisatrice</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DSN</td>
+<td>Gip-MDS</td>
+</tr>
+<tr class="even">
+<td>Données hospitalières</td>
+<td>ATIH-10</td>
+</tr>
+<tr class="odd">
+<td>SI gestion des eaux</td>
+<td>SANDRE12</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="usage-de-la-donnée-administrative" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Usage de la donnée administrative</h2>
+<ol type="1">
+<li>Usage à des fins de gestion (la finalité pour laquelle elles sont construites)</li>
+<li>Usage à des fins d’analyse (la finalité fortuite)
+<ul>
+<li>Exploitation directe pour productions ou études</li>
+<li>Utilisation pour des appariements</li>
+</ul></li>
+</ol>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Le CSNS</strong></p>
+</div>
+<div class="callout-content">
+<p><a href="https://www.insee.fr/fr/information/5388962">Code statistique non signifiant</a> (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="exemple-1-la-dsn" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple 1: la DSN</h2>
+<ul>
+<li>Données issues des fiches de paie <span class="citation" data-cites="Humbert2018">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Humbert-Bottin 2018</a>)</span></li>
+</ul>
+
+<img data-src="https://inseefrlab.github.io/cours-nouvelles-donnees-site/img/images/dsn-diff.png" class="r-stretch"></section>
+<section id="exemple-2-sirene" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple 2: SIRENE</h2>
+<ul>
+<li>Répertoire d’entreprises administré par l’Insee:
+<ul>
+<li>Centralise de l’information sur 32 millions d’établissements.</li>
+<li>(dont 13 millions d’établissements actifs)</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Met à disposition des utilisateurs un code APE (pour activité principale exercée)</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Base de référence pour toutes les études et enquêtes statistiques sur les entreprises</li>
+</ul>
+</div>
+</section>
+<section id="exemple-3-fidéli" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple 3: Fidéli</h2>
+<ul>
+<li>Assemblage de :
+<ul>
+<li>données d’origine fiscale: taxe d’habitation, fichier des propriétés bâties, déclarations de revenus, etc.</li>
+<li>données d’origine sociale: prestations, etc.</li>
+<li>données contextuelles sur le logement: nombre de pièces, etc.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Base de référence pour études sociodémographiques fines</li>
+</ul>
+</div>
+</section>
+<section id="exemple-4-le-snds" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple 4: le SNDS</h2>
+<ul>
+<li>Appariement des grandes bases médico-administratives nationales, notamment :
+<ul>
+<li>les données de l’assurance maladie (base SNIIRAM) ;</li>
+<li>les données des hôpitaux (base PMSI) ;</li>
+<li>les causes médicales de décès (base du CépiDC de l’Inserm).</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Flux massif:
+<ul>
+<li>1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d’actes (plus de 3000 variables) qui représentent 450 To de données…</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Lien entre médecine de ville et médecine hospitalière
+<ul>
+<li>Permet reconstruction du parcours de soin complet (EDP-Santé)</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Enjeu de confidentialité</li>
+</ul>
+</div>
+</section>
+<section id="bibliographie" class="slide level2 smaller scrollable" data-background-image="background.svg" data-background-size="contain">
+<h2>Bibliographie</h2>
+
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-beck2022" class="csl-entry" role="listitem">
+Beck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. <span>«&nbsp;Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié&nbsp;»</span>. <em>Courrier des statistiques</em>.
+</div>
+<div id="ref-Humbert2018" class="csl-entry" role="listitem">
+Humbert-Bottin, Élisabeth. 2018. <span>«&nbsp;La déclaration sociale nominative: nouvelle référence pour les échanges de données sociales des entreprises vers les administrations&nbsp;»</span>. <em>Courrier des statistiques</em>.
+</div>
+<div id="ref-LuitenHoxde" class="csl-entry" role="listitem">
+Luiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. <span>«&nbsp;Survey Nonresponse Trends and Fieldwork Effort in the 21st Century: Results of an International Study across Countries and Surveys&nbsp;»</span>. <em>Journal of Official Statistics</em> 36 (3): 469‑87. <a href="https://doi.org/doi:10.2478/jos-2020-0025">https://doi.org/doi:10.2478/jos-2020-0025</a>.
+</div>
+<div id="ref-riviere2018" class="csl-entry" role="listitem">
+Rivière, Pascal. 2018. <span>«&nbsp;Utiliser les déclarations administratives à des fins statistiques&nbsp;»</span>. <em>Courrier des statistiques</em>.
 </div>
 </div>
 </section></section>

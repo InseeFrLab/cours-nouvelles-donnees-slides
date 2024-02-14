@@ -61,5 +61,96 @@
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Diversification des données (4/4)",
     "text": "Diversification des données (4/4)\nImages, sons et vidéos"
+  },
+  {
+    "objectID": "slides/index.html#contexte-1",
+    "href": "slides/index.html#contexte-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Contexte",
+    "text": "Contexte\n\nBaisse généralisée des taux de réponse aux enquêtes (Luiten, Hox, et Leeuw 2020; Beck et al. 2022)\n\nEnquête “Cadre de vie et sécurité”: 72% (2012) à 66% (2021).\nSRCV: 85% (2010) à 80% (2019)\n\n\n\n\nDonnées statistiques traditionnelles (sondage ou recensement) produites pour informer :\n\nCette finalité guide la conception\nMesurer le plus objectivement possible un phénomène cible\nProcessus de réflexion en amont, échantillonnage ad hoc, post traitement…\n\n\n\n\n\nNumérisation a facilité l’automatisation des systèmes de gestion:\n\nExploitation statistique ou recherche n’est pas la finalité initiale\nFinalité: enregistrement d’événements pour déclencher des actions (remboursement, paiement, etc.)\nOpportunité mais perte de contrôle dans la conception"
+  },
+  {
+    "objectID": "slides/index.html#nature-des-données-administratives",
+    "href": "slides/index.html#nature-des-données-administratives",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Nature des données administratives",
+    "text": "Nature des données administratives\n\nAspect transactionnel\nDonnée n’est stabilisée qu’après plusieurs cycles de gestion\n\nContinuité, au niveau de l’unité statistique, ne va pas de soi.\n\n\n\n\n\n\n\n\nLa collecte devient un processus vivant\n\n\n\nDonnées mises à jour à plusieurs échéances\nStructure du fichier de données évolue\n\nNouveau crédit d’impôt = ajout d’une catégorie dans les déclarations fiscales\n-&gt; changement du fichier de gestion"
+  },
+  {
+    "objectID": "slides/index.html#nature-des-données-administratives-1",
+    "href": "slides/index.html#nature-des-données-administratives-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Nature des données administratives",
+    "text": "Nature des données administratives\nLes déclarations administratives\n\n\nPouvoir coercitif pouvant aller jusqu’aux poursuites judiciaires\n\nRéduit le risque de non-déclaration ou de déclaration faussée\nInformation exhaustive et honnête sur la sous-population concernée par la donnée\n\n\n\n\n\n\n\n\nLes déclarations administratives (Rivière 2018)\n\n\nObligation est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.\nPar exemple, les déclarations fiscales des ménages sont annuelles, avec un calendrier déterminé à l’avance (qui dépend du format, papier ou internet)."
+  },
+  {
+    "objectID": "slides/index.html#quelle-différence-avec-les-autres-sources-numériques",
+    "href": "slides/index.html#quelle-différence-avec-les-autres-sources-numériques",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Quelle différence avec les autres sources numériques ?",
+    "text": "Quelle différence avec les autres sources numériques ?\n\nCoût marginal faible\n\nComme les “big data” !\n\n\n\n\nDifférence principale: la population cible est connue\n\nPrérogatives légales obligent à identifier la population cible\nDonnée privée: population dépend de la part de marché (évolutive, biaisée)\nDonnée privée: Même quand population cible est large, risque de biais (âge, territoire…)\n\n\n\n\n\nDifférence secondaire: la fréquence de collecte\n\nGénéralement fréquence moindre des données administratives\nMais certaines données quasi temps réel (SIVIC, SNDS, GIE CB…)"
+  },
+  {
+    "objectID": "slides/index.html#aparté-les-5v-sappliquent-aussi-aux-données-administratives",
+    "href": "slides/index.html#aparté-les-5v-sappliquent-aussi-aux-données-administratives",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Aparté: les 5V s’appliquent aussi aux données administratives",
+    "text": "Aparté: les 5V s’appliquent aussi aux données administratives\nMacKinsey définissait les propriétés du big data selon 5V:\n\nVolume: DSN &gt; 1To de données par an ;\n\n\n\nVélocité: Données assurance maladie ou GIE CB sont à haute fréquence ;\n\n\n\n\nVariété: l’État collecte et exploite des données de natures très différentes ;\n\n\n\n\nVéracité: erreurs (volontaires ou non) coûteuses permet des données de meilleure qualité que celles auto-déclarées sans contrôle ex-post ;\n\n\n\n\nValeur: données collectées par l’État sont d’une grande valeur même si elles ne sont pas monétisées (bien public, sans valeur de marché mais avec une valeur sociale)"
+  },
+  {
+    "objectID": "slides/index.html#une-donnée-plus-sensible",
+    "href": "slides/index.html#une-donnée-plus-sensible",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Une donnée plus sensible",
+    "text": "Une donnée plus sensible\n\nEnquête: réidentification après la phase d’anonymisation est compliquée\n\n\n\nDonnées administratives:\n\nInformation moins précise…\n… mais réidentification facilitée en combinant plusieurs sources de données\nChamp de recherche: differential privacy\n\n\n\n\n\n\n\n\nLe secret statistique (article 7bis de la loi de 1951)\n\n\nLe secret statistique crée une obligation spéciale dans le cas de données confidentielles collectées, détenues ou produites pour des usages statistiques. Il interdit strictement la communication de données individuelles ou susceptibles d’identifier les personnes, issues de traitements à finalités statistiques, que ces traitements proviennent d’enquêtes ou de bases de données. En dérogation aux règles communes applicables au secret professionnel, le secret statistique est en effet opposable à toute réquisition judiciaire ou émanant d’autorités administratives (fiscale ou douanière par exemple)."
+  },
+  {
+    "objectID": "slides/index.html#processus-de-production",
+    "href": "slides/index.html#processus-de-production",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Processus de production",
+    "text": "Processus de production\n\nPlace centrale d’une autorité gestionnaire, qui centralise la donnée\n\ndistingué de l’administration qui exploite le flux (à des fins de gestion ou d’exploitation statistique).\n\n\n\n\n\nDonnée\nAutorité centralisatrice\n\n\n\n\nDSN\nGip-MDS\n\n\nDonnées hospitalières\nATIH-10\n\n\nSI gestion des eaux\nSANDRE12"
+  },
+  {
+    "objectID": "slides/index.html#usage-de-la-donnée-administrative",
+    "href": "slides/index.html#usage-de-la-donnée-administrative",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Usage de la donnée administrative",
+    "text": "Usage de la donnée administrative\n\nUsage à des fins de gestion (la finalité pour laquelle elles sont construites)\nUsage à des fins d’analyse (la finalité fortuite)\n\nExploitation directe pour productions ou études\nUtilisation pour des appariements\n\n\n\n\n\n\n\n\nLe CSNS\n\n\nCode statistique non signifiant (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique."
+  },
+  {
+    "objectID": "slides/index.html#exemple-1-la-dsn",
+    "href": "slides/index.html#exemple-1-la-dsn",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Exemple 1: la DSN",
+    "text": "Exemple 1: la DSN\n\nDonnées issues des fiches de paie (Humbert-Bottin 2018)"
+  },
+  {
+    "objectID": "slides/index.html#exemple-2-sirene",
+    "href": "slides/index.html#exemple-2-sirene",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Exemple 2: SIRENE",
+    "text": "Exemple 2: SIRENE\n\nRépertoire d’entreprises administré par l’Insee:\n\nCentralise de l’information sur 32 millions d’établissements.\n(dont 13 millions d’établissements actifs)\n\n\n\n\nMet à disposition des utilisateurs un code APE (pour activité principale exercée)\n\n\n\n\nBase de référence pour toutes les études et enquêtes statistiques sur les entreprises"
+  },
+  {
+    "objectID": "slides/index.html#exemple-3-fidéli",
+    "href": "slides/index.html#exemple-3-fidéli",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Exemple 3: Fidéli",
+    "text": "Exemple 3: Fidéli\n\nAssemblage de :\n\ndonnées d’origine fiscale: taxe d’habitation, fichier des propriétés bâties, déclarations de revenus, etc.\ndonnées d’origine sociale: prestations, etc.\ndonnées contextuelles sur le logement: nombre de pièces, etc.\n\n\n\n\nBase de référence pour études sociodémographiques fines"
+  },
+  {
+    "objectID": "slides/index.html#exemple-4-le-snds",
+    "href": "slides/index.html#exemple-4-le-snds",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Exemple 4: le SNDS",
+    "text": "Exemple 4: le SNDS\n\nAppariement des grandes bases médico-administratives nationales, notamment :\n\nles données de l’assurance maladie (base SNIIRAM) ;\nles données des hôpitaux (base PMSI) ;\nles causes médicales de décès (base du CépiDC de l’Inserm).\n\n\n\n\nFlux massif:\n\n1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d’actes (plus de 3000 variables) qui représentent 450 To de données…\n\n\n\n\n\nLien entre médecine de ville et médecine hospitalière\n\nPermet reconstruction du parcours de soin complet (EDP-Santé)\n\n\n\n\n\nEnjeu de confidentialité"
+  },
+  {
+    "objectID": "slides/index.html#bibliographie",
+    "href": "slides/index.html#bibliographie",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Bibliographie",
+    "text": "Bibliographie\n\n\n\n\n\n\n\n\nBeck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. « Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié ». Courrier des statistiques.\n\n\nHumbert-Bottin, Élisabeth. 2018. « La déclaration sociale nominative: nouvelle référence pour les échanges de données sociales des entreprises vers les administrations ». Courrier des statistiques.\n\n\nLuiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. « Survey Nonresponse Trends and Fieldwork Effort in the 21st Century: Results of an International Study across Countries and Surveys ». Journal of Official Statistics 36 (3): 469‑87. https://doi.org/doi:10.2478/jos-2020-0025.\n\n\nRivière, Pascal. 2018. « Utiliser les déclarations administratives à des fins statistiques ». Courrier des statistiques."
   }
 ]
