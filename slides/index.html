@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.4.550">
 
   <title>Nouvelles sources de données pour la statistique publique</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1307,6 +1307,200 @@ Figure&nbsp;1
 <li>Questions légales : aujourd’hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique</li>
 </ul>
 </div>
+</section></section>
+<section>
+<section id="analyse-textuelle" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Analyse textuelle</h1>
+
+</section>
+<section id="introduction" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Introduction</h2>
+<ul>
+<li>Le traitement du texte et du langage est un des domaines de recherche les plus actifs en sciences des données</li>
+<li>Beaucoup d’applications potentielles pour la statistique publique:
+<ul>
+<li>Données d’enquête</li>
+<li>Données administratives</li>
+<li>Données privées mobilisables pour la statistique publique</li>
+</ul></li>
+<li>Traitement automatique: fait référence à des tâches variées</li>
+</ul>
+</section>
+<section id="collecte-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Collecte (1/2)</h2>
+<ul>
+<li>Webscraping: extraction du contenu de sites Internet</li>
+<li>Information textuelle très riche sur Internet, mobilisable à des fins de statistique publique</li>
+<li>Enjeux:
+<ul>
+<li>Techniques: évolution des pages web, interactivité des sites</li>
+<li>Légaux: directives de 2020 de la CNIL, pas de scraping sans prévenir</li>
+</ul></li>
+<li>Bonnes pratiques: <code>robots.txt</code></li>
+<li>API: mode préférentiel de collecte de données</li>
+</ul>
+</section>
+<section id="collecte-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Collecte (2/2)</h2>
+<ul>
+<li>En pratique:
+<ul>
+<li><code>Python</code>: <code>BeautifulSoup</code> (parser), <code>Scrapy</code> (crawler)</li>
+<li><code>R</code>: <code>httr</code>, <code>rvest</code>, <code>polite</code></li>
+<li><code>Selenium</code>: outils d’automatisation</li>
+</ul></li>
+</ul>
+</section>
+<section id="modèles-de-langage-12" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
+<h2>Modèles de langage (1/2)</h2>
+<ul>
+<li>Encoder l’information présente dans un texte:
+<ul>
+<li>Matrice document-terme: représentation sparse</li>
+<li>Embeddings: représentation dense</li>
+</ul></li>
+<li>Exemple de word2vec</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="modèles-de-langage-22" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
+<h2>Modèles de langage (2/2)</h2>
+<ul>
+<li>Aujourd’hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone: le Transformer</li>
+<li>Embeddings des mots qui composent un texte deviennent contextuels</li>
+<li>Boom des modèle de langage “génératifs”</li>
+</ul>
+</section>
+<section id="applications-pour-la-statistique-publique" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Applications pour la statistique publique</h2>
+<ul>
+<li>Classification dans des nomenclatures:
+<ul>
+<li>Profession (enquêtes, recensement de la population)</li>
+<li>Activité des entreprises</li>
+<li>Produits de consommation</li>
+</ul></li>
+<li>Appariements</li>
+<li>Extraction automatique de contenu au sein de documents textuels</li>
+<li>Modèles de langage génératifs: assistants de code, etc.</li>
+</ul>
+</section></section>
+<section>
+<section id="analyse-dimages" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Analyse d’images</h1>
+
+</section>
+<section id="représentation-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Représentation (1/2)</h2>
+<ul>
+<li>Image en noir et blanc: matrice de dimension <span class="math inline">\(L \times W\)</span></li>
+<li>Plusieurs encodages possibles: valeurs entières entre 0 et 255 (<code>uint8</code>), valeurs flottantes entre 0 et 1, etc.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/python_pixels.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="représentation-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Représentation (2/2)</h2>
+<ul>
+<li>Image en couleurs: matrice de dimension <span class="math inline">\(L \times W \times 3\)</span></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="img/rgb_image.png"></p>
+</div><div class="column" style="width:26%;">
+<p><img data-src="img/python_red.png"></p>
+</div><div class="column" style="width:26%;">
+<p><img data-src="img/python_green.png"></p>
+</div><div class="column" style="width:26%;">
+<p><img data-src="img/python_blue.png"></p>
+</div>
+</div>
+</section>
+<section id="vision-par-ordinateur-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Vision par ordinateur (1/2)</h2>
+<ul>
+<li>Techniques qui permettent à des machines d’acquérir une compréhension d’images ou de vidéos numériques</li>
+<li>1973: détection de contours</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="./img/bike.jpg"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="./img/bike_sobel.jpg"></p>
+</div>
+</div>
+</section>
+<section id="vision-par-ordinateur-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Vision par ordinateur (2/2)</h2>
+<ul>
+<li>On définit les images suivantes:</li>
+</ul>
+<p><span class="math display">\[
+G_x = \begin{bmatrix}
++1 &amp; 0 &amp; -1\\
++2 &amp; 0 &amp; -2\\
++1 &amp; 0 &amp; -1
+\end{bmatrix} \star A \quad \text{et} \quad G_y = \begin{bmatrix}
++1 &amp; +2 &amp; +1\\
+0 &amp; 0 &amp; 0\\
+-1 &amp; -2 &amp; -1
+\end{bmatrix} \star A
+\]</span></p>
+<p>avec <span class="math inline">\(\star\)</span> l’opérateur de convolution 2-dimensionnel en traitement du signal - Alors <span class="math inline">\(G = \sqrt{G_x^2 + G_y^2}\)</span>: représentation des contours de l’image <span class="math inline">\(A\)</span></p>
+</section>
+<section id="opérateur-de-convolution" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Opérateur de convolution</h2>
+
+<img data-src="img/convol.png" style="width:50.0%" class="r-stretch quarto-figure-center"><p class="caption">Illustration de l’opérateur de convolution 2-dimensionnel <span class="math inline">\(\star\)</span>. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et <em>glisse</em> sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul <span class="math inline">\(3 = 1*(-1) + 1*1 + 1*2 + 1*1\)</span>.</p></section>
+<section id="réseaux-de-neurones-convolutifs" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Réseaux de neurones convolutifs</h2>
+
+<img data-src="https://editor.analyticsvidhya.com/uploads/59954intro%20to%20CNN.JPG" class="r-stretch quarto-figure-center"><p class="caption">Illustration d’une succession de séquences d’un réseau convolutionnel. Emprunté à https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/</p></section>
+<section id="segmentation-sémantique-détection-dobjets" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Segmentation sémantique, détection d’objets</h2>
+
+<img data-src="https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg" class="r-stretch quarto-figure-center"><p class="caption">Tâches classiques de vision</p></section>
+<section id="eo-data-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>EO data (1/2)</h2>
+<ul>
+<li>Données provenant de satellites, mais photographies prises depuis un avion, etc.</li>
+<li>Beaucoup de données ouvertes ou semi-ouvertes (NASA: Landsat, ESA: Sentinel, Airbus: Pleiades)</li>
+<li>Résolution spatiale variable (de haute: 10m, à très haute: 0.5m)</li>
+<li>Résolution spectrale variable</li>
+<li>Couverture régulière des territoires (par exemple tous les 5j pour Sentinel-2)</li>
+<li>Risques et difficultés: résultats robustes, disponibilité, temps de calcul, résolution adaptée</li>
+</ul>
+</section>
+<section id="eo-data-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>EO data (2/2)</h2>
+<ul>
+<li>Cas d’usage potentiels multiples: supervision des forêts, de l’agriculture, des masses d’eau, supervision de l’urbanisation et des infrastructures, étude de la pollution environnementale, etc.</li>
+<li>Aujourd’hui:
+<ul>
+<li>Calcul de statistiques sur l’occupation et l’usage des sols (consolidation de l’enquête Teruti)</li>
+<li>Mise à jour du répertoire de logements dans les DROM</li>
+<li>Consolidation des statistiques sur les vergers issues de l’enquête sur la structure des exploitations agricoles</li>
+</ul></li>
+</ul>
+</section>
+<section id="ocr-et-extraction" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>OCR et extraction</h2>
+<ul>
+<li>OCR: reconnaissance optique de caractères</li>
+<li>Documents scannés ou photographiés exploitables pour la statistique publique:
+<ul>
+<li>Comptes annuels des entreprises</li>
+<li>Photographies de tickets de caisse pour l’enquête Budget de Famille</li>
+</ul></li>
+<li>Extraction d’information structurée: cas des tableaux</li>
+</ul>
 </section>
 <section id="bibliographie" class="slide level2 smaller scrollable" data-background-image="background.svg" data-background-size="contain">
 <h2>Bibliographie</h2>
