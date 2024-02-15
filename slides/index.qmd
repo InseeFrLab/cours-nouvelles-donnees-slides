@@ -341,4 +341,6 @@ la librairie {{< fa brands js-square >}} `gridviz` (visible sur [Observable](htt
 
 {{< include "images.qmd" >}}
 
+{{< include "nowcasting.qmd" >}}
+
 ## Bibliographie
