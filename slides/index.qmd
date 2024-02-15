@@ -337,5 +337,8 @@ la librairie {{< fa brands js-square >}} `gridviz` (visible sur [Observable](htt
 
 - Questions légales : aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique
 
+{{< include "texte.qmd" >}}
+
+{{< include "images.qmd" >}}
 
 ## Bibliographie
