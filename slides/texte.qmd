@@ -1,1 +1,52 @@
-## Texte
+# Analyse textuelle
+
+## Introduction
+
+- Le traitement du texte et du langage est un des domaines de recherche les plus actifs en sciences des données
+- Beaucoup d'applications potentielles pour la statistique publique:
+    - Données d'enquête
+    - Données administratives
+    - Données privées mobilisables pour la statistique publique
+- Traitement automatique: fait référence à des tâches variées
+
+## Collecte (1/2)
+
+- Webscraping: extraction du contenu de sites Internet
+- Information textuelle très riche sur Internet, mobilisable à des fins de statistique publique
+- Enjeux:
+    - Techniques: évolution des pages web, interactivité des sites
+    - Légaux: directives de 2020 de la CNIL, pas de scraping sans prévenir
+- Bonnes pratiques: `robots.txt`
+- API: mode préférentiel de collecte de données
+
+## Collecte (2/2)
+
+- En pratique:
+    - `Python`: `BeautifulSoup` (parser), `Scrapy` (crawler)
+    - `R`: `httr`, `rvest`, `polite`
+    - `Selenium`: outils d'automatisation
+
+## Modèles de langage (1/2) {.nostretch}
+
+- Encoder l'information présente dans un texte:
+    - Matrice document-terme: représentation sparse
+    - Embeddings: représentation dense
+- Exemple de word2vec
+
+![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png){width="60%" fig-align="center"}
+
+## Modèles de langage (2/2) {.nostretch}
+
+- Aujourd'hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone: le Transformer
+- Embeddings des mots qui composent un texte deviennent contextuels
+- Boom des modèle de langage "génératifs"
+
+## Applications pour la statistique publique
+
+- Classification dans des nomenclatures:
+    - Profession (enquêtes, recensement de la population)
+    - Activité des entreprises
+    - Produits de consommation
+- Appariements
+- Extraction automatique de contenu au sein de documents textuels
+- Modèles de langage génératifs: assistants de code, etc.
