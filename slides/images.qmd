@@ -1,0 +1,111 @@
+# Analyse d'images
+
+## Représentation (1/2)
+
+- Image en noir et blanc: matrice de dimension $L \times W$
+- Plusieurs encodages possibles: valeurs entières entre 0 et 255 (`uint8`), valeurs flottantes entre 0 et 1, etc.
+
+![](img/python_pixels.png){fig-align="center" height=400}
+
+## Représentation (2/2)
+
+- Image en couleurs: matrice de dimension $L \times W \times 3$
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](img/rgb_image.png)
+:::
+
+::: {.column width="26%"}
+![](img/python_red.png)
+:::
+
+::: {.column width="26%"}
+![](img/python_green.png)
+:::
+
+::: {.column width="26%"}
+![](img/python_blue.png)
+:::
+
+::::
+
+## Vision par ordinateur (1/2)
+
+- Techniques qui permettent à des machines d'acquérir une compréhension d'images ou de vidéos numériques
+- 1973: détection de contours
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](./img/bike.jpg)
+:::
+
+::: {.column width="50%"}
+![](./img/bike_sobel.jpg)
+:::
+
+::::
+
+## Vision par ordinateur (2/2)
+
+- On définit les images suivantes: 
+
+$$
+G_x = \begin{bmatrix}
++1 & 0 & -1\\
++2 & 0 & -2\\
++1 & 0 & -1
+\end{bmatrix} \star A \quad \text{et} \quad G_y = \begin{bmatrix}
++1 & +2 & +1\\
+0 & 0 & 0\\
+-1 & -2 & -1
+\end{bmatrix} \star A
+$$
+
+avec $\star$ l'opérateur de convolution 2-dimensionnel en traitement du signal
+- Alors $G = \sqrt{G_x^2 + G_y^2}$: représentation des contours de l'image $A$
+
+## Opérateur de convolution
+
+::: {#fig-convol}
+![Illustration de l'opérateur de convolution 2-dimensionnel $\star$. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et *glisse* sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul $3 = 1*(-1) + 1*1 + 1*2 + 1*1$.](img/convol.png){ width=50% }
+:::
+
+## Réseaux de neurones convolutifs
+
+::: {#fig-nn-convol}
+![Illustration d'une succession de séquences d'un réseau convolutionnel. Emprunté à https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/](https://editor.analyticsvidhya.com/uploads/59954intro%20to%20CNN.JPG)
+:::
+
+## Segmentation sémantique, détection d'objets
+
+::: {#fig-vision-tasks}
+![Tâches classiques de vision](https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg)
+:::
+
+## EO data (1/2)
+
+- Données provenant de satellites, mais photographies prises depuis un avion, etc. 
+- Beaucoup de données ouvertes ou semi-ouvertes (NASA: Landsat, ESA: Sentinel, Airbus: Pleiades)
+- Résolution spatiale variable (de haute: 10m, à très haute: 0.5m)
+- Résolution spectrale variable
+- Couverture régulière des territoires (par exemple tous les 5j pour Sentinel-2)
+- Risques et difficultés: résultats robustes, disponibilité, temps de calcul, résolution adaptée
+
+## EO data (2/2)
+
+- Cas d'usage potentiels multiples: supervision des forêts, de l’agriculture, des masses d’eau, supervision de l'urbanisation et des infrastructures, étude de la pollution environnementale, etc.
+- Aujourd'hui:
+    - Calcul de statistiques sur l’occupation et l’usage des sols (consolidation de l'enquête Teruti)
+    - Mise à jour du répertoire de logements dans les DROM
+    - Consolidation des statistiques sur les vergers issues de l'enquête sur la structure des exploitations agricoles
+
+## OCR et extraction
+
+- OCR: reconnaissance optique de caractères
+- Documents scannés ou photographiés exploitables pour la statistique publique:
+    - Comptes annuels des entreprises
+    - Photographies de tickets de caisse pour l'enquête Budget de Famille
+- Extraction d'information structurée: cas des tableaux
