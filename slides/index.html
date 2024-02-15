@@ -1507,6 +1507,55 @@ G_x = \begin{bmatrix}
 <h1>Nowcasting</h1>
 
 </section>
+<section id="introduction-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Introduction</h2>
+<ul>
+<li>La statistique publique a pour rôle de publier et mettre à jour des séries temporelles harmonisées sur longues périodes</li>
+<li>Collecte et traitements prennent du temps: ces séries ont du retard</li>
+<li>Réalisation de prévisions à court/très court terme et même d’indicateurs prospectifs</li>
+<li>Nowcasting: modélisation de la situation macroéconomique actuelle ou très récente grâce à la collecte de signaux haute fréquence</li>
+</ul>
+</section>
+<section id="modèles" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Modèles</h2>
+<ul>
+<li>Modèles autorégressifs de type bridge models ou mixed-data sampling (<span class="citation" data-cites="schumacher-16">Schumacher (<a href="#/bibliographie" role="doc-biblioref" onclick="">2016</a>)</span>)</li>
+<li>Dynamic factor models (<span class="citation" data-cites="stock-10">Stock et Watson (<a href="#/bibliographie" role="doc-biblioref" onclick="">2010</a>)</span>)</li>
+<li>Modèles de Deep Learning de type LSTM (<span class="citation" data-cites="hopp-21">Hopp (<a href="#/bibliographie" role="doc-biblioref" onclick="">2021</a>)</span>)</li>
+</ul>
+</section>
+<section id="données-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Données (1/2)</h2>
+<ul>
+<li>Indicateurs de type soft: climat des affaires, sentiment des consommateurs</li>
+<li>Indicateurs hard: production industrielle, commerce de détail, prix de l’immobilier, etc.</li>
+<li>Données à différentes fréquences avec une disponibilité variable</li>
+</ul>
+</section>
+<section id="données-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Données (2/2)</h2>
+<ul>
+<li>Statistiques de recherches sur Internet: Google Trends</li>
+<li>Données de réseaux sociaux: par exemple données de Twitter pour prévoir du comportement des marchés financiers et du marché du travail</li>
+<li>Risques: données très biaisées, difficiles à modéliser</li>
+</ul>
+</section>
+<section id="nowcasting-à-linsee-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Nowcasting à l’Insee (1/2)</h2>
+<ul>
+<li>Chaire de recherche <strong>Mesures de l’économie, nowcasting ‐ au‐delà du PIB en 2021</strong></li>
+<li>Travail sur l’amélioration des prévisions économiques grâce à la mobilisation de nouvelles données</li>
+<li>Actualités <span class="citation" data-cites="bortoli-18">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Bortoli, Combes, et Renault 2018</a>)</span>, médias sociaux, données satellitaires, réseaux professionnels et avis de consommateurs, données sur le commerce international, la consommation d’électricité et le transport routier <span class="citation" data-cites="fornaro-20">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Fornaro 2020</a>)</span>, le transport maritime, l’immobilier, l’hôtellerie et les télécommunications</li>
+<li>Nouveaux indicateurs économiques, de bien-être ou de développement durable</li>
+</ul>
+</section>
+<section id="nowcasting-à-linsee-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Nowcasting à l’Insee (2/2)</h2>
+<ul>
+<li>Impact de la crise sanitaire du Covid-19 sur l’activité économique: données de transactions par cartes bancaires: chute d’un tiers pour la consommation</li>
+<li>Données de téléphonie mobile pour mesurer les déplacements de populations au moment des confinement et déconfinement <span class="citation" data-cites="galiana-20">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Galiana, Suarez-Castillo, et al. 2020</a>)</span></li>
+</ul>
+</section>
 <section id="bibliographie" class="slide level2 smaller scrollable" data-background-image="background.svg" data-background-size="contain">
 <h2>Bibliographie</h2>
 
@@ -1522,11 +1571,20 @@ André, Mathias, et Olivier Meslin. 2021. <span>«&nbsp;Et pour quelques apparte
 <div id="ref-beck2022" class="csl-entry" role="listitem">
 Beck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. <span>«&nbsp;Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié&nbsp;»</span>. <em>Courrier des statistiques</em>.
 </div>
+<div id="ref-bortoli-18" class="csl-entry" role="listitem">
+Bortoli, Clément, Stéphanie Combes, et Thomas Renault. 2018. <span>«&nbsp;<span>Nowcasting GDP Growth by Reading Newspapers</span>&nbsp;»</span>. <em><span>Economie et Statistique / Economics and Statistics</span></em>, Big Data et Statistics - Part 1, nᵒ 505-506: 17‑33. <a href="https://doi.org/10.24187/ecostat.2018.505d.1964">https://doi.org/10.24187/ecostat.2018.505d.1964</a>.
+</div>
+<div id="ref-fornaro-20" class="csl-entry" role="listitem">
+Fornaro, Paolo. 2020. <span>«&nbsp;<span>Nowcasting Industrial Production Using Uncoventional Data Sources</span>&nbsp;»</span>. ETLA Working Papers 80. The Research Institute of the Finnish Economy. <a href="https://ideas.repec.org/p/rif/wpaper/80.html">https://ideas.repec.org/p/rif/wpaper/80.html</a>.
+</div>
 <div id="ref-galiana2020segregation" class="csl-entry" role="listitem">
 Galiana, Lino, François Sémécurbe, Benjamin Sakarovitch, et Zbigniew Smoreda. 2020. <span>«&nbsp;Residential segregation, daytime segregation and spatial frictions: an analysis from mobile phone data&nbsp;»</span>.
 </div>
 <div id="ref-galiana-20" class="csl-entry" role="listitem">
 Galiana, Lino, Milena Suarez-Castillo, François Sémécurbe, Élise Coudin, et Marie-Pierre de Bellefon. 2020. <span>«&nbsp;Retour partiel des mouvements de population avec le d<span>é</span>confinement&nbsp;»</span>.
+</div>
+<div id="ref-hopp-21" class="csl-entry" role="listitem">
+Hopp, Daniel. 2021. <span>«&nbsp;Economic Nowcasting with Long Short-Term Memory Artificial Neural Networks (LSTM)&nbsp;»</span>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2106.08901">https://doi.org/10.48550/ARXIV.2106.08901</a>.
 </div>
 <div id="ref-Humbert2018" class="csl-entry" role="listitem">
 Humbert-Bottin, Élisabeth. 2018. <span>«&nbsp;La déclaration sociale nominative: nouvelle référence pour les échanges de données sociales des entreprises vers les administrations&nbsp;»</span>. <em>Courrier des statistiques</em>.
@@ -1536,6 +1594,12 @@ Luiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. <span>«&nbsp;Survey Nonre
 </div>
 <div id="ref-riviere2018" class="csl-entry" role="listitem">
 Rivière, Pascal. 2018. <span>«&nbsp;Utiliser les déclarations administratives à des fins statistiques&nbsp;»</span>. <em>Courrier des statistiques</em>.
+</div>
+<div id="ref-schumacher-16" class="csl-entry" role="listitem">
+Schumacher, Christian. 2016. <span>«&nbsp;A comparison of MIDAS and bridge equations&nbsp;»</span>. <em>International Journal of Forecasting</em> 32 (2): 257‑70. <a href="https://EconPapers.repec.org/RePEc:eee:intfor:v:32:y:2016:i:2:p:257-270">https://EconPapers.repec.org/RePEc:eee:intfor:v:32:y:2016:i:2:p:257-270</a>.
+</div>
+<div id="ref-stock-10" class="csl-entry" role="listitem">
+Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»</span>. In <em>Oxford Handbook of Economic Forecasting</em>, édité par Michael P. Clements et David F. Henry. Oxford: Oxford University Press; Oxford University Press. <a href="http://www.economics.harvard.edu/faculty/stock/files/dfm_oup_4.pdf">http://www.economics.harvard.edu/faculty/stock/files/dfm_oup_4.pdf</a>.
 </div>
 </div>
 </section></section>

@@ -336,10 +336,52 @@
     "text": "OCR et extraction\n\nOCR: reconnaissance optique de caractères\nDocuments scannés ou photographiés exploitables pour la statistique publique:\n\nComptes annuels des entreprises\nPhotographies de tickets de caisse pour l’enquête Budget de Famille\n\nExtraction d’information structurée: cas des tableaux"
   },
   {
+    "objectID": "slides/index.html#introduction-1",
+    "href": "slides/index.html#introduction-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Introduction",
+    "text": "Introduction\n\nLa statistique publique a pour rôle de publier et mettre à jour des séries temporelles harmonisées sur longues périodes\nCollecte et traitements prennent du temps: ces séries ont du retard\nRéalisation de prévisions à court/très court terme et même d’indicateurs prospectifs\nNowcasting: modélisation de la situation macroéconomique actuelle ou très récente grâce à la collecte de signaux haute fréquence"
+  },
+  {
+    "objectID": "slides/index.html#modèles",
+    "href": "slides/index.html#modèles",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Modèles",
+    "text": "Modèles\n\nModèles autorégressifs de type bridge models ou mixed-data sampling (Schumacher (2016))\nDynamic factor models (Stock et Watson (2010))\nModèles de Deep Learning de type LSTM (Hopp (2021))"
+  },
+  {
+    "objectID": "slides/index.html#données-12",
+    "href": "slides/index.html#données-12",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Données (1/2)",
+    "text": "Données (1/2)\n\nIndicateurs de type soft: climat des affaires, sentiment des consommateurs\nIndicateurs hard: production industrielle, commerce de détail, prix de l’immobilier, etc.\nDonnées à différentes fréquences avec une disponibilité variable"
+  },
+  {
+    "objectID": "slides/index.html#données-22",
+    "href": "slides/index.html#données-22",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Données (2/2)",
+    "text": "Données (2/2)\n\nStatistiques de recherches sur Internet: Google Trends\nDonnées de réseaux sociaux: par exemple données de Twitter pour prévoir du comportement des marchés financiers et du marché du travail\nRisques: données très biaisées, difficiles à modéliser"
+  },
+  {
+    "objectID": "slides/index.html#nowcasting-à-linsee-12",
+    "href": "slides/index.html#nowcasting-à-linsee-12",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Nowcasting à l’Insee (1/2)",
+    "text": "Nowcasting à l’Insee (1/2)\n\nChaire de recherche Mesures de l’économie, nowcasting ‐ au‐delà du PIB en 2021\nTravail sur l’amélioration des prévisions économiques grâce à la mobilisation de nouvelles données\nActualités (Bortoli, Combes, et Renault 2018), médias sociaux, données satellitaires, réseaux professionnels et avis de consommateurs, données sur le commerce international, la consommation d’électricité et le transport routier (Fornaro 2020), le transport maritime, l’immobilier, l’hôtellerie et les télécommunications\nNouveaux indicateurs économiques, de bien-être ou de développement durable"
+  },
+  {
+    "objectID": "slides/index.html#nowcasting-à-linsee-22",
+    "href": "slides/index.html#nowcasting-à-linsee-22",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Nowcasting à l’Insee (2/2)",
+    "text": "Nowcasting à l’Insee (2/2)\n\nImpact de la crise sanitaire du Covid-19 sur l’activité économique: données de transactions par cartes bancaires: chute d’un tiers pour la consommation\nDonnées de téléphonie mobile pour mesurer les déplacements de populations au moment des confinement et déconfinement (Galiana, Suarez-Castillo, et al. 2020)"
+  },
+  {
     "objectID": "slides/index.html#bibliographie",
     "href": "slides/index.html#bibliographie",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Bibliographie",
-    "text": "Bibliographie\n\n\n\n\n\n\n\n\nAndré, Mathias, et Olivier Meslin. 2021. « Et pour quelques appartements de plus : Étude de la propriété immobilière des ménages et du profil redistributif de la taxe foncière ».\n\n\nBeck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. « Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié ». Courrier des statistiques.\n\n\nGaliana, Lino, François Sémécurbe, Benjamin Sakarovitch, et Zbigniew Smoreda. 2020. « Residential segregation, daytime segregation and spatial frictions: an analysis from mobile phone data ».\n\n\nGaliana, Lino, Milena Suarez-Castillo, François Sémécurbe, Élise Coudin, et Marie-Pierre de Bellefon. 2020. « Retour partiel des mouvements de population avec le déconfinement ».\n\n\nHumbert-Bottin, Élisabeth. 2018. « La déclaration sociale nominative: nouvelle référence pour les échanges de données sociales des entreprises vers les administrations ». Courrier des statistiques.\n\n\nLuiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. « Survey Nonresponse Trends and Fieldwork Effort in the 21st Century: Results of an International Study across Countries and Surveys ». Journal of Official Statistics 36 (3): 469‑87. https://doi.org/doi:10.2478/jos-2020-0025.\n\n\nRivière, Pascal. 2018. « Utiliser les déclarations administratives à des fins statistiques ». Courrier des statistiques."
+    "text": "Bibliographie\n\n\n\n\n\n\n\n\nAndré, Mathias, et Olivier Meslin. 2021. « Et pour quelques appartements de plus : Étude de la propriété immobilière des ménages et du profil redistributif de la taxe foncière ».\n\n\nBeck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. « Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié ». Courrier des statistiques.\n\n\nBortoli, Clément, Stéphanie Combes, et Thomas Renault. 2018. « Nowcasting GDP Growth by Reading Newspapers ». Economie et Statistique / Economics and Statistics, Big Data et Statistics - Part 1, nᵒ 505-506: 17‑33. https://doi.org/10.24187/ecostat.2018.505d.1964.\n\n\nFornaro, Paolo. 2020. « Nowcasting Industrial Production Using Uncoventional Data Sources ». ETLA Working Papers 80. The Research Institute of the Finnish Economy. https://ideas.repec.org/p/rif/wpaper/80.html.\n\n\nGaliana, Lino, François Sémécurbe, Benjamin Sakarovitch, et Zbigniew Smoreda. 2020. « Residential segregation, daytime segregation and spatial frictions: an analysis from mobile phone data ».\n\n\nGaliana, Lino, Milena Suarez-Castillo, François Sémécurbe, Élise Coudin, et Marie-Pierre de Bellefon. 2020. « Retour partiel des mouvements de population avec le déconfinement ».\n\n\nHopp, Daniel. 2021. « Economic Nowcasting with Long Short-Term Memory Artificial Neural Networks (LSTM) ». arXiv. https://doi.org/10.48550/ARXIV.2106.08901.\n\n\nHumbert-Bottin, Élisabeth. 2018. « La déclaration sociale nominative: nouvelle référence pour les échanges de données sociales des entreprises vers les administrations ». Courrier des statistiques.\n\n\nLuiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. « Survey Nonresponse Trends and Fieldwork Effort in the 21st Century: Results of an International Study across Countries and Surveys ». Journal of Official Statistics 36 (3): 469‑87. https://doi.org/doi:10.2478/jos-2020-0025.\n\n\nRivière, Pascal. 2018. « Utiliser les déclarations administratives à des fins statistiques ». Courrier des statistiques.\n\n\nSchumacher, Christian. 2016. « A comparison of MIDAS and bridge equations ». International Journal of Forecasting 32 (2): 257‑70. https://EconPapers.repec.org/RePEc:eee:intfor:v:32:y:2016:i:2:p:257-270.\n\n\nStock, James, et Mark Watson. 2010. « Dynamic Factor Models ». In Oxford Handbook of Economic Forecasting, édité par Michael P. Clements et David F. Henry. Oxford: Oxford University Press; Oxford University Press. http://www.economics.harvard.edu/faculty/stock/files/dfm_oup_4.pdf."
   }
 ]
