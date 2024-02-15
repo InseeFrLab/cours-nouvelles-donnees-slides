@@ -1,2 +1,38 @@
 # Nowcasting
 
+## Introduction
+
+- La statistique publique a pour rôle de publier et mettre à jour des séries temporelles harmonisées sur longues périodes
+- Collecte et traitements prennent du temps: ces séries ont du retard
+- Réalisation de prévisions à court/très court terme et même d'indicateurs prospectifs
+- Nowcasting: modélisation de la situation macroéconomique actuelle ou très récente grâce à la collecte de signaux haute fréquence
+
+## Modèles
+
+- Modèles autorégressifs de type bridge models ou mixed-data sampling (@schumacher-16)
+- Dynamic factor models (@stock-10) 
+- Modèles de Deep Learning de type LSTM (@hopp-21)
+
+## Données (1/2)
+
+- Indicateurs de type soft: climat des affaires, sentiment des consommateurs
+- Indicateurs hard: production industrielle, commerce de détail, prix de l’immobilier, etc.
+- Données à différentes fréquences avec une disponibilité variable
+
+## Données (2/2)
+
+- Statistiques de recherches sur Internet: Google Trends
+- Données de réseaux sociaux: par exemple données de Twitter pour prévoir du comportement des marchés financiers et du marché du travail
+- Risques: données très biaisées, difficiles à modéliser
+
+## Nowcasting à l'Insee (1/2)
+
+- Chaire de recherche **Mesures de l’économie, nowcasting ‐ au‐delà du PIB en 2021**
+- Travail sur l’amélioration des prévisions économiques grâce à la mobilisation de nouvelles données
+- Actualités [@bortoli-18], médias sociaux, données satellitaires, réseaux professionnels et avis de consommateurs, données sur le commerce international, la consommation d’électricité et le transport routier [@fornaro-20], le transport maritime, l’immobilier, l’hôtellerie et les télécommunications
+- Nouveaux indicateurs économiques, de bien-être ou de développement durable
+
+## Nowcasting à l'Insee (2/2)
+
+- Impact de la crise sanitaire du Covid-19 sur l'activité économique: données de transactions par cartes bancaires: chute d’un tiers pour la consommation
+- Données de téléphonie mobile pour mesurer les déplacements de populations au moment des confinement et déconfinement [@galiana-20]
