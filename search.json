@@ -147,6 +147,34 @@
     "text": "Exemple 4: le SNDS\n\nAppariement des grandes bases médico-administratives nationales, notamment :\n\nles données de l’assurance maladie (base SNIIRAM) ;\nles données des hôpitaux (base PMSI) ;\nles causes médicales de décès (base du CépiDC de l’Inserm).\n\n\n\n\nFlux massif:\n\n1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d’actes (plus de 3000 variables) qui représentent 450 To de données…\n\n\n\n\n\nLien entre médecine de ville et médecine hospitalière\n\nPermet reconstruction du parcours de soin complet (EDP-Santé)\n\n\n\n\n\nEnjeu de confidentialité"
   },
   {
+    "objectID": "slides/index.html#webscraping-13",
+    "href": "slides/index.html#webscraping-13",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Webscraping (1/3)",
+    "text": "Webscraping (1/3)\n\nWebscraping: extraction du contenu de sites Internet\nInformation textuelle très riche sur Internet, mobilisable à des fins de statistique publique\nEnjeux:\n\nTechniques: évolution des pages web, interactivité des sites\nLégaux: jurisprudences, directives de 2020 de la CNIL\n\nBonnes pratiques: robots.txt"
+  },
+  {
+    "objectID": "slides/index.html#webscraping-23",
+    "href": "slides/index.html#webscraping-23",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Webscraping (2/3)",
+    "text": "Webscraping (2/3)\n\nEn pratique:\n\nPython: BeautifulSoup (parser), Scrapy (crawler)\nR: httr, rvest, polite\nSelenium: outils d’automatisation\n\n[Excellente formation] d’Antoine Palazzolo: https://inseefrlab.github.io/formation-webscraping/"
+  },
+  {
+    "objectID": "slides/index.html#webscraping-33",
+    "href": "slides/index.html#webscraping-33",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Webscraping (3/3)",
+    "text": "Webscraping (3/3)\n\nPrix dans le domaine de l’hôtellerie: scraping du site Booking.com\nVente d’articles électroniques:\n\nboulanger\nRue du commerce\n\nScraping du site de la SNCF: collecte quotidienne pour capter la volatilité des prix"
+  },
+  {
+    "objectID": "slides/index.html#utilisation-dapi",
+    "href": "slides/index.html#utilisation-dapi",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Utilisation d’API",
+    "text": "Utilisation d’API\n\nAPI: interface de programmation\nMode préférentiel de collecte de données:\n\nPlus de garanties sur la qualité\nReproductibité\n…\n\nAvec Python: requests"
+  },
+  {
     "objectID": "slides/index.html#loffre-crée-sa-propre-demande",
     "href": "slides/index.html#loffre-crée-sa-propre-demande",
     "title": "Nouvelles sources de données pour la statistique publique",
