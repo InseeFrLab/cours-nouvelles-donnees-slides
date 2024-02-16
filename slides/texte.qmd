@@ -57,4 +57,4 @@
     - [**Produits]{.blue2} de consommation
 - [**Appariements**]{.orange}
 - [**Extraction automatique**]{.orange} de contenu au sein de documents textuels
-- Modèles de langage [**génératifs**]{.orange}: assistants de code, etc.
+- Modèles de langage [**génératifs**]{.orange}: assistants de code, RAG, etc.
