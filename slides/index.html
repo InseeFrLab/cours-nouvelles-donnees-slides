@@ -1531,8 +1531,8 @@ Figure&nbsp;1
 <section id="représentation-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Représentation (1/2)</h2>
 <ul>
-<li>Image en noir et blanc: matrice de dimension <span class="math inline">\(L \times W\)</span></li>
-<li>Plusieurs encodages possibles: valeurs entières entre 0 et 255 (<code>uint8</code>), valeurs flottantes entre 0 et 1, etc.</li>
+<li><span class="orange"><strong>Image en noir et blanc</strong></span>: matrice de dimension <span class="math inline">\(L \times W\)</span></li>
+<li>Plusieurs <span class="orange"><strong>encodages</strong></span> possibles: valeurs entières entre 0 et 255 (<code>uint8</code>), valeurs flottantes entre 0 et 1, etc.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1543,25 +1543,15 @@ Figure&nbsp;1
 <section id="représentation-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Représentation (2/2)</h2>
 <ul>
-<li>Image en couleurs: matrice de dimension <span class="math inline">\(L \times W \times 3\)</span></li>
+<li>Image en <span class="orange"><strong>couleurs</strong></span>: matrice de dimension <span class="math inline">\(L \times W \times 3\)</span></li>
 </ul>
-<div class="columns">
-<div class="column" style="width:20%;">
-<p><img data-src="img/rgb_image.png"></p>
-</div><div class="column" style="width:26%;">
-<p><img data-src="img/python_red.png"></p>
-</div><div class="column" style="width:26%;">
-<p><img data-src="img/python_green.png"></p>
-</div><div class="column" style="width:26%;">
-<p><img data-src="img/python_blue.png"></p>
-</div>
-</div>
-</section>
+
+<img data-src="img/python_color.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="vision-par-ordinateur-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Vision par ordinateur (1/2)</h2>
 <ul>
-<li>Techniques qui permettent à des machines d’acquérir une compréhension d’images ou de vidéos numériques</li>
-<li>1973: détection de contours</li>
+<li>Techniques qui permettent à des machines d’acquérir une <span class="orange"><strong>compréhension d’images</strong></span> ou de vidéos numériques</li>
+<li>1973: <span class="orange"><strong>détection de contours</strong></span></li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1587,54 +1577,106 @@ G_x = \begin{bmatrix}
 -1 &amp; -2 &amp; -1
 \end{bmatrix} \star A
 \]</span></p>
-<p>avec <span class="math inline">\(\star\)</span> l’opérateur de convolution 2-dimensionnel en traitement du signal - Alors <span class="math inline">\(G = \sqrt{G_x^2 + G_y^2}\)</span>: représentation des contours de l’image <span class="math inline">\(A\)</span></p>
+<p>avec <span class="math inline">\(\star\)</span> l’opérateur de <span class="orange"><strong>convolution</strong></span> 2-dimensionnel en traitement du signal</p>
+<ul>
+<li>Alors <span class="math inline">\(G = \sqrt{G_x^2 + G_y^2}\)</span>: représentation des <span class="orange"><strong>contours</strong></span> de l’image <span class="math inline">\(A\)</span></li>
+</ul>
 </section>
-<section id="opérateur-de-convolution" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="opérateur-de-convolution" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
 <h2>Opérateur de convolution</h2>
-
-<img data-src="img/convol.png" style="width:50.0%" class="r-stretch quarto-figure-center"><p class="caption">Illustration de l’opérateur de convolution 2-dimensionnel <span class="math inline">\(\star\)</span>. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et <em>glisse</em> sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul <span class="math inline">\(3 = 1*(-1) + 1*1 + 1*2 + 1*1\)</span>.</p></section>
-<section id="réseaux-de-neurones-convolutifs" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<div id="fig-convol" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-convol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/convol.png" style="width:80.0%"></p>
+<figcaption>Illustration de l’opérateur de convolution 2-dimensionnel <span class="math inline">\(\star\)</span>. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et <em>glisse</em> sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul <span class="math inline">\(3 = 1*(-1) + 1*1 + 1*2 + 1*1\)</span>.</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-convol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="réseaux-de-neurones-convolutifs" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
 <h2>Réseaux de neurones convolutifs</h2>
-
-<img data-src="https://editor.analyticsvidhya.com/uploads/59954intro%20to%20CNN.JPG" class="r-stretch quarto-figure-center"><p class="caption">Illustration d’une succession de séquences d’un réseau convolutionnel. Emprunté à https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/</p></section>
+<div id="fig-nn-convol" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-nn-convol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://editor.analyticsvidhya.com/uploads/59954intro%20to%20CNN.JPG" style="width:80.0%"></p>
+<figcaption>Illustration d’une succession de séquences d’un réseau convolutionnel. Emprunté à https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-nn-convol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
+</figure>
+</div>
+</section>
 <section id="segmentation-sémantique-détection-dobjets" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Segmentation sémantique, détection d’objets</h2>
 
 <img data-src="https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg" class="r-stretch quarto-figure-center"><p class="caption">Tâches classiques de vision</p></section>
-<section id="eo-data-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>EO data (1/2)</h2>
+<section id="eo-data-13" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>EO data (1/3)</h2>
 <ul>
-<li>Données provenant de satellites, mais photographies prises depuis un avion, etc.</li>
-<li>Beaucoup de données ouvertes ou semi-ouvertes (NASA: Landsat, ESA: Sentinel, Airbus: Pleiades)</li>
-<li>Résolution spatiale variable (de haute: 10m, à très haute: 0.5m)</li>
-<li>Résolution spectrale variable</li>
-<li>Couverture régulière des territoires (par exemple tous les 5j pour Sentinel-2)</li>
-<li>Risques et difficultés: résultats robustes, disponibilité, temps de calcul, résolution adaptée</li>
+<li>Données <span class="orange"><strong>provenant de satellites</strong></span>, photographies prises depuis un avion, etc.</li>
+<li><span class="orange"><strong>Beaucoup de données ouvertes</strong></span> ou semi-ouvertes (NASA: Landsat, ESA: Sentinel, Airbus: Pleiades)</li>
+<li><span class="orange"><strong>Résolution spatiale</strong></span> variable (de haute: 10m, à très haute: 0.5m)</li>
+<li><span class="orange"><strong>Résolution spectrale</strong></span> variable</li>
+<li><span class="orange"><strong>Couverture régulière</strong></span> des territoires (par exemple tous les 5j pour Sentinel-2)</li>
+<li><span class="orange"><strong>Risques et difficultés</strong></span>: résultats robustes, disponibilité, temps de calcul, résolution adaptée</li>
 </ul>
 </section>
-<section id="eo-data-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>EO data (2/2)</h2>
+<section id="eo-data-23" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>EO data (2/3)</h2>
 <ul>
-<li>Cas d’usage potentiels multiples: supervision des forêts, de l’agriculture, des masses d’eau, supervision de l’urbanisation et des infrastructures, étude de la pollution environnementale, etc.</li>
+<li><span class="orange"><strong>Cas d’usage</strong></span> potentiels multiples: supervision des forêts, de l’agriculture, des masses d’eau, supervision de l’urbanisation et des infrastructures, étude de la pollution environnementale, etc.</li>
 <li>Aujourd’hui:
 <ul>
-<li>Calcul de statistiques sur l’occupation et l’usage des sols (consolidation de l’enquête Teruti)</li>
-<li>Mise à jour du répertoire de logements dans les DROM</li>
-<li>Consolidation des statistiques sur les vergers issues de l’enquête sur la structure des exploitations agricoles</li>
+<li>Calcul de statistiques sur <span class="blue2"><strong>l’occupation et l’usage des sols</strong></span> (consolidation de l’enquête Teruti)</li>
+<li>Consolidation des <span class="blue2"><strong>statistiques sur les vergers</strong></span> issues de l’enquête sur la structure des exploitations agricoles</li>
+<li>Mise à jour du <span class="blue2"><strong>répertoire de logements</strong></span> dans les DROM</li>
 </ul></li>
 </ul>
 </section>
-<section id="ocr-et-extraction" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>OCR et extraction</h2>
+<section id="eo-data-33" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>EO data (3/3)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="./img/sat_t1.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="./img/sat_t2.png"></p>
+</div>
+</div>
+</section>
+<section id="ocr-et-extraction-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>OCR et extraction (1/2)</h2>
 <ul>
-<li>OCR: reconnaissance optique de caractères</li>
+<li>OCR: <span class="orange"><strong>reconnaissance optique de caractères</strong></span></li>
 <li>Documents scannés ou photographiés exploitables pour la statistique publique:
 <ul>
-<li>Comptes annuels des entreprises</li>
-<li>Photographies de tickets de caisse pour l’enquête Budget de Famille</li>
+<li>Comptes <span class="blue2"><strong>annuels des entreprises</strong></span></li>
+<li><span class="blue2"><strong>Permis de construire</strong></span></li>
+<li>Photographies de <span class="blue2"><strong>tickets de caisse</strong></span> pour l’enquête Budget de Famille</li>
 </ul></li>
-<li>Extraction d’information structurée: cas des tableaux</li>
+<li>Extraction d’information structurée: cas des <span class="orange"><strong>tableaux</strong></span></li>
 </ul>
+</section>
+<section id="ocr-et-extraction-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>OCR et extraction (2/2)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="./img/pdf_example.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="./img/annotation_example.png"></p>
+</div>
+</div>
 </section></section>
 <section>
 <section id="nowcasting" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
