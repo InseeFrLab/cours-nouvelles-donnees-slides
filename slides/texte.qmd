@@ -9,14 +9,10 @@
     - Données [**privées**]{.blue2} mobilisables pour la statistique publique
 - Traitement automatique: fait référence à des tâches [**variées**]{.orange}
 
-## Modèles de langage (1/5) {.nostretch}
+## Modèles de langage (1/5) {.nostretch .smaller}
 
 - Encoder [**l'information présente**]{.orange} dans un texte:
-    - [**Matrice document-terme**]{.blue2}
-    
-*   _"La pratique du tricot et du crochet"_
-*   _"Transmettre la passion du timbre"_
-*   _"Vivre de sa passion"_
+    - [**Matrice document-terme**]{.blue2}. Avec le corpus _"La pratique du tricot et du crochet"_, _"Transmettre la passion du timbre"_ et _"Vivre de sa passion"_:
 
 |                                     | crochet | de | du | et | la | passion | pratique | sa | timbre | transmettre | tricot | vivre |
 | ----------------------------------- | :-------: | :--: | :--: | :--: | :--: | :-------: | :--------: | :--: | :------: | :-----------: | :------: | :-----: |
@@ -27,18 +23,18 @@
 ## Modèles de langage (2/5) {.nostretch}
 
 - Encoder [**l'information présente**]{.orange} dans un texte:
-    - Extension de la matrice document-terme: [**TF*IDF**]{.blue2} (Term Frequency * Inverse Document Frequency)
+    - Extension de la matrice document-terme: [**TF IDF**]{.blue2} (Term Frequency * Inverse Document Frequency)
     - Forme très simple d'[**apprentissage**]{.blue2}
     - Mais représentation [**sparse**]{.blue2}, fléau de la dimension
 
 ## Modèles de langage (3/5) {.nostretch}
 
 - Text embeddings: [**représentation dense**]{.orange}
-- Exemple de [**word2vec**]{.orange}
+- Exemple de [**word2vec**]{.orange} (2013), apprentissage non-supervisé d'embeddings à l'aide d'une tâche de prédiction des mots à partir de leur contexte
 
-![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png){width="60%" fig-align="center"}
+![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png){width="70%" fig-align="center"}
 
-## Modèles de langage (4/5) {.nostretch}
+## Modèles de langage (4/5)
 
 ![](img/word_embedding.png)
 
@@ -53,8 +49,8 @@
 
 - Classification dans des [**nomenclatures**]{.orange}:
     - [**Profession**]{.blue2} (enquêtes, recensement de la population)
-    - [**Activité]{.blue2} des entreprises
-    - [**Produits]{.blue2} de consommation
+    - [**Activité**]{.blue2} des entreprises
+    - [**Produits**]{.blue2} de consommation
 - [**Appariements**]{.orange}
 - [**Extraction automatique**]{.orange} de contenu au sein de documents textuels
 - Modèles de langage [**génératifs**]{.orange}: assistants de code, RAG, etc.
