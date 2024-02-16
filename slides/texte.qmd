@@ -9,7 +9,7 @@
     - Données [**privées**]{.blue2} mobilisables pour la statistique publique
 - Traitement automatique: fait référence à des tâches [**variées**]{.orange}
 
-## Modèles de langage (1/2) {.nostretch}
+## Modèles de langage (1/5) {.nostretch}
 
 - Encoder [**l'information présente**]{.orange} dans un texte:
     - [**Matrice document-terme**]{.blue2}
@@ -24,26 +24,26 @@
 | Transmettre sa passion du timbre    | 0       | 0  | 1  | 0  | 0  | 1       | 0        | 1  | 1      | 1           | 0      | 0     |
 | Vivre de sa passion                 | 0       | 1  | 0  | 0  | 0  | 1       | 0        | 1  | 0      | 0           | 0      | 1     |
 
-## Modèles de langage (2/2) {.nostretch}
+## Modèles de langage (2/5) {.nostretch}
 
 - Encoder [**l'information présente**]{.orange} dans un texte:
     - Extension de la matrice document-terme: [**TF*IDF**]{.blue2} (Term Frequency * Inverse Document Frequency)
     - Forme très simple d'[**apprentissage**]{.blue2}
     - Mais représentation [**sparse**]{.blue2}, fléau de la dimension
 
-## Modèles de langage (2/2) {.nostretch}
+## Modèles de langage (3/5) {.nostretch}
 
 - Text embeddings: [**représentation dense**]{.orange}
 - Exemple de [**word2vec**]{.orange}
 
 ![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png){width="60%" fig-align="center"}
 
-## Modèles de langage (2/2) {.nostretch}
+## Modèles de langage (4/5) {.nostretch}
 
 ![](img/word_embedding.png)
 
 
-## Modèles de langage (2/2) {.nostretch}
+## Modèles de langage (5/5) {.nostretch}
 
 - Aujourd'hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone: le [**Transformer**]{.orange}
 - Embeddings des mots qui composent un texte deviennent [**contextuels**]{.orange}
