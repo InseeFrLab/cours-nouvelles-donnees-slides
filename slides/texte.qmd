@@ -2,51 +2,59 @@
 
 ## Introduction
 
-- Le traitement du texte et du langage est un des domaines de recherche les plus actifs en sciences des données
-- Beaucoup d'applications potentielles pour la statistique publique:
-    - Données d'enquête
-    - Données administratives
-    - Données privées mobilisables pour la statistique publique
-- Traitement automatique: fait référence à des tâches variées
-
-## Collecte (1/2)
-
-- Webscraping: extraction du contenu de sites Internet
-- Information textuelle très riche sur Internet, mobilisable à des fins de statistique publique
-- Enjeux:
-    - Techniques: évolution des pages web, interactivité des sites
-    - Légaux: directives de 2020 de la CNIL, pas de scraping sans prévenir
-- Bonnes pratiques: `robots.txt`
-- API: mode préférentiel de collecte de données
-
-## Collecte (2/2)
-
-- En pratique:
-    - `Python`: `BeautifulSoup` (parser), `Scrapy` (crawler)
-    - `R`: `httr`, `rvest`, `polite`
-    - `Selenium`: outils d'automatisation
+- Le traitement automatique du texte et du langage est un des [**domaines de recherche les plus actifs**]{.orange} en sciences des données
+- [**Beaucoup d'applications**]{.orange} potentielles pour la statistique publique:
+    - Données d'[**enquête**]{.blue2}
+    - Données [**administratives**]{.blue2}
+    - Données [**privées**]{.blue2} mobilisables pour la statistique publique
+- Traitement automatique: fait référence à des tâches [**variées**]{.orange}
 
 ## Modèles de langage (1/2) {.nostretch}
 
-- Encoder l'information présente dans un texte:
-    - Matrice document-terme: représentation sparse
-    - Embeddings: représentation dense
-- Exemple de word2vec
+- Encoder [**l'information présente**]{.orange} dans un texte:
+    - [**Matrice document-terme**]{.blue2}
+    
+*   _"La pratique du tricot et du crochet"_
+*   _"Transmettre la passion du timbre"_
+*   _"Vivre de sa passion"_
+
+|                                     | crochet | de | du | et | la | passion | pratique | sa | timbre | transmettre | tricot | vivre |
+| ----------------------------------- | :-------: | :--: | :--: | :--: | :--: | :-------: | :--------: | :--: | :------: | :-----------: | :------: | :-----: |
+| La pratique du tricot et du crochet | 1       | 0  | 2  | 1  | 1  | 0       | 1        | 0  | 0      | 0           | 1      | 0     |
+| Transmettre sa passion du timbre    | 0       | 0  | 1  | 0  | 0  | 1       | 0        | 1  | 1      | 1           | 0      | 0     |
+| Vivre de sa passion                 | 0       | 1  | 0  | 0  | 0  | 1       | 0        | 1  | 0      | 0           | 0      | 1     |
+
+## Modèles de langage (2/2) {.nostretch}
+
+- Encoder [**l'information présente**]{.orange} dans un texte:
+    - Extension de la matrice document-terme: [**TF*IDF**]{.blue2} (Term Frequency * Inverse Document Frequency)
+    - Forme très simple d'[**apprentissage**]{.blue2}
+    - Mais représentation [**sparse**]{.blue2}, fléau de la dimension
+
+## Modèles de langage (2/2) {.nostretch}
+
+- Text embeddings: [**représentation dense**]{.orange}
+- Exemple de [**word2vec**]{.orange}
 
 ![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png){width="60%" fig-align="center"}
 
 ## Modèles de langage (2/2) {.nostretch}
 
-- Aujourd'hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone: le Transformer
-- Embeddings des mots qui composent un texte deviennent contextuels
-- Boom des modèle de langage "génératifs"
+![](img/word_embedding.png)
+
+
+## Modèles de langage (2/2) {.nostretch}
+
+- Aujourd'hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone: le [**Transformer**]{.orange}
+- Embeddings des mots qui composent un texte deviennent [**contextuels**]{.orange}
+- Explosion des modèle de langage [**génératifs**]{.orange}
 
 ## Applications pour la statistique publique
 
-- Classification dans des nomenclatures:
-    - Profession (enquêtes, recensement de la population)
-    - Activité des entreprises
-    - Produits de consommation
-- Appariements
-- Extraction automatique de contenu au sein de documents textuels
-- Modèles de langage génératifs: assistants de code, etc.
+- Classification dans des [**nomenclatures**]{.orange}:
+    - [**Profession**]{.blue2} (enquêtes, recensement de la population)
+    - [**Activité]{.blue2} des entreprises
+    - [**Produits]{.blue2} de consommation
+- [**Appariements**]{.orange}
+- [**Extraction automatique**]{.orange} de contenu au sein de documents textuels
+- Modèles de langage [**génératifs**]{.orange}: assistants de code, etc.
