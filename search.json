@@ -298,7 +298,7 @@
     "href": "slides/index.html#applications-pour-la-statistique-publique",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Applications pour la statistique publique",
-    "text": "Applications pour la statistique publique\n\nClassification dans des nomenclatures:\n\nProfession (enquêtes, recensement de la population)\n**Activité des entreprises\n**Produits de consommation\n\nAppariements\nExtraction automatique de contenu au sein de documents textuels\nModèles de langage génératifs: assistants de code, etc."
+    "text": "Applications pour la statistique publique\n\nClassification dans des nomenclatures:\n\nProfession (enquêtes, recensement de la population)\n**Activité des entreprises\n**Produits de consommation\n\nAppariements\nExtraction automatique de contenu au sein de documents textuels\nModèles de langage génératifs: assistants de code, RAG, etc."
   },
   {
     "objectID": "slides/index.html#représentation-12",
