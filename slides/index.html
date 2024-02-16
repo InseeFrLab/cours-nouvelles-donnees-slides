@@ -1381,16 +1381,13 @@ Figure&nbsp;1
 <li>Traitement automatique: fait référence à des tâches <span class="orange"><strong>variées</strong></span></li>
 </ul>
 </section>
-<section id="modèles-de-langage-15" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
+<section id="modèles-de-langage-15" class="slide level2 nostretch smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Modèles de langage (1/5)</h2>
 <ul>
 <li>Encoder <span class="orange"><strong>l’information présente</strong></span> dans un texte:
 <ul>
-<li><span class="blue2"><strong>Matrice document-terme</strong></span></li>
+<li><span class="blue2"><strong>Matrice document-terme</strong></span>. Avec le corpus <em>“La pratique du tricot et du crochet”</em>, <em>“Transmettre la passion du timbre”</em> et <em>“Vivre de sa passion”</em>:</li>
 </ul></li>
-<li><em>“La pratique du tricot et du crochet”</em></li>
-<li><em>“Transmettre la passion du timbre”</em></li>
-<li><em>“Vivre de sa passion”</em></li>
 </ul>
 <table>
 <colgroup>
@@ -1479,7 +1476,7 @@ Figure&nbsp;1
 <ul>
 <li>Encoder <span class="orange"><strong>l’information présente</strong></span> dans un texte:
 <ul>
-<li>Extension de la matrice document-terme: <span class="blue2">**TF*IDF**</span> (Term Frequency * Inverse Document Frequency)</li>
+<li>Extension de la matrice document-terme: <span class="blue2"><strong>TF IDF</strong></span> (Term Frequency * Inverse Document Frequency)</li>
 <li>Forme très simple d’<span class="blue2"><strong>apprentissage</strong></span></li>
 <li>Mais représentation <span class="blue2"><strong>sparse</strong></span>, fléau de la dimension</li>
 </ul></li>
@@ -1489,18 +1486,18 @@ Figure&nbsp;1
 <h2>Modèles de langage (3/5)</h2>
 <ul>
 <li>Text embeddings: <span class="orange"><strong>représentation dense</strong></span></li>
-<li>Exemple de <span class="orange"><strong>word2vec</strong></span></li>
+<li>Exemple de <span class="orange"><strong>word2vec</strong></span> (2013), apprentissage non-supervisé d’embeddings à l’aide d’une tâche de prédiction des mots à partir de leur contexte</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+<p><img data-src="https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </section>
-<section id="modèles-de-langage-45" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
+<section id="modèles-de-langage-45" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Modèles de langage (4/5)</h2>
-<p><img data-src="img/word_embedding.png"></p>
-</section>
+
+<img data-src="img/word_embedding.png" class="r-stretch"></section>
 <section id="modèles-de-langage-55" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
 <h2>Modèles de langage (5/5)</h2>
 <ul>
@@ -1515,8 +1512,8 @@ Figure&nbsp;1
 <li>Classification dans des <span class="orange"><strong>nomenclatures</strong></span>:
 <ul>
 <li><span class="blue2"><strong>Profession</strong></span> (enquêtes, recensement de la population)</li>
-<li><span class="blue2">**Activité</span> des entreprises</li>
-<li><span class="blue2">**Produits</span> de consommation</li>
+<li><span class="blue2"><strong>Activité</strong></span> des entreprises</li>
+<li><span class="blue2"><strong>Produits</strong></span> de consommation</li>
 </ul></li>
 <li><span class="orange"><strong>Appariements</strong></span></li>
 <li><span class="orange"><strong>Extraction automatique</strong></span> de contenu au sein de documents textuels</li>
