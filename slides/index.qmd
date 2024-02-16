@@ -212,6 +212,7 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
 
 - Enjeu de confidentialité
 
+{{< include "collecte.qmd" >}}
 
 # Données géolocalisées
 
