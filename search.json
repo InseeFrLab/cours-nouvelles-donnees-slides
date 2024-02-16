@@ -259,39 +259,39 @@
     "text": "Introduction\n\nLe traitement automatique du texte et du langage est un des domaines de recherche les plus actifs en sciences des données\nBeaucoup d’applications potentielles pour la statistique publique:\n\nDonnées d’enquête\nDonnées administratives\nDonnées privées mobilisables pour la statistique publique\n\nTraitement automatique: fait référence à des tâches variées"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-12",
-    "href": "slides/index.html#modèles-de-langage-12",
+    "objectID": "slides/index.html#modèles-de-langage-15",
+    "href": "slides/index.html#modèles-de-langage-15",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (1/2)",
-    "text": "Modèles de langage (1/2)\n\nEncoder l’information présente dans un texte:\n\nMatrice document-terme\n\n“La pratique du tricot et du crochet”\n“Transmettre la passion du timbre”\n“Vivre de sa passion”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncrochet\nde\ndu\net\nla\npassion\npratique\nsa\ntimbre\ntransmettre\ntricot\nvivre\n\n\n\n\nLa pratique du tricot et du crochet\n1\n0\n2\n1\n1\n0\n1\n0\n0\n0\n1\n0\n\n\nTransmettre sa passion du timbre\n0\n0\n1\n0\n0\n1\n0\n1\n1\n1\n0\n0\n\n\nVivre de sa passion\n0\n1\n0\n0\n0\n1\n0\n1\n0\n0\n0\n1"
+    "section": "Modèles de langage (1/5)",
+    "text": "Modèles de langage (1/5)\n\nEncoder l’information présente dans un texte:\n\nMatrice document-terme\n\n“La pratique du tricot et du crochet”\n“Transmettre la passion du timbre”\n“Vivre de sa passion”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncrochet\nde\ndu\net\nla\npassion\npratique\nsa\ntimbre\ntransmettre\ntricot\nvivre\n\n\n\n\nLa pratique du tricot et du crochet\n1\n0\n2\n1\n1\n0\n1\n0\n0\n0\n1\n0\n\n\nTransmettre sa passion du timbre\n0\n0\n1\n0\n0\n1\n0\n1\n1\n1\n0\n0\n\n\nVivre de sa passion\n0\n1\n0\n0\n0\n1\n0\n1\n0\n0\n0\n1"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-22",
-    "href": "slides/index.html#modèles-de-langage-22",
+    "objectID": "slides/index.html#modèles-de-langage-25",
+    "href": "slides/index.html#modèles-de-langage-25",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (2/2)",
-    "text": "Modèles de langage (2/2)\n\nEncoder l’information présente dans un texte:\n\nExtension de la matrice document-terme: **TF*IDF** (Term Frequency * Inverse Document Frequency)\nForme très simple d’apprentissage\nMais représentation sparse, fléau de la dimension"
+    "section": "Modèles de langage (2/5)",
+    "text": "Modèles de langage (2/5)\n\nEncoder l’information présente dans un texte:\n\nExtension de la matrice document-terme: **TF*IDF** (Term Frequency * Inverse Document Frequency)\nForme très simple d’apprentissage\nMais représentation sparse, fléau de la dimension"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-22-1",
-    "href": "slides/index.html#modèles-de-langage-22-1",
+    "objectID": "slides/index.html#modèles-de-langage-35",
+    "href": "slides/index.html#modèles-de-langage-35",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (2/2)",
-    "text": "Modèles de langage (2/2)\n\nText embeddings: représentation dense\nExemple de word2vec"
+    "section": "Modèles de langage (3/5)",
+    "text": "Modèles de langage (3/5)\n\nText embeddings: représentation dense\nExemple de word2vec"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-22-2",
-    "href": "slides/index.html#modèles-de-langage-22-2",
+    "objectID": "slides/index.html#modèles-de-langage-45",
+    "href": "slides/index.html#modèles-de-langage-45",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (2/2)",
-    "text": "Modèles de langage (2/2)"
+    "section": "Modèles de langage (4/5)",
+    "text": "Modèles de langage (4/5)"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-22-3",
-    "href": "slides/index.html#modèles-de-langage-22-3",
+    "objectID": "slides/index.html#modèles-de-langage-55",
+    "href": "slides/index.html#modèles-de-langage-55",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (2/2)",
-    "text": "Modèles de langage (2/2)\n\nAujourd’hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone: le Transformer\nEmbeddings des mots qui composent un texte deviennent contextuels\nExplosion des modèle de langage génératifs"
+    "section": "Modèles de langage (5/5)",
+    "text": "Modèles de langage (5/5)\n\nAujourd’hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone: le Transformer\nEmbeddings des mots qui composent un texte deviennent contextuels\nExplosion des modèle de langage génératifs"
   },
   {
     "objectID": "slides/index.html#applications-pour-la-statistique-publique",
