@@ -263,7 +263,7 @@
     "href": "slides/index.html#introduction",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Introduction",
-    "text": "Introduction\n\nLe traitement automatique du texte et du langage est un des domaines de recherche les plus actifs en sciences des données\nBeaucoup d’applications potentielles pour la statistique publique:\n\nDonnées d’enquête\nDonnées administratives\nDonnées privées mobilisables pour la statistique publique\n\nTraitement automatique: fait référence à des tâches variées"
+    "text": "Introduction\n\nUn des domaines de recherche les plus actifs en data science\nBeaucoup d’applications potentielles pour la statistique publique:\n\nDonnées d’enquête\nDonnées administratives\nDonnées privées mobilisables pour la statistique publique\n\nTraitement automatique: fait référence à des tâches variées"
   },
   {
     "objectID": "slides/index.html#modèles-de-langage-15",
@@ -277,7 +277,7 @@
     "href": "slides/index.html#modèles-de-langage-25",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Modèles de langage (2/5)",
-    "text": "Modèles de langage (2/5)\n\nEncoder l’information présente dans un texte:\n\nExtension de la matrice document-terme: TF IDF (Term Frequency * Inverse Document Frequency)\nForme très simple d’apprentissage\nMais représentation sparse, fléau de la dimension"
+    "text": "Modèles de langage (2/5)\n\nEncoder l’information présente dans un texte\n\n\nExtension de la matrice document-terme: TF IDF\n\nTerm Frequency * Inverse Document Frequency\n\nForme très simple d’apprentissage\nMais représentation sparse, fléau de la dimension"
   },
   {
     "objectID": "slides/index.html#modèles-de-langage-35",
