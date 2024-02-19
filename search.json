@@ -147,6 +147,13 @@
     "text": "Exemple 4: le SNDS\n\nAppariement des grandes bases médico-administratives nationales, notamment :\n\nles données de l’assurance maladie (base SNIIRAM) ;\nles données des hôpitaux (base PMSI) ;\nles causes médicales de décès (base du CépiDC de l’Inserm).\n\n\n\n\nFlux massif:\n\n1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d’actes (plus de 3000 variables) qui représentent 450 To de données…\n\n\n\n\n\nLien entre médecine de ville et médecine hospitalière\n\nPermet reconstruction du parcours de soin complet (EDP-Santé)\n\n\n\n\n\nEnjeu de confidentialité"
   },
   {
+    "objectID": "slides/index.html#enjeux",
+    "href": "slides/index.html#enjeux",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Enjeux",
+    "text": "Enjeux\n\nEnjeux méthodologiques très liés au changement de paradigme de collecte\nPlus un design ad hoc"
+  },
+  {
     "objectID": "slides/index.html#webscraping-13",
     "href": "slides/index.html#webscraping-13",
     "title": "Nouvelles sources de données pour la statistique publique",
@@ -158,7 +165,7 @@
     "href": "slides/index.html#webscraping-23",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Webscraping (2/3)",
-    "text": "Webscraping (2/3)\n\nEn pratique:\n\nPython: BeautifulSoup (parser), Scrapy (crawler)\nR: httr, rvest, polite\nSelenium: outils d’automatisation\n\n[Excellente formation] d’Antoine Palazzolo: https://inseefrlab.github.io/formation-webscraping/"
+    "text": "Webscraping (2/3)\n\nEn pratique:\n\nPython: BeautifulSoup (parser), Scrapy (crawler)\nR: httr, rvest, polite\nSelenium: outils d’automatisation\n\nExcellente formation d’Antoine Palazzolo"
   },
   {
     "objectID": "slides/index.html#webscraping-33",
