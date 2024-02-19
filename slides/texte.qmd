@@ -2,7 +2,7 @@
 
 ## Introduction
 
-- Le traitement automatique du texte et du langage est un des [**domaines de recherche les plus actifs**]{.orange} en sciences des données
+- Un des [**domaines de recherche les plus actifs**]{.orange} en _data science_
 - [**Beaucoup d'applications**]{.orange} potentielles pour la statistique publique:
     - Données d'[**enquête**]{.blue2}
     - Données [**administratives**]{.blue2}
@@ -22,14 +22,16 @@
 
 ## Modèles de langage (2/5) {.nostretch}
 
-- Encoder [**l'information présente**]{.orange} dans un texte:
-    - Extension de la matrice document-terme: [**TF IDF**]{.blue2} (Term Frequency * Inverse Document Frequency)
-    - Forme très simple d'[**apprentissage**]{.blue2}
-    - Mais représentation [**sparse**]{.blue2}, fléau de la dimension
+<h4>Encoder [**l'information présente**]{.orange} dans un texte</h4>
+
+- Extension de la matrice document-terme: [**TF IDF**]{.blue2}
+    + _Term Frequency_ * _Inverse Document Frequency_
+- Forme très simple d'[**apprentissage**]{.blue2}
+- Mais représentation [**sparse**]{.blue2}, fléau de la dimension
 
 ## Modèles de langage (3/5) {.nostretch}
 
-- Text embeddings: [**représentation dense**]{.orange}
+- _Text embeddings_: [**représentation dense**]{.orange}
 - Exemple de [**word2vec**]{.orange} (2013), apprentissage non-supervisé d'embeddings à l'aide d'une tâche de prédiction des mots à partir de leur contexte
 
 ![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png){width="70%" fig-align="center"}
