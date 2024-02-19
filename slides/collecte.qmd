@@ -1,5 +1,12 @@
 # Collecte de données
 
+## Enjeux
+
+- Enjeux méthodologiques très liés au changement de paradigme de collecte
+
+- Plus un _design ad hoc_ 
+
+
 ## Webscraping (1/3)
 
 - [**Webscraping**]{.orange}: extraction du contenu de sites Internet
@@ -15,7 +22,7 @@
     - `Python`: `BeautifulSoup` (parser), `Scrapy` (crawler)
     - `R`: `httr`, `rvest`, `polite`
     - `Selenium`: outils d'automatisation
-- [**Excellente formation**] d'Antoine Palazzolo: https://inseefrlab.github.io/formation-webscraping/
+- [**Excellente formation** d'Antoine Palazzolo](https://inseefrlab.github.io/formation-webscraping/)
 
 ## Webscraping (3/3)
 
