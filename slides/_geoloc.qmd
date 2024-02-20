@@ -39,7 +39,7 @@
 
 ![La  première carte choroplèthe (Dupin, 1928)](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Carte_figurative_de_l%27instruction_populaire_de_la_France.jpg/800px-Carte_figurative_de_l%27instruction_populaire_de_la_France.jpg)
 
-![Une carte de la population actuelle faite avec {{< fa brands r-project >}} inspirée par ce style ([source](https://rgeo.linogaliana.fr/exercises/cartography.html))](./img/pop.png){#fig-hanno}
+![Une carte de la population actuelle faite avec {{< fa brands r-project >}} inspirée par ce style ([source](https://rgeo.linogaliana.fr/exercises/cartography.html))](./img/pop.png)
 
 :::
 
@@ -66,7 +66,7 @@ la librairie {{< fa brands js-square >}} `gridviz` (visible sur [Observable](htt
 
 ## Quels apports ? {.smaller}
 
-- Calculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques. 
+- Calculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques:
     + Etudes territoriales
     + Aide pour les acteurs publics
     + Source d'information de contexte pour tous les acteurs (publics & privés)
@@ -84,40 +84,40 @@ la librairie {{< fa brands js-square >}} `gridviz` (visible sur [Observable](htt
     + Carte: _dataviz_ connue et compréhensible par un large spectre de publics
 
 
-## Exemple 1: données de téléphonie mobile
+## Exemple: données de téléphonie mobile
 
 1. Call Detail Records (CDR)
-    + Générés lors des communications actives d’un utilisateur à travers son téléphone mobile (appel, envoi de SMS, etc.);
+    + Générés lors des communications actives d’un utilisateur à travers son téléphone mobile (appel, envoi de SMS, etc.)
 2. Données de signalisation passive:
     + Issues des connexions _data_ automatiques
-    + Collectées par les opérateurs principalement à des fins d’optimisation et de surveillance de leurs réseaux.
+    + Collectées par les opérateurs principalement à des fins d’optimisation et de surveillance de leurs réseaux
     + Fréquence temporelle >> données CDR.
 
-## Exemple 1: données de téléphonie mobile (CDR) {.smaller}
+## Exemple: données de téléphonie mobile (CDR) {.smaller}
 
-- Statistiques intéressantes sur les populations présentes et les déplacements de la population.
+- Statistiques intéressantes sur les populations présentes et les déplacements de la population
     + @galiana-20: mouvements de population avant/après le confinement de 2020
 
 ![](https://inseefrlab.github.io/cours-nouvelles-donnees-site/img/geolocalized_data/confinement-deconfinement.png){fig-align="center"}
 
-## Exemple 1: données de signalisation {.smaller}
+## Exemple: données de signalisation {.smaller}
 
 - Article _Journal of official statistics_
 
-![](https://inseefrlab.github.io/cours-nouvelles-donnees-site/gif/paris_week_densities.gif)
+![](https://inseefrlab.github.io/cours-nouvelles-donnees-site/gif/paris_week_densities.gif){fig-align="center"}
 
-## Exemple 1: enjeux {.smaller}
+## Exemple: enjeux {.smaller}
 
-- Questions sur la qualité : sous-champ de la population (clients d’un opérateur en particulier) donc biais de sélection à corriger pour s’assurer de la validité (partielle) des résultats;
-
-. . .
-
-- Questions sur la pérennité : l’Insee n’a donc aucun contrôle sur des possibles changements de format ou de méthode de collection des données. Pas de garantie que les indicateurs restent comparables au cours du temps.
+- Questions sur la qualité: sous-champ de la population (clients d’un opérateur en particulier) donc biais de sélection à corriger pour s’assurer de la validité (partielle) des résultats
 
 . . .
 
-- Questions d’éthique : avant d’utiliser ces données personnelles, il faut s’assurer que l’usage qui en est fait est proportionné et que la production statistique qui en résulte a une valeur ajoutée pour la population.
+- Questions sur la pérennité: l’Insee n’a donc aucun contrôle sur des possibles changements de format ou de méthode de collection des données. Pas de garantie que les indicateurs restent comparables au cours du temps
 
 . . .
 
-- Questions légales : aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique
+- Questions d’éthique: avant d’utiliser ces données personnelles, il faut s’assurer que l’usage qui en est fait est proportionné et que la production statistique qui en résulte a une valeur ajoutée pour la population
+
+. . .
+
+- Questions légales: aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique
