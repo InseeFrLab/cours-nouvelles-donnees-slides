@@ -2,8 +2,8 @@
 
 ## Prolifération des données
 
-- Numérisation et innovations technologiques ont réduit le coût de production de la donnée ;
-    + Volume de données produites en explosion
+- Numérisation et innovations technologiques ont réduit le coût de production de la donnée
+    + Volume de données produites en explosion :
 
 . . .
 
@@ -12,29 +12,29 @@
 . . .
 
 - ... mais une place accrue :
-    + Dans le débat public et l'action publique ([Supiot](https://www.fayard.fr/sciences-humaines/la-gouvernance-par-les-nombres-9782213681092), [Martin](https://www.cairn.info/l-empire-des-chiffres--9782200625719.htm)) ;
-    + Dans les stratégies d'entreprise.
+    + Dans le débat public et l'action publique ([Supiot](https://www.fayard.fr/sciences-humaines/la-gouvernance-par-les-nombres-9782213681092), [Martin](https://www.cairn.info/l-empire-des-chiffres--9782200625719.htm))
+    + Dans les stratégies d'entreprise
 
 
 ## Diversification des données {.smaller}
 
-- Des données de nature très différentes:
-    - Données structurées classiques ;
-    - Données géolocalisées ;
-    - Données textuelles et non structurées ;
-    - Images, sons et vidéos.
+- Des données de nature très différentes :
+    - Données structurées classiques
+    - Données géolocalisées
+    - Données textuelles et non structurées
+    - Images, sons et vidéos
 
 . . .
 
 - Besoin de nouvelles méthodes pour valoriser ces données :
-    - _Machine learning_ (re)devenu un outil classique ;
+    - _Machine learning_ (re)devenu un outil classique
     - Réseaux de neurone pour les problèmes complexes (NLP, CV)...
 
 ::: {.callout-tip}
 ## Pourquoi le _machine learning_ ?
 
-- Meilleure prise en compte des non-linéarités que statistique paramétrique ;
-- Simplicité à mise en oeuvre opérationnelle ;
+- Meilleure prise en compte des non-linéarités que la statistique paramétrique
+- Simplicité pour la mise en oeuvre opérationnelle
 - ...
 :::
 
@@ -174,7 +174,7 @@ plot_power_plants = Plot.plot({
 <h3>Données géolocalisées</h3>
 
 - Données tabulaires avec une dimension spatiale supplémentaire
-    + Dimension géographique prend des formes multiples:
+- Dimension géographique prend des formes multiples :
     + Points, lignes, polygones...
 
 . . .
@@ -185,18 +185,18 @@ plot_power_plants = Plot.plot({
 
 <h3>Données textuelles et non structurées</h3>
 
-- Techniques statistiques anciennes ([Levenshtein 1957](https://en.wikipedia.org/wiki/Levenshtein_distance), [perceptron](https://fr.wikipedia.org/wiki/Perceptron)) ;
+- Techniques statistiques anciennes ([Levenshtein 1957](https://en.wikipedia.org/wiki/Levenshtein_distance), [perceptron](https://fr.wikipedia.org/wiki/Perceptron))
 
 . . .
 
-- Applications limitées jusqu'aux années 2010 ;
+- Applications limitées jusqu'aux années 2010
 
 . . .
 
 - Développement très rapide de la recherche :
-    + Collecte accrue : réseaux sociaux, enquêtes...
-    + Baisse coûts stockage & augmentation ressources traitement ;
-    + Nouvelles techniques statistiques: _webscraping_, LLM...
+    + Collecte accrue : réseaux sociaux, enquêtes, _webscraping_...
+    + Baisse coûts stockage & augmentation ressources traitement
+    + Nouvelles techniques statistiques: LLM...
 
 . . .
 
