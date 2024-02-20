@@ -3,7 +3,7 @@
 ## Prolifération des données
 
 - Numérisation et innovations technologiques ont réduit le coût de production de la donnée
-    + Volume de données produites en explosion :
+    + Volume de données produites en explosion:
 
 . . .
 
@@ -11,14 +11,14 @@
 
 . . .
 
-- ... mais une place accrue :
+- ... mais une place accrue:
     + Dans le débat public et l'action publique ([Supiot](https://www.fayard.fr/sciences-humaines/la-gouvernance-par-les-nombres-9782213681092), [Martin](https://www.cairn.info/l-empire-des-chiffres--9782200625719.htm))
     + Dans les stratégies d'entreprise
 
 
 ## Diversification des données {.smaller}
 
-- Des données de nature très différentes :
+- Des données de nature très différentes:
     - Données structurées classiques
     - Données géolocalisées
     - Données textuelles et non structurées
@@ -26,7 +26,7 @@
 
 . . .
 
-- Besoin de nouvelles méthodes pour valoriser ces données :
+- Besoin de nouvelles méthodes pour valoriser ces données:
     - _Machine learning_ (re)devenu un outil classique
     - Réseaux de neurone pour les problèmes complexes (NLP, CV)...
 
@@ -174,7 +174,7 @@ plot_power_plants = Plot.plot({
 <h3>Données géolocalisées</h3>
 
 - Données tabulaires avec une dimension spatiale supplémentaire
-- Dimension géographique prend des formes multiples :
+- Dimension géographique prend des formes multiples:
     + Points, lignes, polygones...
 
 . . .
@@ -193,8 +193,8 @@ plot_power_plants = Plot.plot({
 
 . . .
 
-- Développement très rapide de la recherche :
-    + Collecte accrue : réseaux sociaux, enquêtes, _webscraping_...
+- Développement très rapide de la recherche:
+    + Collecte accrue: réseaux sociaux, enquêtes, _webscraping_...
     + Baisse coûts stockage & augmentation ressources traitement
     + Nouvelles techniques statistiques: LLM...
 
@@ -238,7 +238,7 @@ d3.json(urlApe).then(res => {
   }).join('');
 
   const confidenceRow = `<tr>
-    <td colspan="2" style="text-align:left; "><em>Indice de confiance : ${IC.toFixed(3)}</em></td>
+    <td colspan="2" style="text-align:left; "><em>Indice de confiance: ${IC.toFixed(3)}</em></td>
   </tr>`;
 
   const tableHTML = html`
