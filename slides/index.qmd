@@ -16,6 +16,10 @@ css: custom.css
 bibliography: references.bib
 ---
 
+## Lien vers le cours
+
+{{< qrcode https://inseefrlab.github.io/cours-nouvelles-donnees-slides/ width=500 height=500 >}}
+
 {{< include "_intro.qmd" >}}
 
 {{< include "_admin.qmd" >}}
