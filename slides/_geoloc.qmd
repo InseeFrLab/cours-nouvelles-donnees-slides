@@ -121,3 +121,12 @@ la librairie {{< fa brands js-square >}} `gridviz` (visible sur [Observable](htt
 . . .
 
 - Questions légales: aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique
+
+
+## Application
+
+- Application sur le [site web du cours](https://inseefrlab.github.io/cours-nouvelles-donnees-site/geolocalized_data_exemples.html)
+sur données agricoles 🚜🍎🐄
+- Manipuler les données du Registre Parcellaire Graphique (RPG) avec {{< fa brands r-project >}} et `PostGIS`
+
+<a href="https://datalab.sspcloud.fr/launcher/ide/rstudio?autoLaunch=true&amp;onyxia.friendlyName=%C2%ABtp-geo%C2%BB&amp;persistence.size=%C2%AB30Gi%C2%BB&amp;security.allowlist.enabled=false" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSPcloud-Tester%20via%20SSP--cloud-informational&amp;color=yellow?logo=Rstudio" alt="Onyxia"></a>

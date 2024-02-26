@@ -56,3 +56,20 @@
 - [**Appariements**]{.orange}
 - [**Extraction automatique**]{.orange} de contenu au sein de documents textuels
 - Modèles de langage [**génératifs**]{.orange}: assistants de code, RAG, etc.
+
+## Application 1
+
+- Consignes sur [le site web](https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html)
+- Codification automatique des entreprises dans la nomenclature d'activités
+- Exploitation des données Sirene avec {{< fa brands python >}} et `Fasttext`
+- Ouverture à la problématique du MLOps appliquée au NLP
+
+<a href="https://datalab.sspcloud.fr/launcher/ide/jupyter-python?autoLaunch=true&amp;onyxia.friendlyName=%C2%ABpython-datascience%C2%BB&amp;init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Ftomseimandi%2Finit-scripts%2Fmain%2Fcours-ensai.sh%C2%BB&amp;security.allowlist.enabled=false" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSPcloud-Tester%20via%20SSP--cloud-informational&amp;color=yellow?logo=Python" alt="Onyxia"></a>
+
+## Application 2 (optionnelle)
+
+- Consignes sur [le site web](https://inseefrlab.github.io/cours-nouvelles-donnees-site/textes_exemples.html)
+- Appariements flous entre noms de produits de supermarchés
+- Exploitation `OpenFoodFacts` avec `Elasticsearch` et {{< fa brands python >}}
+
+<a href="https://datalab.sspcloud.fr/launcher/ide/jupyter-python?autoLaunch=true&amp;onyxia.friendlyName=%C2%ABpython-datascience%C2%BB&amp;init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-jupyter.sh%C2%BB&amp;init.personalInitArgs=%C2%ABmodern-ds%20elastic_intro%C2%BB&amp;security.allowlist.enabled=false" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSPcloud-Tester%20via%20SSP--cloud-informational&amp;color=yellow?logo=Python" alt="Onyxia"></a>
