@@ -266,6 +266,13 @@
     "text": "Exemple: enjeux\n\nQuestions sur la qualité: sous-champ de la population (clients d’un opérateur en particulier) donc biais de sélection à corriger pour s’assurer de la validité (partielle) des résultats\n\n\n\nQuestions sur la pérennité: l’Insee n’a donc aucun contrôle sur des possibles changements de format ou de méthode de collection des données. Pas de garantie que les indicateurs restent comparables au cours du temps\n\n\n\n\nQuestions d’éthique: avant d’utiliser ces données personnelles, il faut s’assurer que l’usage qui en est fait est proportionné et que la production statistique qui en résulte a une valeur ajoutée pour la population\n\n\n\n\nQuestions légales: aujourd’hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique"
   },
   {
+    "objectID": "slides/index.html#application",
+    "href": "slides/index.html#application",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Application",
+    "text": "Application\n\nApplication sur le site web du cours sur données agricoles 🚜🍎🐄\nManipuler les données du Registre Parcellaire Graphique (RPG) avec  et PostGIS"
+  },
+  {
     "objectID": "slides/index.html#introduction",
     "href": "slides/index.html#introduction",
     "title": "Nouvelles sources de données pour la statistique publique",
@@ -313,6 +320,20 @@
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Applications pour la statistique publique",
     "text": "Applications pour la statistique publique\n\nClassification dans des nomenclatures:\n\nProfession (enquêtes, recensement de la population)\nActivité des entreprises\nProduits de consommation\n\nAppariements\nExtraction automatique de contenu au sein de documents textuels\nModèles de langage génératifs: assistants de code, RAG, etc."
+  },
+  {
+    "objectID": "slides/index.html#application-1",
+    "href": "slides/index.html#application-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Application 1",
+    "text": "Application 1\n\nConsignes sur le site web\nCodification automatique des entreprises dans la nomenclature d’activités\nExploitation des données Sirene avec  et Fasttext\nOuverture à la problématique du MLOps appliquée au NLP"
+  },
+  {
+    "objectID": "slides/index.html#application-2-optionnelle",
+    "href": "slides/index.html#application-2-optionnelle",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Application 2 (optionnelle)",
+    "text": "Application 2 (optionnelle)\n\nConsignes sur le site web\nAppariements flous entre noms de produits de supermarchés\nExploitation OpenFoodFacts avec Elasticsearch et"
   },
   {
     "objectID": "slides/index.html#représentation-12",
