@@ -3,15 +3,15 @@
 
 ## L'offre crée sa propre demande {.smaller}
 
-- Généralisation de traces numériques géolocalisées:
+- Généralisation de traces numériques géolocalisées :
     + Multiplication des acteurs (production & exploitation)
-    + Données mobile, GPS, localisation d’adresses IP, géolocalisation d'adresses...
+    + Données mobile, GPS, localisation d'adresses IP, géolocalisation d'adresses...
 
 . . .
 
-- Recherche et statistique publique:
-    + Intérêt ancien: enquêtes des sociologues du XIXe, école de Chicago (années 1920) mais données limitées
-    + Années 2010: quantification de masse de phénomènes <del>spatiaux</del> sociaux: déplacements, lieux fréquentés...
+- Recherche et statistique publique :
+    + Intérêt ancien : enquêtes des sociologues du XIXe, école de Chicago (années 1920) mais données limitées
+    + Années 2010 : quantification de masse de phénomènes <del>spatiaux</del> sociaux : déplacements, lieux fréquentés...
     + Statistique publique s'adapte en publiant des données fines (données carroyées...)
 
 <br>
@@ -66,67 +66,76 @@ la librairie {{< fa brands js-square >}} `gridviz` (visible sur [Observable](htt
 
 ## Quels apports ? {.smaller}
 
-- Calculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques:
+- Calculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques :
     + Etudes territoriales
     + Aide pour les acteurs publics
     + Source d'information de contexte pour tous les acteurs (publics & privés)
 
 . . .
 
-- Éclairer des phénomènes socio-économiques très locaux: 
+- Éclairer des phénomènes socio-économiques très locaux : 
     + Problématiques de mixité [@galiana2020segregation]
     + Concentration immobilière liée au niveau de vie [@andre-21]
-    + ...
+    + Localisation intra-communale des cambriolages de logements [@pramil2020cambri].
 
 . . .
 
 - Réaliser des _dataviz_ plus engageantes pour le public
-    + Carte: _dataviz_ connue et compréhensible par un large spectre de publics
+    + Carte : _dataviz_ connue et compréhensible par un large spectre de publics
 
 
-## Exemple: données de téléphonie mobile
+## Exemple : données de téléphonie mobile
 
 1. Call Detail Records (CDR)
-    + Générés lors des communications actives d’un utilisateur à travers son téléphone mobile (appel, envoi de SMS, etc.)
-2. Données de signalisation passive:
+    + Générés lors des communications actives d'un utilisateur à travers son téléphone mobile (appel, envoi de SMS, etc.)
+2. Données de signalisation passive :
     + Issues des connexions _data_ automatiques
-    + Collectées par les opérateurs principalement à des fins d’optimisation et de surveillance de leurs réseaux
+    + Collectées par les opérateurs principalement à des fins d'optimisation et de surveillance de leurs réseaux
     + Fréquence temporelle >> données CDR.
 
-## Exemple: données de téléphonie mobile (CDR) {.smaller}
+## Exemple : données de téléphonie mobile (CDR) {.smaller}
 
 - Statistiques intéressantes sur les populations présentes et les déplacements de la population
-    + @galiana-20: mouvements de population avant/après le confinement de 2020
+    + @galiana-20 : mouvements de population avant/après le confinement de 2020
 
 ![](https://inseefrlab.github.io/cours-nouvelles-donnees-site/img/geolocalized_data/confinement-deconfinement.png){fig-align="center"}
 
-## Exemple: données de signalisation {.smaller}
+## Exemple : données de signalisation {.smaller}
 
 - Article _Journal of official statistics_
 
 ![](https://inseefrlab.github.io/cours-nouvelles-donnees-site/gif/paris_week_densities.gif){fig-align="center"}
 
-## Exemple: enjeux {.smaller}
 
-- Questions sur la qualité: sous-champ de la population (clients d’un opérateur en particulier) donc biais de sélection à corriger pour s’assurer de la validité (partielle) des résultats
+## Exemple : enjeux
 
-. . .
-
-- Questions sur la pérennité: l’Insee n’a donc aucun contrôle sur des possibles changements de format ou de méthode de collection des données. Pas de garantie que les indicateurs restent comparables au cours du temps
+- Questions sur la [**qualité**]{.orange} : 
+    - **biais de sélection** à corriger ? (exemple : clients d'Orange)
 
 . . .
 
-- Questions d’éthique: avant d’utiliser ces données personnelles, il faut s’assurer que l’usage qui en est fait est proportionné et que la production statistique qui en résulte a une valeur ajoutée pour la population
+- Questions sur la [**pérennité**]{.orange} : 
+    - Pas de garantie sur la pérénité des formats, méthodes de collection des données. 
+    - Donc, pas de garantie que les indicateurs restent comparables au cours du temps.
+
+## Exemple : enjeux
+
+- Questions d'[**éthique**]{.orange} : 
+    - avant d'utiliser ces données personnelles, 
+        - usage proportionné ? 
+        - valeur ajoutée des statistiques produites pour la population ?
 
 . . .
 
-- Questions légales: aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique
+- Questions [**légales**]{.orange} : 
+    - Exemple : aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l'utilisation de données téléphoniques de signalisation pour la statistique publique.
+    - Modification du[ réglement européen 223/2009](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX%3A52023PC0402) à venir.
 
 
 ## Application
 
 - Application sur le [site web du cours](https://inseefrlab.github.io/cours-nouvelles-donnees-site/geolocalized_data_exemples.html)
-sur données agricoles 🚜🍎🐄
-- Manipuler les données du Registre Parcellaire Graphique (RPG) avec {{< fa brands r-project >}} et `PostGIS`
+sur données de transactions immobilières 💰💸🏠
+- Manipuler les données spatiales DVF et les données carroyées de l'Insee avec {{< fa brands r-project >}} et `DuckDB`
 
 <a href="https://datalab.sspcloud.fr/launcher/ide/rstudio?autoLaunch=true&amp;onyxia.friendlyName=%C2%ABtp-geo%C2%BB&amp;persistence.size=%C2%AB30Gi%C2%BB&amp;security.allowlist.enabled=false" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSPcloud-Tester%20via%20SSP--cloud-informational&amp;color=yellow?logo=Rstudio" alt="Onyxia"></a>
