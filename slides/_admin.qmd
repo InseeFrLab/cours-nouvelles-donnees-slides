@@ -3,8 +3,8 @@
 ## Contexte {.smaller}
 
 - Baisse généralisée des taux de réponse aux enquêtes [@LuitenHoxde; @beck2022] :
-    + Enquête "Cadre de vie et sécurité" : 72% (2012) à 66% (2021)
-    + SRCV : 85% (2010) à 80% (2019)
+    + Enquête "Cadre de vie et sécurité" : 72 % (2012) à 66 % (2021)
+    + SRCV : 85 % (2010) à 80 % (2019)
 
 . . .
 

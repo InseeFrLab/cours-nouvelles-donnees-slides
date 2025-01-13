@@ -9,34 +9,34 @@
 
 ## Webscraping (1/3)
 
-- [**Webscraping**]{.orange}: extraction du contenu de sites Internet
+- [**Webscraping**]{.orange} : extraction du contenu de sites Internet
 - Information textuelle [**très riche**]{.orange} sur Internet, mobilisable à des fins de statistique publique
-- [**Enjeux**]{.orange}:
-    - [**Techniques**]{.blue2}: évolution des pages web, interactivité des sites
-    - [**Légaux**]{.blue2}: jurisprudences, directives de 2020 de la CNIL
-- [**Bonnes pratiques**]{.orange}: `robots.txt`
+- [**Enjeux**]{.orange} :
+    - [**Techniques**]{.blue2} : évolution des pages web, interactivité des sites
+    - [**Légaux**]{.blue2} : jurisprudences, directives de 2020 de la CNIL
+- [**Bonnes pratiques**]{.orange} : `robots.txt`
 
 ## Webscraping (2/3)
 
-- [**En pratique**]{.orange}:
-    - `Python`: `BeautifulSoup` (parser), `Scrapy` (crawler)
-    - `R`: `httr`, `rvest`, `polite`
-    - `Selenium`: outils d'automatisation
+- [**En pratique**]{.orange} :
+    - `Python` : `BeautifulSoup` (parser), `Scrapy` (crawler)
+    - `R` : `httr`, `rvest`, `polite`
+    - `Selenium` : outils d'automatisation
 - [**Excellente formation** d'Antoine Palazzolo](https://inseefrlab.github.io/formation-webscraping/)
 
 ## Webscraping (3/3)
 
-- Prix dans le [**domaine de l'hôtellerie**]{.orange}: scraping du site [Booking.com](https://www.booking.com/)
-- Vente d'[**articles électroniques**]{.orange}:
-    - [boulanger](https://www.boulanger.com/)
+- Prix dans le [**domaine de l'hôtellerie**]{.orange} : scraping du site [Booking.com](https://www.booking.com/)
+- Vente d'[**articles électroniques**]{.orange} :
+    - [Boulanger](https://www.boulanger.com/)
     - [Rue du commerce](https://www.rueducommerce.fr/)
-- Scraping du [**site de la SNCF**]{.orange}: collecte quotidienne pour capter la volatilité des prix
+- Scraping du [**site de la SNCF**]{.orange} : collecte quotidienne pour capter la volatilité des prix
 
 ## Utilisation d'API
 
-- [**API**]{.orange}: interface de programmation
-- Mode [**préférentiel**]{.orange} de collecte de données:
+- [**API**]{.orange} : interface de programmation
+- Mode [**préférentiel**]{.orange} de collecte de données :
     - Plus de garanties sur [**la qualité**]{.blue2}
     - [**Reproductibité**]{.blue2}
     - ...
-- Avec `Python`: `requests`
+- Avec `Python` : `requests`
