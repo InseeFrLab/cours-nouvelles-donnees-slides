@@ -193,7 +193,7 @@
     "href": "slides/index.html#loffre-crée-sa-propre-demande",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "L’offre crée sa propre demande",
-    "text": "L’offre crée sa propre demande\n\nGénéralisation de traces numériques géolocalisées:\n\nMultiplication des acteurs (production & exploitation)\nDonnées mobile, GPS, localisation d’adresses IP, géolocalisation d’adresses…\n\n\n\n\nRecherche et statistique publique:\n\nIntérêt ancien: enquêtes des sociologues du XIXe, école de Chicago (années 1920) mais données limitées\nAnnées 2010: quantification de masse de phénomènes spatiaux sociaux: déplacements, lieux fréquentés…\nStatistique publique s’adapte en publiant des données fines (données carroyées…)\n\n\n\n\n\nRéférences\n\n\nRoth Camille. 2019. “Digital, Digitized, and Numerical Humanities.” Digital Scholarship in the Humanities\nAsh J, Kitchin R, Leszczynski A. 2018. “Digital turn, digital geographies ?” Progress in Human Geography\nEinav, L., & Levin, J. (2014). Economics in the age of big data. Science, 346(6210), 1243089."
+    "text": "L’offre crée sa propre demande\n\nGénéralisation de traces numériques géolocalisées :\n\nMultiplication des acteurs (production & exploitation)\nDonnées mobile, GPS, localisation d’adresses IP, géolocalisation d’adresses…\n\n\n\n\nRecherche et statistique publique :\n\nIntérêt ancien : enquêtes des sociologues du XIXe, école de Chicago (années 1920) mais données limitées\nAnnées 2010 : quantification de masse de phénomènes spatiaux sociaux : déplacements, lieux fréquentés…\nStatistique publique s’adapte en publiant des données fines (données carroyées…)\n\n\n\n\n\nRéférences\n\n\nRoth Camille. 2019. “Digital, Digitized, and Numerical Humanities.” Digital Scholarship in the Humanities\nAsh J, Kitchin R, Leszczynski A. 2018. “Digital turn, digital geographies ?” Progress in Human Geography\nEinav, L., & Levin, J. (2014). Economics in the age of big data. Science, 346(6210), 1243089."
   },
   {
     "objectID": "slides/index.html#un-enjeu-ancien",
@@ -235,42 +235,49 @@
     "href": "slides/index.html#quels-apports",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Quels apports ?",
-    "text": "Quels apports ?\n\nCalculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques:\n\nEtudes territoriales\nAide pour les acteurs publics\nSource d’information de contexte pour tous les acteurs (publics & privés)\n\n\n\n\nÉclairer des phénomènes socio-économiques très locaux:\n\nProblématiques de mixité (Galiana, Sémécurbe, et al. 2020)\nConcentration immobilière liée au niveau de vie (André et Meslin 2021)\n…\n\n\n\n\n\nRéaliser des dataviz plus engageantes pour le public\n\nCarte: dataviz connue et compréhensible par un large spectre de publics"
+    "text": "Quels apports ?\n\nCalculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques :\n\nEtudes territoriales\nAide pour les acteurs publics\nSource d’information de contexte pour tous les acteurs (publics & privés)\n\n\n\n\nÉclairer des phénomènes socio-économiques très locaux :\n\nProblématiques de mixité (Galiana, Sémécurbe, et al. 2020)\nConcentration immobilière liée au niveau de vie (André et Meslin 2021)\nLocalisation intra-communale des cambriolages de logements (Pramil 2020).\n\n\n\n\n\nRéaliser des dataviz plus engageantes pour le public\n\nCarte : dataviz connue et compréhensible par un large spectre de publics"
   },
   {
     "objectID": "slides/index.html#exemple-données-de-téléphonie-mobile",
     "href": "slides/index.html#exemple-données-de-téléphonie-mobile",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Exemple: données de téléphonie mobile",
-    "text": "Exemple: données de téléphonie mobile\n\nCall Detail Records (CDR)\n\nGénérés lors des communications actives d’un utilisateur à travers son téléphone mobile (appel, envoi de SMS, etc.)\n\nDonnées de signalisation passive:\n\nIssues des connexions data automatiques\nCollectées par les opérateurs principalement à des fins d’optimisation et de surveillance de leurs réseaux\nFréquence temporelle &gt;&gt; données CDR."
+    "section": "Exemple : données de téléphonie mobile",
+    "text": "Exemple : données de téléphonie mobile\n\nCall Detail Records (CDR)\n\nGénérés lors des communications actives d’un utilisateur à travers son téléphone mobile (appel, envoi de SMS, etc.)\n\nDonnées de signalisation passive :\n\nIssues des connexions data automatiques\nCollectées par les opérateurs principalement à des fins d’optimisation et de surveillance de leurs réseaux\nFréquence temporelle &gt;&gt; données CDR."
   },
   {
     "objectID": "slides/index.html#exemple-données-de-téléphonie-mobile-cdr",
     "href": "slides/index.html#exemple-données-de-téléphonie-mobile-cdr",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Exemple: données de téléphonie mobile (CDR)",
-    "text": "Exemple: données de téléphonie mobile (CDR)\n\nStatistiques intéressantes sur les populations présentes et les déplacements de la population\n\nGaliana, Suarez-Castillo, et al. (2020): mouvements de population avant/après le confinement de 2020"
+    "section": "Exemple : données de téléphonie mobile (CDR)",
+    "text": "Exemple : données de téléphonie mobile (CDR)\n\nStatistiques intéressantes sur les populations présentes et les déplacements de la population\n\nGaliana, Suarez-Castillo, et al. (2020) : mouvements de population avant/après le confinement de 2020"
   },
   {
     "objectID": "slides/index.html#exemple-données-de-signalisation",
     "href": "slides/index.html#exemple-données-de-signalisation",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Exemple: données de signalisation",
-    "text": "Exemple: données de signalisation\n\nArticle Journal of official statistics"
+    "section": "Exemple : données de signalisation",
+    "text": "Exemple : données de signalisation\n\nArticle Journal of official statistics"
   },
   {
     "objectID": "slides/index.html#exemple-enjeux",
     "href": "slides/index.html#exemple-enjeux",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Exemple: enjeux",
-    "text": "Exemple: enjeux\n\nQuestions sur la qualité: sous-champ de la population (clients d’un opérateur en particulier) donc biais de sélection à corriger pour s’assurer de la validité (partielle) des résultats\n\n\n\nQuestions sur la pérennité: l’Insee n’a donc aucun contrôle sur des possibles changements de format ou de méthode de collection des données. Pas de garantie que les indicateurs restent comparables au cours du temps\n\n\n\n\nQuestions d’éthique: avant d’utiliser ces données personnelles, il faut s’assurer que l’usage qui en est fait est proportionné et que la production statistique qui en résulte a une valeur ajoutée pour la population\n\n\n\n\nQuestions légales: aujourd’hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique"
+    "section": "Exemple : enjeux",
+    "text": "Exemple : enjeux\n\nQuestions sur la qualité :\n\nbiais de sélection à corriger ? (exemple : clients d’Orange)\n\n\n\n\nQuestions sur la pérennité :\n\nPas de garantie sur la pérénité des formats, méthodes de collection des données.\nDonc, pas de garantie que les indicateurs restent comparables au cours du temps."
+  },
+  {
+    "objectID": "slides/index.html#exemple-enjeux-1",
+    "href": "slides/index.html#exemple-enjeux-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Exemple : enjeux",
+    "text": "Exemple : enjeux\n\nQuestions d’éthique :\n\navant d’utiliser ces données personnelles,\n\nusage proportionné ?\nvaleur ajoutée des statistiques produites pour la population ?\n\n\n\n\n\nQuestions légales :\n\nExemple : aujourd’hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique.\nModification duréglement européen 223/2009 à venir."
   },
   {
     "objectID": "slides/index.html#application",
     "href": "slides/index.html#application",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Application",
-    "text": "Application\n\nApplication sur le site web du cours sur données agricoles 🚜🍎🐄\nManipuler les données du Registre Parcellaire Graphique (RPG) avec  et PostGIS"
+    "text": "Application\n\nApplication sur le site web du cours sur données de transactions immobilières 💰💸🏠\nManipuler les données spatiales DVF et les données carroyées de l’Insee avec  et DuckDB"
   },
   {
     "objectID": "slides/index.html#introduction",
@@ -473,6 +480,6 @@
     "href": "slides/index.html#bibliographie",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Bibliographie",
-    "text": "Bibliographie\n\n\n\n\nAndré, Mathias, et Olivier Meslin. 2021. « Et pour quelques appartements de plus : Étude de la propriété immobilière des ménages et du profil redistributif de la taxe foncière ».\n\n\nBeck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. « Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié ». Courrier des statistiques.\n\n\nBortoli, Clément, Stéphanie Combes, et Thomas Renault. 2018. « Nowcasting GDP Growth by Reading Newspapers ». Economie et Statistique / Economics and Statistics, Big Data et Statistics - Part 1, nᵒ 505-506: 17‑33. https://doi.org/10.24187/ecostat.2018.505d.1964.\n\n\nFornaro, Paolo. 2020. « Nowcasting Industrial Production Using Uncoventional Data Sources ». ETLA Working Papers 80. The Research Institute of the Finnish Economy. https://ideas.repec.org/p/rif/wpaper/80.html.\n\n\nGaliana, Lino, François Sémécurbe, Benjamin Sakarovitch, et Zbigniew Smoreda. 2020. « Residential segregation, daytime segregation and spatial frictions: an analysis from mobile phone data ».\n\n\nGaliana, Lino, Milena Suarez-Castillo, François Sémécurbe, Élise Coudin, et Marie-Pierre de Bellefon. 2020. « Retour partiel des mouvements de population avec le déconfinement ».\n\n\nHopp, Daniel. 2021. « Economic Nowcasting with Long Short-Term Memory Artificial Neural Networks (LSTM) ». arXiv. https://doi.org/10.48550/ARXIV.2106.08901.\n\n\nHumbert-Bottin, Élisabeth. 2018. « La déclaration sociale nominative: nouvelle référence pour les échanges de données sociales des entreprises vers les administrations ». Courrier des statistiques.\n\n\nLuiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. « Survey Nonresponse Trends and Fieldwork Effort in the 21st Century: Results of an International Study across Countries and Surveys ». Journal of Official Statistics 36 (3): 469‑87. https://doi.org/doi:10.2478/jos-2020-0025.\n\n\nRivière, Pascal. 2018. « Utiliser les déclarations administratives à des fins statistiques ». Courrier des statistiques.\n\n\nSchumacher, Christian. 2016. « A comparison of MIDAS and bridge equations ». International Journal of Forecasting 32 (2): 257‑70. https://EconPapers.repec.org/RePEc:eee:intfor:v:32:y:2016:i:2:p:257-270.\n\n\nStock, James, et Mark Watson. 2010. « Dynamic Factor Models ». In Oxford Handbook of Economic Forecasting, édité par Michael P. Clements et David F. Henry. Oxford: Oxford University Press; Oxford University Press. http://www.economics.harvard.edu/faculty/stock/files/dfm_oup_4.pdf."
+    "text": "Bibliographie\n\n\n\n\nAndré, Mathias, et Olivier Meslin. 2021. « Et pour quelques appartements de plus : Étude de la propriété immobilière des ménages et du profil redistributif de la taxe foncière ».\n\n\nBeck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. « Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié ». Courrier des statistiques.\n\n\nBortoli, Clément, Stéphanie Combes, et Thomas Renault. 2018. « Nowcasting GDP Growth by Reading Newspapers ». Economie et Statistique / Economics and Statistics, Big Data et Statistics - Part 1, nᵒ 505-506: 17‑33. https://doi.org/10.24187/ecostat.2018.505d.1964.\n\n\nFornaro, Paolo. 2020. « Nowcasting Industrial Production Using Uncoventional Data Sources ». ETLA Working Papers 80. The Research Institute of the Finnish Economy. https://ideas.repec.org/p/rif/wpaper/80.html.\n\n\nGaliana, Lino, François Sémécurbe, Benjamin Sakarovitch, et Zbigniew Smoreda. 2020. « Residential segregation, daytime segregation and spatial frictions: an analysis from mobile phone data ».\n\n\nGaliana, Lino, Milena Suarez-Castillo, François Sémécurbe, Élise Coudin, et Marie-Pierre de Bellefon. 2020. « Retour partiel des mouvements de population avec le déconfinement ».\n\n\nHopp, Daniel. 2021. « Economic Nowcasting with Long Short-Term Memory Artificial Neural Networks (LSTM) ». arXiv. https://doi.org/10.48550/ARXIV.2106.08901.\n\n\nHumbert-Bottin, Élisabeth. 2018. « La déclaration sociale nominative: nouvelle référence pour les échanges de données sociales des entreprises vers les administrations ». Courrier des statistiques.\n\n\nLuiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. « Survey Nonresponse Trends and Fieldwork Effort in the 21st Century: Results of an International Study across Countries and Surveys ». Journal of Official Statistics 36 (3): 469‑87. https://doi.org/doi:10.2478/jos-2020-0025.\n\n\nPramil, Julien. 2020. « Des risques de cambriolages de logements élevés dans les centres-villes des agglomérations de Paris-Lyon-Marseille, mais plus faibles dans leurs quartiers de « grands-ensembles » ».\n\n\nRivière, Pascal. 2018. « Utiliser les déclarations administratives à des fins statistiques ». Courrier des statistiques.\n\n\nSchumacher, Christian. 2016. « A comparison of MIDAS and bridge equations ». International Journal of Forecasting 32 (2): 257‑70. https://EconPapers.repec.org/RePEc:eee:intfor:v:32:y:2016:i:2:p:257-270.\n\n\nStock, James, et Mark Watson. 2010. « Dynamic Factor Models ». In Oxford Handbook of Economic Forecasting, édité par Michael P. Clements et David F. Henry. Oxford: Oxford University Press; Oxford University Press. http://www.economics.harvard.edu/faculty/stock/files/dfm_oup_4.pdf."
   }
 ]
