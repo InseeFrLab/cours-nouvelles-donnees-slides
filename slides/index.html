@@ -6,12 +6,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script>
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.550">
+  <meta name="generator" content="quarto-1.6.40">
 
   <title>Nouvelles sources de données pour la statistique publique</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -44,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -72,7 +71,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -86,7 +85,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -117,7 +116,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-27ed07df87b78d55b4ad4c3bb7b1d3ac.css">
   <link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/InseeFrLab/onyxia/logo.css">
   <link rel="stylesheet" href="custom.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -126,204 +125,6 @@
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -421,7 +222,7 @@
 
 <section id="title-slide" data-background-image="../site_libs/quarto-contrib/quarto-project/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Nouvelles sources de données pour la statistique publique</h1>
-  <p class="subtitle"></p><p><span class="orange"><strong><span class="orange">Lino Galiana (Insee), Tom Seimandi (Insee)</span></strong></span></p><p></p>
+  <p class="subtitle"></p><p><span class="orange"><strong><span class="orange">Lino Galiana (Insee), Julien PRAMIL (Insee)</span></strong></span></p><p></p>
 
 <div class="quarto-title-authors">
 </div>
@@ -431,7 +232,7 @@
 <h2>Lien vers le cours</h2>
 <div id="qrcode" class="qrcode"></div>
 <script type="text/javascript">
-var qrcode = new QRCode("qrcode", {"colorDark":"#000000","width":"500","colorLight":"#ffffff","text":"https://inseefrlab.github.io/cours-nouvelles-donnees-slides/","height":"500"});
+var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff","height":"500","text":"https://inseefrlab.github.io/cours-nouvelles-donnees-slides/","width":"500"});
 </script>
     
 </section>
@@ -445,7 +246,7 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","width":"500","colorLig
 <ul>
 <li>Numérisation et innovations technologiques ont réduit le coût de production de la donnée
 <ul>
-<li>Volume de données produites en explosion:</li>
+<li>Volume de données produites en explosion :</li>
 </ul></li>
 </ul>
 <div class="fragment">
@@ -455,7 +256,7 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","width":"500","colorLig
 </div>
 <div class="fragment">
 <ul>
-<li>… mais une place accrue:
+<li>… mais une place accrue :
 <ul>
 <li>Dans le débat public et l’action publique (<a href="https://www.fayard.fr/sciences-humaines/la-gouvernance-par-les-nombres-9782213681092">Supiot</a>, <a href="https://www.cairn.info/l-empire-des-chiffres--9782200625719.htm">Martin</a>)</li>
 <li>Dans les stratégies d’entreprise</li>
@@ -466,7 +267,7 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","width":"500","colorLig
 <section id="diversification-des-données" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Diversification des données</h2>
 <ul>
-<li>Des données de nature très différentes:
+<li>Des données de nature très différentes :
 <ul>
 <li>Données structurées classiques</li>
 <li>Données géolocalisées</li>
@@ -476,7 +277,7 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","width":"500","colorLig
 </ul>
 <div class="fragment">
 <ul>
-<li>Besoin de nouvelles méthodes pour valoriser ces données:
+<li>Besoin de nouvelles méthodes pour valoriser ces données :
 <ul>
 <li><em>Machine learning</em> (re)devenu un outil classique</li>
 <li>Réseaux de neurone pour les problèmes complexes (NLP, CV)…</li>
@@ -509,7 +310,7 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","width":"500","colorLig
 <li>Données <strong>structurées</strong> sous forme de tableau</li>
 </ul>
 
-<img data-src="https://r4ds.hadley.nz/images/tidy-1.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://r4ds.hadley.nz/data-tidy.html">Hadley Wickham, <em>R for data science</em></a></p></section>
+<img data-src="https://r4ds.hadley.nz/images/tidy-1.png" class="r-stretch quarto-figure-center"><p class="caption">Source : <a href="https://r4ds.hadley.nz/data-tidy.html">Hadley Wickham, <em>R for data science</em></a></p></section>
 <section id="diversification-des-données-14-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Diversification des données (1/4)</h2>
 <h3 data-background-image="background.svg" data-background-size="contain" id="données-administratives-1">Données administratives</h3>
@@ -533,8 +334,8 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","width":"500","colorLig
 </div>
 <div class="cell hidden">
 <div class="sourceCode cell-code hidden" id="cb3" data-startfrom="1" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a></a>url <span class="op">=</span> <span class="st">"https://files.data.gouv.fr/geo-dvf/latest/csv/2020/communes/92/92049.csv"</span></span>
-<span id="cb3-2"><a></a>proxy <span class="op">=</span> <span class="st">"https://corsproxy.io/?"</span></span>
-<span id="cb3-3"><a></a>dvf <span class="op">=</span> d3<span class="op">.</span><span class="fu">csv</span>(proxy <span class="op">+</span> url)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-2"><a></a><span class="co">//proxy = "https://corsproxy.io/?"</span></span>
+<span id="cb3-3"><a></a>dvf <span class="op">=</span> d3<span class="op">.</span><span class="fu">csv</span>(url)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display hidden">
 <div>
 <div id="ojs-cell-3-1" data-nodetype="declaration">
@@ -545,13 +346,6 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","width":"500","colorLig
 <div class="cell-output cell-output-display hidden">
 <div>
 <div id="ojs-cell-3-2" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display hidden">
-<div>
-<div id="ojs-cell-3-3" data-nodetype="declaration">
 
 </div>
 </div>
@@ -603,7 +397,7 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","width":"500","colorLig
 </div>
 </div>
 </div>
-<p><em>Exemple</em>: les données DVF</p>
+<p><em>Exemple</em> : les données DVF</p>
 </section>
 <section id="diversification-des-données-24" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Diversification des données (2/4)</h2>
@@ -705,7 +499,7 @@ Données géolocalisées
 </h3>
 <ul>
 <li>Données tabulaires avec une dimension spatiale supplémentaire</li>
-<li>Dimension géographique prend des formes multiples:
+<li>Dimension géographique prend des formes multiples :
 <ul>
 <li>Points, lignes, polygones…</li>
 </ul></li>
@@ -731,11 +525,11 @@ Données textuelles et non structurées
 </div>
 <div class="fragment">
 <ul>
-<li>Développement très rapide de la recherche:
+<li>Développement très rapide de la recherche :
 <ul>
-<li>Collecte accrue: réseaux sociaux, enquêtes, <em>webscraping</em>…</li>
+<li>Collecte accrue : réseaux sociaux, enquêtes, <em>webscraping</em>…</li>
 <li>Baisse coûts stockage &amp; augmentation ressources traitement</li>
-<li>Nouvelles techniques statistiques: LLM…</li>
+<li>Nouvelles techniques statistiques : LLM…</li>
 </ul></li>
 </ul>
 </div>
@@ -783,7 +577,7 @@ Données textuelles et non structurées
 <span id="cb10-13"><a></a>  })<span class="op">.</span><span class="fu">join</span>(<span class="st">''</span>)<span class="op">;</span></span>
 <span id="cb10-14"><a></a></span>
 <span id="cb10-15"><a></a>  <span class="kw">const</span> confidenceRow <span class="op">=</span> <span class="vs">`&lt;tr&gt;</span></span>
-<span id="cb10-16"><a></a><span class="vs">    &lt;td colspan="2" style="text-align:left; "&gt;&lt;em&gt;Indice de confiance: </span><span class="sc">${</span>IC<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">&lt;/em&gt;&lt;/td&gt;</span></span>
+<span id="cb10-16"><a></a><span class="vs">    &lt;td colspan="2" style="text-align:left; "&gt;&lt;em&gt;Indice de confiance : </span><span class="sc">${</span>IC<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">&lt;/em&gt;&lt;/td&gt;</span></span>
 <span id="cb10-17"><a></a><span class="vs">  &lt;/tr&gt;`</span><span class="op">;</span></span>
 <span id="cb10-18"><a></a></span>
 <span id="cb10-19"><a></a>  <span class="kw">const</span> tableHTML <span class="op">=</span> <span class="fu">html</span><span class="vs">`</span></span>
@@ -849,15 +643,15 @@ Données textuelles et non structurées
 <section id="contexte-1" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Contexte</h2>
 <ul>
-<li>Baisse généralisée des taux de réponse aux enquêtes <span class="citation" data-cites="LuitenHoxde beck2022">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Luiten, Hox, et Leeuw 2020</a>; <a href="#/bibliographie" role="doc-biblioref" onclick="">Beck et al. 2022</a>)</span>:
+<li>Baisse généralisée des taux de réponse aux enquêtes <span class="citation" data-cites="LuitenHoxde beck2022">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Luiten, Hox, et Leeuw 2020</a>; <a href="#/bibliographie" role="doc-biblioref" onclick="">Beck et al. 2022</a>)</span> :
 <ul>
-<li>Enquête “Cadre de vie et sécurité”: 72% (2012) à 66% (2021)</li>
-<li>SRCV: 85% (2010) à 80% (2019)</li>
+<li>Enquête “Cadre de vie et sécurité” : 72% (2012) à 66% (2021)</li>
+<li>SRCV : 85% (2010) à 80% (2019)</li>
 </ul></li>
 </ul>
 <div class="fragment">
 <ul>
-<li>Données statistiques traditionnelles (sondage ou recensement) produites pour informer:
+<li>Données statistiques traditionnelles (sondage ou recensement) produites pour informer :
 <ul>
 <li>Cette finalité guide la conception</li>
 <li>Mesurer le plus objectivement possible un phénomène cible</li>
@@ -867,10 +661,10 @@ Données textuelles et non structurées
 </div>
 <div class="fragment">
 <ul>
-<li>Numérisation a facilité l’automatisation des systèmes de gestion:
+<li>Numérisation a facilité l’automatisation des systèmes de gestion :
 <ul>
 <li>Exploitation statistique ou recherche n’est pas la finalité initiale</li>
-<li>Finalité: enregistrement d’événements pour déclencher des actions (remboursement, paiement, etc.)</li>
+<li>Finalité : enregistrement d’événements pour déclencher des actions (remboursement, paiement, etc.)</li>
 <li>Opportunité mais perte de contrôle dans la conception</li>
 </ul></li>
 </ul>
@@ -942,17 +736,17 @@ Données textuelles et non structurées
 </ul>
 <div class="fragment">
 <ul>
-<li>Différence principale: la population cible est connue
+<li>Différence principale : la population cible est connue
 <ul>
 <li>Prérogatives légales obligent à identifier la population cible</li>
-<li>Donnée privée: population dépend de la part de marché (évolutive, biaisée)</li>
-<li>Donnée privée: Même quand population cible est large, risque de biais (âge, territoire…)</li>
+<li>Donnée privée : population dépend de la part de marché (évolutive, biaisée)</li>
+<li>Donnée privée : Même quand population cible est large, risque de biais (âge, territoire…)</li>
 </ul></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li>Différence secondaire: la fréquence de collecte
+<li>Différence secondaire : la fréquence de collecte
 <ul>
 <li>Généralement fréquence moindre des données administratives</li>
 <li>Mais certaines données quasi temps réel (SIVIC, SNDS, GIE CB…)</li>
@@ -961,44 +755,44 @@ Données textuelles et non structurées
 </div>
 </section>
 <section id="aparté-les-5v-sappliquent-aussi-aux-données-administratives" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
-<h2>Aparté: les 5V s’appliquent aussi aux données administratives</h2>
-<p>McKinsey définissait les propriétés du <em>big data</em> selon 5V:</p>
+<h2>Aparté : les 5V s’appliquent aussi aux données administratives</h2>
+<p>McKinsey définissait les propriétés du <em>big data</em> selon 5V :</p>
 <ol type="1">
-<li>Volume: DSN &gt; 1To de données par an</li>
+<li>Volume : DSN &gt; 1To de données par an</li>
 </ol>
 <div class="fragment">
 <ol start="2" type="1">
-<li>Vélocité: Données assurance maladie ou GIE CB sont à haute fréquence</li>
+<li>Vélocité : Données assurance maladie ou GIE CB sont à haute fréquence</li>
 </ol>
 </div>
 <div class="fragment">
 <ol start="3" type="1">
-<li>Variété: l’État collecte et exploite des données de natures très différentes</li>
+<li>Variété : l’État collecte et exploite des données de natures très différentes</li>
 </ol>
 </div>
 <div class="fragment">
 <ol start="4" type="1">
-<li>Véracité: erreurs (volontaires ou non) coûteuses permet des données de meilleure qualité que celles auto-déclarées sans contrôle ex-post</li>
+<li>Véracité : erreurs (volontaires ou non) coûteuses permet des données de meilleure qualité que celles auto-déclarées sans contrôle ex-post</li>
 </ol>
 </div>
 <div class="fragment">
 <ol start="5" type="1">
-<li>Valeur: données collectées par l’État sont d’une grande valeur même si elles ne sont pas monétisées (bien public, sans valeur de marché mais avec une valeur sociale)</li>
+<li>Valeur : données collectées par l’État sont d’une grande valeur même si elles ne sont pas monétisées (bien public, sans valeur de marché mais avec une valeur sociale)</li>
 </ol>
 </div>
 </section>
 <section id="une-donnée-plus-sensible" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Une donnée plus sensible</h2>
 <ul>
-<li>Enquête: réidentification après la phase d’anonymisation est compliquée</li>
+<li>Enquête : réidentification après la phase d’anonymisation est compliquée</li>
 </ul>
 <div class="fragment">
 <ul>
-<li>Données administratives:
+<li>Données administratives :
 <ul>
 <li>Information moins précise…</li>
 <li>… mais réidentification facilitée en combinant plusieurs sources de données</li>
-<li>Champ de recherche: <em>differential privacy</em></li>
+<li>Champ de recherche : <em>differential privacy</em></li>
 </ul></li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -1024,7 +818,7 @@ Données textuelles et non structurées
 <li>Distingué de l’administration qui exploite le flux (à des fins de gestion ou d’exploitation statistique)</li>
 </ul></li>
 </ul>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Donnée</th>
@@ -1072,16 +866,16 @@ Données textuelles et non structurées
 </div>
 </section>
 <section id="exemple-1-la-dsn" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Exemple 1: la DSN</h2>
+<h2>Exemple 1 : la DSN</h2>
 <ul>
 <li>Données issues des fiches de paie <span class="citation" data-cites="Humbert2018">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Humbert-Bottin 2018</a>)</span></li>
 </ul>
 
 <img data-src="https://inseefrlab.github.io/cours-nouvelles-donnees-site/img/images/dsn-diff.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="exemple-2-sirene" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Exemple 2: SIRENE</h2>
+<h2>Exemple 2 : SIRENE</h2>
 <ul>
-<li>Répertoire d’entreprises administré par l’Insee:
+<li>Répertoire d’entreprises administré par l’Insee :
 <ul>
 <li>Centralise de l’information sur 32 millions d’établissements</li>
 <li>Dont 13 millions d’établissements actifs</li>
@@ -1099,13 +893,13 @@ Données textuelles et non structurées
 </div>
 </section>
 <section id="exemple-3-fidéli" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Exemple 3: Fidéli</h2>
+<h2>Exemple 3 : Fidéli</h2>
 <ul>
-<li>Assemblage de:
+<li>Assemblage de :
 <ul>
-<li>Données d’origine fiscale: taxe d’habitation, fichier des propriétés bâties, déclarations de revenus, etc.</li>
-<li>Données d’origine sociale: prestations, etc.</li>
-<li>Données contextuelles sur le logement: nombre de pièces, etc.</li>
+<li>Données d’origine fiscale : taxe d’habitation, fichier des propriétés bâties, déclarations de revenus, etc.</li>
+<li>Données d’origine sociale : prestations, etc.</li>
+<li>Données contextuelles sur le logement : nombre de pièces, etc.</li>
 </ul></li>
 </ul>
 <div class="fragment">
@@ -1115,9 +909,9 @@ Données textuelles et non structurées
 </div>
 </section>
 <section id="exemple-4-le-snds" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
-<h2>Exemple 4: le SNDS</h2>
+<h2>Exemple 4 : le SNDS</h2>
 <ul>
-<li>Appariement des grandes bases médico-administratives nationales, notamment:
+<li>Appariement des grandes bases médico-administratives nationales, notamment :
 <ul>
 <li>les données de l’assurance maladie (base SNIIRAM)</li>
 <li>les données des hôpitaux (base PMSI)</li>
@@ -1126,7 +920,7 @@ Données textuelles et non structurées
 </ul>
 <div class="fragment">
 <ul>
-<li>Flux massif:
+<li>Flux massif :
 <ul>
 <li>1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d’actes (plus de 3000 variables) qui représentent 450 To de données…</li>
 </ul></li>
@@ -1409,7 +1203,7 @@ Figure&nbsp;1
 <li><span class="blue2"><strong>Matrice document-terme</strong></span>. Avec le corpus <em>“La pratique du tricot et du crochet”</em>, <em>“Transmettre la passion du timbre”</em> et <em>“Vivre de sa passion”</em>:</li>
 </ul></li>
 </ul>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 29%">
 <col style="width: 7%">
@@ -1597,8 +1391,7 @@ Encoder <span class="orange"><strong>l’information présente</strong></span> d
 <p><img data-src="./img/bike.jpg"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="./img/bike_sobel.jpg"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="vision-par-ordinateur-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Vision par ordinateur (2/2)</h2>
@@ -1623,7 +1416,7 @@ G_x = \begin{bmatrix}
 </section>
 <section id="opérateur-de-convolution" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
 <h2>Opérateur de convolution</h2>
-<div id="fig-convol" class="quarto-figure quarto-figure-center quarto-float">
+<div id="fig-convol" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-convol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-figure quarto-figure-center">
@@ -1641,7 +1434,7 @@ Figure&nbsp;2
 </section>
 <section id="réseaux-de-neurones-convolutifs" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
 <h2>Réseaux de neurones convolutifs</h2>
-<div id="fig-nn-convol" class="quarto-figure quarto-figure-center quarto-float">
+<div id="fig-nn-convol" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-nn-convol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-figure quarto-figure-center">
@@ -1660,7 +1453,7 @@ Figure&nbsp;3
 <section id="segmentation-sémantique-détection-dobjets" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Segmentation sémantique, détection d’objets</h2>
 
-<img data-src="https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg" class="r-stretch quarto-figure-center"><p class="caption">Tâches classiques de vision</p></section>
+<img data-src="https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg" class="r-stretch quarto-figure-center" id="fig-vision-tasks"><p class="caption">Tâches classiques de vision</p></section>
 <section id="eo-data-13" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>EO data (1/3)</h2>
 <ul>
@@ -1691,8 +1484,7 @@ Figure&nbsp;3
 <p><img data-src="./img/sat_t1.png"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="./img/sat_t2.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="ocr-et-extraction-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>OCR et extraction (1/2)</h2>
@@ -1714,8 +1506,7 @@ Figure&nbsp;3
 <p><img data-src="./img/pdf_example.png"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="./img/annotation_example.png"></p>
-</div>
-</div>
+</div></div>
 </section></section>
 <section>
 <section id="nowcasting" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
@@ -1781,11 +1572,7 @@ Figure&nbsp;3
 <section id="bibliographie" class="slide level2 smaller scrollable" data-background-image="background.svg" data-background-size="contain">
 <h2>Bibliographie</h2>
 
-<div class="quarto-auto-generated-content">
-<div class="footer footer-default">
 
-</div>
-</div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-andre-21" class="csl-entry" role="listitem">
 André, Mathias, et Olivier Meslin. 2021. <span>«&nbsp;Et pour quelques appartements de plus : <span>É</span>tude de la propri<span>é</span>t<span>é</span> immobili<span>è</span>re des m<span>é</span>nages et du profil redistributif de la taxe fonci<span>è</span>re&nbsp;»</span>.
@@ -1826,7 +1613,11 @@ Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»<
 </div>
 </section></section>
     </div>
-  </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="../site_libs/revealjs/dist/reveal.js"></script>
@@ -1856,7 +1647,8 @@ Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»<
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true,"theme":"whiteboard"},
 'smaller': false,
  
@@ -2011,7 +1803,7 @@ Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»<
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -2038,7 +1830,7 @@ Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»<
       });
     </script>
     <script type="ojs-module-contents">
-    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBpbmZvX211dGF0aW9ucyA9IElucHV0cy5yYWRpbyhcbiAgW1wiVGFibGVhdVwiLCBcIkdyYXBoaXF1ZVwiXSwge3ZhbHVlOiBcIlRhYmxlYXVcIn1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImluZm9fbXV0YXRpb25zID09IFwiVGFibGVhdVwiID8gaHRtbGA8ZGl2PiR7dGFibGVfbXV0YXRpb25zMX08ZGl2PmAgOiBodG1sYDxkaXY+JHtwbG90X211dGF0aW9uc308ZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InVybCA9IFwiaHR0cHM6Ly9maWxlcy5kYXRhLmdvdXYuZnIvZ2VvLWR2Zi9sYXRlc3QvY3N2LzIwMjAvY29tbXVuZXMvOTIvOTIwNDkuY3N2XCJcbnByb3h5ID0gXCJodHRwczovL2NvcnNwcm94eS5pby8/XCJcbmR2ZiA9IGQzLmNzdihwcm94eSArIHVybClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRhYmxlX211dGF0aW9uczEgPSBJbnB1dHMudGFibGUoZHZmLCB7XCJjb2x1bW5zXCI6IFsnZGF0ZV9tdXRhdGlvbicsICd2YWxldXJfZm9uY2llcmUnLCAnYWRyZXNzZV9ub21fdm9pZSddfSlcbnBsb3RfbXV0YXRpb25zID0gUGxvdC5wbG90KHtcbiAgeToge2dyaWQ6IHRydWUsIGxhYmVsOiBcIk5vbWJyZSBkZSB0cmFuc2FjdGlvbnNcIn0sXG4gIHg6IHtcbiAgICB0aWNrczogMTIsXG4gICAgdHJhbnNmb3JtOiAoZCkgPT4gTWF0aC5wb3coMTAsIGQpLFxuICAgIHR5cGU6IFwibG9nXCIsXG4gICAgdGlja0Zvcm1hdDogXCJ+c1wiLFxuICAgIGxhYmVsOiBcIlByaXggKMOpY2hlbGxlIGxvZykg4oaSXCJcbiAgfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LnJlY3RZKFxuICAgICAgZHZmLmZpbHRlcihkID0+IGQudmFsZXVyX2ZvbmNpZXJlID4gMTAwMDApLFxuICAgICAgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LFxuICAgICAge1xuICAgICAgICB4OiBkID0+IE1hdGgubG9nMTAoZC52YWxldXJfZm9uY2llcmUpLFxuICAgICAgICB0aXA6IHRydWVcbiAgICAgIH0pXG4gICAgKSxcbiAgICBQbG90LnJ1bGVZKFswXSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QgPSByZXF1aXJlKFwiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9Ab2JzZXJ2YWJsZWhxL3Bsb3RAMC42LjEwL2Rpc3QvcGxvdC51bWQubWluLmpzXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgaW5mb19wb3dlcl9wbGFudHMgPSBJbnB1dHMucmFkaW8oXG4gIFtcIlRhYmxlYXVcIiwgXCJDYXJ0ZVwiXSwge3ZhbHVlOiBcIlRhYmxlYXVcIn1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImluZm9fcG93ZXJfcGxhbnRzID09IFwiVGFibGVhdVwiID8gaHRtbGA8ZGl2PiR7dGFibGVfcG93ZXJfcGxhbnRzfTxkaXY+YCA6IGh0bWxgPGRpdj4ke3Bsb3RfcG93ZXJfcGxhbnRzfTxkaXY+YFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaW1wb3J0IHt1c19wb3dlcl9wbGFudHMsIHN0YXRlc30gZnJvbSBcIkBvYnNlcnZhYmxlaHEvYnVpbGQteW91ci1maXJzdC1tYXAtd2l0aC1vYnNlcnZhYmxlLXBsb3RcIlxuXG50YWJsZV9wb3dlcl9wbGFudHMgPSBJbnB1dHMudGFibGUoXG4gIHVzX3Bvd2VyX3BsYW50c1xuKVxuXG5cbnBsb3RfcG93ZXJfcGxhbnRzID0gUGxvdC5wbG90KHtcbiAgcHJvamVjdGlvbjogXCJhbGJlcnMtdXNhXCIsXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5nZW8oc3RhdGVzLCB7IGZpbGw6IFwid2hpdGVcIiwgc3Ryb2tlOiBcIiNlMmUyZTJcIiAgfSksXG4gICAgUGxvdC5kb3QodXNfcG93ZXJfcGxhbnRzLCB7XG4gICAgICB4OiBcImxvbmdpdHVkZVwiLFxuICAgICAgeTogXCJsYXRpdHVkZVwiLFxuICAgICAgcjogXCJUb3RhbF9NV1wiLFxuICAgICAgZmlsbDogXCJQcmltU291cmNlXCIsXG4gICAgICBvcGFjaXR5OiAwLjcsXG4gICAgICB0aXA6IHRydWVcbiAgICB9KSxcbiAgICBQbG90LmRvdCh1c19wb3dlcl9wbGFudHMsIHsgLy8gQ2FuIHlvdSBmaWd1cmUgb3V0IHdoYXQgdGhpcyBhZGRpdGlvbmFsIFBsb3QuZG90IGxheWVyIGFkZHM/XG4gICAgICB4OiBcImxvbmdpdHVkZVwiLFxuICAgICAgeTogXCJsYXRpdHVkZVwiLFxuICAgICAgcjogXCJUb3RhbF9NV1wiLFxuICAgICAgZmlsbDogXCJQcmltU291cmNlXCIsXG4gICAgICBzdHJva2U6IFwiYmxhY2tcIixcbiAgICAgIGZpbHRlcjogZCA9PiBkLlRvdGFsX01XID4gMzUwMCxcbiAgICB9KSxcbiAgICBQbG90LnRleHQodXNfcG93ZXJfcGxhbnRzLCB7IC8vIEFkZCB0ZXh0IHRvIHRoZSBtYXAgdXNpbmcgZGF0YSBmcm9tIHVzX3Bvd2VyX3BsYW50c1xuICAgICAgeDogXCJsb25naXR1ZGVcIiwgLy8gUGxhY2UgdGV4dCBob3Jpem9udGFsbHkgYXQgcGxhbnQgbG9uZ2l0dWRlXG4gICAgICB5OiBcImxhdGl0dWRlXCIsIC8vIFBsYWNlIHRleHQgdmVydGljYWxseSBhdCBwbGFudCBsYXRpdHVkZVxuICAgICAgdGV4dDogXCJQbGFudF9OYW1lXCIsIC8vIFRoZSB0ZXh0IHRoYXQgYXBwZWFycyBpcyB0aGUgdmFsdWUgZnJvbSB0aGUgUGxhbnRfTmFtZSBjb2x1bW4sXG4gICAgICBmaWx0ZXI6IChkKSA9PiBkLlRvdGFsX01XID4gMzUwMCwgLy8gT25seSBhZGQgdGV4dCBmb3IgcGxhbnRzIHdpdGggY2FwYWNpdHkgZXhjZWVkaW5nIDM1MDAgTVdcbiAgICAgIGZvbnRTaXplOiAxMiwgLy8gSW5jcmVhc2VkIGZvbnQgc2l6ZVxuICAgICAgZm9udFdlaWdodDogNjAwLCAvLyBJbmNyZWFzZWQgZm9udCB3ZWlnaHRcbiAgICAgIHN0cm9rZTogXCJ3aGl0ZVwiLCAvLyBBZGRzIHdoaXRlIG91dGVyIHN0cm9rZSB0byB0ZXh0IChmb3IgcmVhZGFiaWxpdHkpXG4gICAgICBmaWxsOiBcImJsYWNrXCIsIC8vIFRleHQgZmlsbCBjb2xvclxuICAgICAgdGV4dEFuY2hvcjogXCJzdGFydFwiLCAvLyBMZWZ0IGFsaWduIHRleHQgd2l0aCB0aGUgeC0gYW5kIHktY29vcmRpbmF0ZXNcbiAgICAgIGR4OiAxNSAvLyBTaGlmdHMgdGV4dCB0byB0aGUgcmlnaHQgKHN0YXJ0aW5nIGZyb20gbGVmdCBhbGlnbm1lbnQgd2l0aCBjb29yZGluYXRlKVxuICAgIH0pXG4gIF0sXG4gIHI6IHsgcmFuZ2U6IFsxLCAxNV0gfSxcbiAgY29sb3I6IHsgbGVnZW5kOiB0cnVlIH0sXG4gIGhlaWdodDogNTAwLFxuICB3aWR0aDogODAwLFxuICBtYXJnaW46IDUwXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGFjdGl2aXRlID0gSW5wdXRzLnRleHQoIFxuICB7bGFiZWw6ICcnLCB2YWx1ZTogJ2RhdGEgc2NpZW50aXN0Jywgd2lkdGg6IDgwMH1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJkMy5qc29uKHVybEFwZSkudGhlbihyZXMgPT4ge1xuICB2YXIgSUMsIHJlc3VsdHM7XG5cbiAgKHsgSUMsIC4uLnJlc3VsdHMgfSA9IHJlcyk7XG5cbiAgSUMgPSBwYXJzZUZsb2F0KElDKTtcblxuICBjb25zdCByb3dzID0gT2JqZWN0LnZhbHVlcyhyZXN1bHRzKS5tYXAob2JqID0+IHtcbiAgICByZXR1cm4gYFxuICAgIDx0cj5cbiAgICAgIDx0ZD4ke29iai5jb2RlfSB8ICR7b2JqLmxpYmVsbGV9PC90ZD5cbiAgICAgIDx0ZD4ke29iai5wcm9iYWJpbGl0ZS50b0ZpeGVkKDMpfTwvdGQ+XG4gICAgPC90cj5cbiAgYDtcbiAgfSkuam9pbignJyk7XG5cbiAgY29uc3QgY29uZmlkZW5jZVJvdyA9IGA8dHI+XG4gICAgPHRkIGNvbHNwYW49XCIyXCIgc3R5bGU9XCJ0ZXh0LWFsaWduOmxlZnQ7IFwiPjxlbT5JbmRpY2UgZGUgY29uZmlhbmNlOiAke0lDLnRvRml4ZWQoMyl9PC9lbT48L3RkPlxuICA8L3RyPmA7XG5cbiAgY29uc3QgdGFibGVIVE1MID0gaHRtbGBcbiAgPHRhYmxlPlxuICAgIDxjYXB0aW9uPlxuICAgICAgUHLDqWRpY3Rpb24gZGUgbCdhY3Rpdml0w6lcbiAgICA8L2NhcHRpb24+XG4gICAgPHRyPlxuICAgICAgPHRoIHN0eWxlPVwidGV4dC1hbGlnbjpjZW50ZXI7XCI+TGliZWxsw6kgKE5BMjAwOCk8L3RoPlxuICAgICAgPHRoPlByb2JhYmlsaXTDqTwvdGg+XG4gICAgPC90cj5cbiAgICAgICR7cm93c31cbiAgICAgICR7Y29uZmlkZW5jZVJvd31cbiAgPC90YWJsZT5gO1xuXG4gIC8vIE5vdyB5b3UgY2FuIHVzZSB0aGUgdGFibGVIVE1MIGFzIG5lZWRlZCwgZm9yIGV4YW1wbGUsIGluc2VydGluZyBpdCBpbnRvIHRoZSBET00uXG4gIC8vIEZvciBleGFtcGxlLCBhc3N1bWluZyB5b3UgaGF2ZSBhIGNvbnRhaW5lciB3aXRoIHRoZSBpZCBcInRhYmxlQ29udGFpbmVyXCI6XG4gIHJldHVybiB0YWJsZUhUTUw7XG59KTtcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJhY3Rpdml0ZV9kZWJvdW5jZSA9IGRlYm91bmNlKHZpZXdvZiBhY3Rpdml0ZSwgMjAwMClcbnVybEFwZSA9IGBodHRwczovL2NvZGlmaWNhdGlvbi1hcGUtdGVzdC5sYWIuc3NwY2xvdWQuZnIvcHJlZGljdD9uYl9lY2hvc19tYXg9MyZwcm9iX21pbj0wJnRleHRfZmVhdHVyZT0ke2FjdGl2aXRlX2RlYm91bmNlfWBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbXBvcnQge2RlYm91bmNlfSBmcm9tIFwiQG1ib3N0b2NrL2RlYm91bmNpbmctaW5wdXRcIlxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdpbmZvX211dGF0aW9ucycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdpbmZvX3Bvd2VyX3BsYW50cycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdhY3Rpdml0ZScpIn1dfQ==
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBpbmZvX211dGF0aW9ucyA9IElucHV0cy5yYWRpbyhcbiAgW1wiVGFibGVhdVwiLCBcIkdyYXBoaXF1ZVwiXSwge3ZhbHVlOiBcIlRhYmxlYXVcIn1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImluZm9fbXV0YXRpb25zID09IFwiVGFibGVhdVwiID8gaHRtbGA8ZGl2PiR7dGFibGVfbXV0YXRpb25zMX08ZGl2PmAgOiBodG1sYDxkaXY+JHtwbG90X211dGF0aW9uc308ZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InVybCA9IFwiaHR0cHM6Ly9maWxlcy5kYXRhLmdvdXYuZnIvZ2VvLWR2Zi9sYXRlc3QvY3N2LzIwMjAvY29tbXVuZXMvOTIvOTIwNDkuY3N2XCJcbi8vcHJveHkgPSBcImh0dHBzOi8vY29yc3Byb3h5LmlvLz9cIlxuZHZmID0gZDMuY3N2KHVybClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRhYmxlX211dGF0aW9uczEgPSBJbnB1dHMudGFibGUoZHZmLCB7XCJjb2x1bW5zXCI6IFsnZGF0ZV9tdXRhdGlvbicsICd2YWxldXJfZm9uY2llcmUnLCAnYWRyZXNzZV9ub21fdm9pZSddfSlcbnBsb3RfbXV0YXRpb25zID0gUGxvdC5wbG90KHtcbiAgeToge2dyaWQ6IHRydWUsIGxhYmVsOiBcIk5vbWJyZSBkZSB0cmFuc2FjdGlvbnNcIn0sXG4gIHg6IHtcbiAgICB0aWNrczogMTIsXG4gICAgdHJhbnNmb3JtOiAoZCkgPT4gTWF0aC5wb3coMTAsIGQpLFxuICAgIHR5cGU6IFwibG9nXCIsXG4gICAgdGlja0Zvcm1hdDogXCJ+c1wiLFxuICAgIGxhYmVsOiBcIlByaXggKMOpY2hlbGxlIGxvZykg4oaSXCJcbiAgfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LnJlY3RZKFxuICAgICAgZHZmLmZpbHRlcihkID0+IGQudmFsZXVyX2ZvbmNpZXJlID4gMTAwMDApLFxuICAgICAgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LFxuICAgICAge1xuICAgICAgICB4OiBkID0+IE1hdGgubG9nMTAoZC52YWxldXJfZm9uY2llcmUpLFxuICAgICAgICB0aXA6IHRydWVcbiAgICAgIH0pXG4gICAgKSxcbiAgICBQbG90LnJ1bGVZKFswXSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QgPSByZXF1aXJlKFwiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9Ab2JzZXJ2YWJsZWhxL3Bsb3RAMC42LjEwL2Rpc3QvcGxvdC51bWQubWluLmpzXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgaW5mb19wb3dlcl9wbGFudHMgPSBJbnB1dHMucmFkaW8oXG4gIFtcIlRhYmxlYXVcIiwgXCJDYXJ0ZVwiXSwge3ZhbHVlOiBcIlRhYmxlYXVcIn1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImluZm9fcG93ZXJfcGxhbnRzID09IFwiVGFibGVhdVwiID8gaHRtbGA8ZGl2PiR7dGFibGVfcG93ZXJfcGxhbnRzfTxkaXY+YCA6IGh0bWxgPGRpdj4ke3Bsb3RfcG93ZXJfcGxhbnRzfTxkaXY+YFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaW1wb3J0IHt1c19wb3dlcl9wbGFudHMsIHN0YXRlc30gZnJvbSBcIkBvYnNlcnZhYmxlaHEvYnVpbGQteW91ci1maXJzdC1tYXAtd2l0aC1vYnNlcnZhYmxlLXBsb3RcIlxuXG50YWJsZV9wb3dlcl9wbGFudHMgPSBJbnB1dHMudGFibGUoXG4gIHVzX3Bvd2VyX3BsYW50c1xuKVxuXG5cbnBsb3RfcG93ZXJfcGxhbnRzID0gUGxvdC5wbG90KHtcbiAgcHJvamVjdGlvbjogXCJhbGJlcnMtdXNhXCIsXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5nZW8oc3RhdGVzLCB7IGZpbGw6IFwid2hpdGVcIiwgc3Ryb2tlOiBcIiNlMmUyZTJcIiAgfSksXG4gICAgUGxvdC5kb3QodXNfcG93ZXJfcGxhbnRzLCB7XG4gICAgICB4OiBcImxvbmdpdHVkZVwiLFxuICAgICAgeTogXCJsYXRpdHVkZVwiLFxuICAgICAgcjogXCJUb3RhbF9NV1wiLFxuICAgICAgZmlsbDogXCJQcmltU291cmNlXCIsXG4gICAgICBvcGFjaXR5OiAwLjcsXG4gICAgICB0aXA6IHRydWVcbiAgICB9KSxcbiAgICBQbG90LmRvdCh1c19wb3dlcl9wbGFudHMsIHsgLy8gQ2FuIHlvdSBmaWd1cmUgb3V0IHdoYXQgdGhpcyBhZGRpdGlvbmFsIFBsb3QuZG90IGxheWVyIGFkZHM/XG4gICAgICB4OiBcImxvbmdpdHVkZVwiLFxuICAgICAgeTogXCJsYXRpdHVkZVwiLFxuICAgICAgcjogXCJUb3RhbF9NV1wiLFxuICAgICAgZmlsbDogXCJQcmltU291cmNlXCIsXG4gICAgICBzdHJva2U6IFwiYmxhY2tcIixcbiAgICAgIGZpbHRlcjogZCA9PiBkLlRvdGFsX01XID4gMzUwMCxcbiAgICB9KSxcbiAgICBQbG90LnRleHQodXNfcG93ZXJfcGxhbnRzLCB7IC8vIEFkZCB0ZXh0IHRvIHRoZSBtYXAgdXNpbmcgZGF0YSBmcm9tIHVzX3Bvd2VyX3BsYW50c1xuICAgICAgeDogXCJsb25naXR1ZGVcIiwgLy8gUGxhY2UgdGV4dCBob3Jpem9udGFsbHkgYXQgcGxhbnQgbG9uZ2l0dWRlXG4gICAgICB5OiBcImxhdGl0dWRlXCIsIC8vIFBsYWNlIHRleHQgdmVydGljYWxseSBhdCBwbGFudCBsYXRpdHVkZVxuICAgICAgdGV4dDogXCJQbGFudF9OYW1lXCIsIC8vIFRoZSB0ZXh0IHRoYXQgYXBwZWFycyBpcyB0aGUgdmFsdWUgZnJvbSB0aGUgUGxhbnRfTmFtZSBjb2x1bW4sXG4gICAgICBmaWx0ZXI6IChkKSA9PiBkLlRvdGFsX01XID4gMzUwMCwgLy8gT25seSBhZGQgdGV4dCBmb3IgcGxhbnRzIHdpdGggY2FwYWNpdHkgZXhjZWVkaW5nIDM1MDAgTVdcbiAgICAgIGZvbnRTaXplOiAxMiwgLy8gSW5jcmVhc2VkIGZvbnQgc2l6ZVxuICAgICAgZm9udFdlaWdodDogNjAwLCAvLyBJbmNyZWFzZWQgZm9udCB3ZWlnaHRcbiAgICAgIHN0cm9rZTogXCJ3aGl0ZVwiLCAvLyBBZGRzIHdoaXRlIG91dGVyIHN0cm9rZSB0byB0ZXh0IChmb3IgcmVhZGFiaWxpdHkpXG4gICAgICBmaWxsOiBcImJsYWNrXCIsIC8vIFRleHQgZmlsbCBjb2xvclxuICAgICAgdGV4dEFuY2hvcjogXCJzdGFydFwiLCAvLyBMZWZ0IGFsaWduIHRleHQgd2l0aCB0aGUgeC0gYW5kIHktY29vcmRpbmF0ZXNcbiAgICAgIGR4OiAxNSAvLyBTaGlmdHMgdGV4dCB0byB0aGUgcmlnaHQgKHN0YXJ0aW5nIGZyb20gbGVmdCBhbGlnbm1lbnQgd2l0aCBjb29yZGluYXRlKVxuICAgIH0pXG4gIF0sXG4gIHI6IHsgcmFuZ2U6IFsxLCAxNV0gfSxcbiAgY29sb3I6IHsgbGVnZW5kOiB0cnVlIH0sXG4gIGhlaWdodDogNTAwLFxuICB3aWR0aDogODAwLFxuICBtYXJnaW46IDUwXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGFjdGl2aXRlID0gSW5wdXRzLnRleHQoIFxuICB7bGFiZWw6ICcnLCB2YWx1ZTogJ2RhdGEgc2NpZW50aXN0Jywgd2lkdGg6IDgwMH1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJkMy5qc29uKHVybEFwZSkudGhlbihyZXMgPT4ge1xuICB2YXIgSUMsIHJlc3VsdHM7XG5cbiAgKHsgSUMsIC4uLnJlc3VsdHMgfSA9IHJlcyk7XG5cbiAgSUMgPSBwYXJzZUZsb2F0KElDKTtcblxuICBjb25zdCByb3dzID0gT2JqZWN0LnZhbHVlcyhyZXN1bHRzKS5tYXAob2JqID0+IHtcbiAgICByZXR1cm4gYFxuICAgIDx0cj5cbiAgICAgIDx0ZD4ke29iai5jb2RlfSB8ICR7b2JqLmxpYmVsbGV9PC90ZD5cbiAgICAgIDx0ZD4ke29iai5wcm9iYWJpbGl0ZS50b0ZpeGVkKDMpfTwvdGQ+XG4gICAgPC90cj5cbiAgYDtcbiAgfSkuam9pbignJyk7XG5cbiAgY29uc3QgY29uZmlkZW5jZVJvdyA9IGA8dHI+XG4gICAgPHRkIGNvbHNwYW49XCIyXCIgc3R5bGU9XCJ0ZXh0LWFsaWduOmxlZnQ7IFwiPjxlbT5JbmRpY2UgZGUgY29uZmlhbmNlIDogJHtJQy50b0ZpeGVkKDMpfTwvZW0+PC90ZD5cbiAgPC90cj5gO1xuXG4gIGNvbnN0IHRhYmxlSFRNTCA9IGh0bWxgXG4gIDx0YWJsZT5cbiAgICA8Y2FwdGlvbj5cbiAgICAgIFByw6lkaWN0aW9uIGRlIGwnYWN0aXZpdMOpXG4gICAgPC9jYXB0aW9uPlxuICAgIDx0cj5cbiAgICAgIDx0aCBzdHlsZT1cInRleHQtYWxpZ246Y2VudGVyO1wiPkxpYmVsbMOpIChOQTIwMDgpPC90aD5cbiAgICAgIDx0aD5Qcm9iYWJpbGl0w6k8L3RoPlxuICAgIDwvdHI+XG4gICAgICAke3Jvd3N9XG4gICAgICAke2NvbmZpZGVuY2VSb3d9XG4gIDwvdGFibGU+YDtcblxuICAvLyBOb3cgeW91IGNhbiB1c2UgdGhlIHRhYmxlSFRNTCBhcyBuZWVkZWQsIGZvciBleGFtcGxlLCBpbnNlcnRpbmcgaXQgaW50byB0aGUgRE9NLlxuICAvLyBGb3IgZXhhbXBsZSwgYXNzdW1pbmcgeW91IGhhdmUgYSBjb250YWluZXIgd2l0aCB0aGUgaWQgXCJ0YWJsZUNvbnRhaW5lclwiOlxuICByZXR1cm4gdGFibGVIVE1MO1xufSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTExIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiYWN0aXZpdGVfZGVib3VuY2UgPSBkZWJvdW5jZSh2aWV3b2YgYWN0aXZpdGUsIDIwMDApXG51cmxBcGUgPSBgaHR0cHM6Ly9jb2RpZmljYXRpb24tYXBlLXRlc3QubGFiLnNzcGNsb3VkLmZyL3ByZWRpY3Q/bmJfZWNob3NfbWF4PTMmcHJvYl9taW49MCZ0ZXh0X2ZlYXR1cmU9JHthY3Rpdml0ZV9kZWJvdW5jZX1gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaW1wb3J0IHtkZWJvdW5jZX0gZnJvbSBcIkBtYm9zdG9jay9kZWJvdW5jaW5nLWlucHV0XCJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaW5mb19tdXRhdGlvbnMnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaW5mb19wb3dlcl9wbGFudHMnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnYWN0aXZpdGUnKSJ9XX0=
     </script>
     <script type="module">
     if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -2080,18 +1872,7 @@ Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»<
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2123,7 +1904,45 @@ Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»<
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/InseeFrLab\.github\.io\/cours-nouvelles-donnees-slides\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -2160,7 +1979,11 @@ Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»<
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
