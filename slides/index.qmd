@@ -1,7 +1,7 @@
 ---
 title: Nouvelles sources de données pour la statistique publique
 subtitle: |
-  [**[Lino Galiana (Insee), Tom Seimandi (Insee)]{.orange}**]{.orange}
+  [**[Lino Galiana (Insee), Julien PRAMIL (Insee)]{.orange}**]{.orange}
 slide-number: true
 
 lang: fr-FR
@@ -15,6 +15,7 @@ controls: true
 css: custom.css
 bibliography: references.bib
 ---
+
 
 ## Lien vers le cours
 

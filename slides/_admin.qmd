@@ -2,22 +2,22 @@
 
 ## Contexte {.smaller}
 
-- Baisse généralisée des taux de réponse aux enquêtes [@LuitenHoxde; @beck2022]:
-    + Enquête "Cadre de vie et sécurité": 72% (2012) à 66% (2021)
-    + SRCV: 85% (2010) à 80% (2019)
+- Baisse généralisée des taux de réponse aux enquêtes [@LuitenHoxde; @beck2022] :
+    + Enquête "Cadre de vie et sécurité" : 72% (2012) à 66% (2021)
+    + SRCV : 85% (2010) à 80% (2019)
 
 . . .
 
-- Données statistiques traditionnelles (sondage ou recensement) produites pour informer:
+- Données statistiques traditionnelles (sondage ou recensement) produites pour informer :
     + Cette finalité guide la conception
     + Mesurer le plus objectivement possible un phénomène cible
     + Processus de réflexion en amont, échantillonnage _ad hoc_, post-traitement...
 
 . . .
 
-- Numérisation a facilité l'automatisation des systèmes de gestion:
+- Numérisation a facilité l'automatisation des systèmes de gestion :
     + Exploitation statistique ou recherche n'est pas la finalité initiale
-    + Finalité: enregistrement d’événements pour déclencher des actions (remboursement, paiement, etc.)
+    + Finalité : enregistrement d’événements pour déclencher des actions (remboursement, paiement, etc.)
     + Opportunité mais perte de contrôle dans la conception
 
 
@@ -66,49 +66,49 @@ Par exemple, les déclarations fiscales des ménages sont annuelles, avec un cal
 
 . . .
 
-- Différence principale: la population cible est connue
+- Différence principale : la population cible est connue
     + Prérogatives légales obligent à identifier la population cible
-    + Donnée privée: population dépend de la part de marché (évolutive, biaisée)
-    + Donnée privée: Même quand population cible est large, risque de biais (âge, territoire...)
+    + Donnée privée : population dépend de la part de marché (évolutive, biaisée)
+    + Donnée privée : Même quand population cible est large, risque de biais (âge, territoire...)
 
 . . .
 
-- Différence secondaire: la fréquence de collecte
+- Différence secondaire : la fréquence de collecte
     + Généralement fréquence moindre des données administratives
     + Mais certaines données quasi temps réel (SIVIC, SNDS, GIE CB...)
 
-## Aparté: les 5V s'appliquent aussi aux données administratives {.smaller}
+## Aparté : les 5V s'appliquent aussi aux données administratives {.smaller}
 
-McKinsey définissait les propriétés du _big data_ selon 5V:
+McKinsey définissait les propriétés du _big data_ selon 5V :
 
-1. Volume: DSN > 1To de données par an
-
-. . .
-
-2. Vélocité: Données assurance maladie ou GIE CB sont à haute fréquence
+1. Volume : DSN > 1To de données par an
 
 . . .
 
-3. Variété: l’État collecte et exploite des données de natures très différentes
+2. Vélocité : Données assurance maladie ou GIE CB sont à haute fréquence
 
 . . .
 
-4. Véracité: erreurs (volontaires ou non) coûteuses permet des données de meilleure qualité que celles auto-déclarées sans contrôle ex-post
+3. Variété : l’État collecte et exploite des données de natures très différentes
 
 . . .
 
-5. Valeur: données collectées par l’État sont d’une grande valeur même si elles ne sont pas monétisées (bien public, sans valeur de marché mais avec une valeur sociale)
+4. Véracité : erreurs (volontaires ou non) coûteuses permet des données de meilleure qualité que celles auto-déclarées sans contrôle ex-post
+
+. . .
+
+5. Valeur : données collectées par l’État sont d’une grande valeur même si elles ne sont pas monétisées (bien public, sans valeur de marché mais avec une valeur sociale)
 
 ## Une donnée plus sensible {.smaller}
 
-- Enquête: réidentification après la phase d’anonymisation est compliquée
+- Enquête : réidentification après la phase d’anonymisation est compliquée
 
 . . .
 
-- Données administratives:
+- Données administratives :
     + Information moins précise... 
     + ... mais réidentification facilitée en combinant plusieurs sources de données
-    + Champ de recherche: _differential privacy_
+    + Champ de recherche : _differential privacy_
 
 ::: {.callout-note}
 ## Le secret statistique (article 7bis de la loi de 1951)
@@ -139,15 +139,15 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
 [Code statistique non signifiant](https://www.insee.fr/fr/information/5388962) (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.
 :::
 
-## Exemple 1: la DSN
+## Exemple 1 : la DSN
 
 - Données issues des fiches de paie [@Humbert2018]
 
 ![](https://inseefrlab.github.io/cours-nouvelles-donnees-site/img/images/dsn-diff.png){fig-align="center"}
 
-## Exemple 2: SIRENE
+## Exemple 2 : SIRENE
 
-- Répertoire d'entreprises administré par l’Insee:
+- Répertoire d'entreprises administré par l’Insee :
     + Centralise de l’information sur 32 millions d’établissements
     + Dont 13 millions d’établissements actifs
 
@@ -160,27 +160,27 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
 - Base de référence pour toutes les études et enquêtes statistiques sur les entreprises
 
 
-## Exemple 3: Fidéli
+## Exemple 3 : Fidéli
 
-- Assemblage de:
-    + Données d'origine fiscale: taxe d'habitation, fichier des propriétés bâties, déclarations de revenus, etc.
-    + Données d'origine sociale: prestations, etc.
-    + Données contextuelles sur le logement: nombre de pièces, etc.
+- Assemblage de :
+    + Données d'origine fiscale : taxe d'habitation, fichier des propriétés bâties, déclarations de revenus, etc.
+    + Données d'origine sociale : prestations, etc.
+    + Données contextuelles sur le logement : nombre de pièces, etc.
 
 . . .
 
 - Base de référence pour études sociodémographiques fines
 
-## Exemple 4: le SNDS {.smaller}
+## Exemple 4 : le SNDS {.smaller}
 
-- Appariement des grandes bases médico-administratives nationales, notamment:
+- Appariement des grandes bases médico-administratives nationales, notamment :
     + les données de l’assurance maladie (base SNIIRAM)
     + les données des hôpitaux (base PMSI)
     + les causes médicales de décès (base du CépiDC de l’Inserm)
 
 . . .
 
-- Flux massif: 
+- Flux massif : 
     + 1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d’actes (plus de 3000 variables) qui représentent 450 To de données...
 
 . . .
