@@ -63,7 +63,9 @@ info_mutations == "Tableau" ? html`<div>${table_mutations1}<div>` : html`<div>${
 
 ```{ojs}
 //| echo: false
-url = "https://minio.lab.sspcloud.fr/nicolastlm/diffusion/92049.csv"  // data coming from "https://files.data.gouv.fr/geo-dvf/latest/csv/2020/communes/92/92049.csv"
+// data coming from "https://files.data.gouv.fr/geo-dvf/latest/csv/2020/communes/92/92049.csv"
+// fetched manually because of CORS issue
+url = "https://minio.lab.sspcloud.fr/nicolastlm/diffusion/92049.csv"  
 dvf = d3.csv(url)
 ```
 
