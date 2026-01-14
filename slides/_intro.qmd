@@ -15,7 +15,6 @@
     + Dans le débat public et l'action publique ([Supiot](https://www.fayard.fr/sciences-humaines/la-gouvernance-par-les-nombres-9782213681092), [Martin](https://www.cairn.info/l-empire-des-chiffres--9782200625719.htm))
     + Dans les stratégies d'entreprise
 
-
 ## Diversification des données {.smaller}
 
 - Des données de nature très différentes :
@@ -40,7 +39,6 @@
 
 ## Diversification des données (1/4)
 
-
 ### Données administratives
 
 - __Enregistrements automatisés__ de systèmes de gestion
@@ -49,11 +47,9 @@
 ![Source : [Hadley Wickham, _R for data science_](https://r4ds.hadley.nz/data-tidy.html)](https://r4ds.hadley.nz/images/tidy-1.png)
 
 
-
 ## Diversification des données (1/4) 
 
 ### Données administratives
-
 
 ```{ojs}
 viewof info_mutations = Inputs.radio(
@@ -66,9 +62,8 @@ info_mutations == "Tableau" ? html`<div>${table_mutations1}<div>` : html`<div>${
 ```
 
 ```{ojs}
-//| output: false
-url = "https://files.data.gouv.fr/geo-dvf/latest/csv/2020/communes/92/92049.csv"
-//proxy = "https://corsproxy.io/?"
+//| echo: false
+url = "https://minio.lab.sspcloud.fr/nicolastlm/diffusion/92049.csv"  // data coming from "https://files.data.gouv.fr/geo-dvf/latest/csv/2020/communes/92/92049.csv"
 dvf = d3.csv(url)
 ```
 
@@ -118,7 +113,6 @@ viewof info_power_plants = Inputs.radio(
 info_power_plants == "Tableau" ? html`<div>${table_power_plants}<div>` : html`<div>${plot_power_plants}<div>`
 ```
 
-
 ```{ojs}
 //| output: false
 import {us_power_plants, states} from "@observablehq/build-your-first-map-with-observable-plot"
@@ -126,7 +120,6 @@ import {us_power_plants, states} from "@observablehq/build-your-first-map-with-o
 table_power_plants = Inputs.table(
   us_power_plants
 )
-
 
 plot_power_plants = Plot.plot({
   projection: "albers-usa",
@@ -206,69 +199,92 @@ plot_power_plants = Plot.plot({
 
 <h3>Données textuelles et non structurées</h3>
 
-
 - Les __[LLM]{.blue2}__ bien sûr...
 - ... Mais pas que !
 
 <br>
 
+- Classification automatique de l'activité principale d'une entreprise : 
 
 ```{ojs}
-viewof activite = Inputs.text( 
-  {label: '', value: 'data scientist', width: 800}
-)
+async function transformToPost(description) {
+  // Base URL with query parameters
+  const baseUrl = `https://codification-ape2025-pytorch.lab.sspcloud.fr/predict/?nb_echos_max=5&prob_min=0.01&num_workers=0&batch_size=1`;
+
+  // Build the request body according to the expected schema
+  const body = {
+    forms: [
+      {
+        description_activity: description
+      }
+    ]
+  };
+
+  // Send the POST request
+  const response = await fetch(baseUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  });
+
+  // Parse and return the JSON response
+  return response.json();
+}
 ```
 
 
 ```{ojs}
-d3.json(urlApe).then(res => {
-  var IC, results;
+viewof activite = Inputs.text({
+  label: '',
+  value: 'data scientist',
+  width: 800
+})
 
-  ({ IC, ...results } = res);
+viewof prediction = Inputs.button("Run Prediction", {
+  reduce: async () => {
+    return await transformToPost(activite);
+  }
+})
 
-  IC = parseFloat(IC);
+// afficher les résultats joliment
+prediction_table = {
+  if (!prediction || !prediction.length) {
+    return html``
+  }
 
-  const rows = Object.values(results).map(obj => {
-    return `
-    <tr>
-      <td>${obj.code} | ${obj.libelle}</td>
-      <td>${obj.probabilite.toFixed(3)}</td>
-    </tr>
-  `;
-  }).join('');
+  // la réponse est un tableau avec un seul objet
+  const result = prediction[0]
+  const { IC, MLversion, ...codes } = result
 
-  const confidenceRow = `<tr>
-    <td colspan="2" style="text-align:left; "><em>Indice de confiance : ${IC.toFixed(3)}</em></td>
-  </tr>`;
+  const rows = Object.values(codes).map(({ code, libelle, probabilite }) => {
+    return html`
+      <tr>
+        <td>${code} – ${libelle}</td>
+        <td style="text-align:right;">${probabilite.toFixed(3)}</td>
+      </tr>
+    `
+  })
 
-  const tableHTML = html`
-  <table>
-    <caption>
-      Prédiction de l'activité
-    </caption>
-    <tr>
-      <th style="text-align:center;">Libellé (NA2008)</th>
-      <th>Probabilité</th>
-    </tr>
-      ${rows}
-      ${confidenceRow}
-  </table>`;
-
-  // Now you can use the tableHTML as needed, for example, inserting it into the DOM.
-  // For example, assuming you have a container with the id "tableContainer":
-  return tableHTML;
-});
+  return html`
+    <table style="border-collapse: collapse; width: 100%;">
+      <caption style="margin-bottom: 0.5em;">
+        Confidence score : ${(+IC).toFixed(3)}
+      </caption>
+      <thead>
+        <tr>
+          <th style="text-align:left;">Description (NA2008)</th>
+          <th style="text-align:right;">Probability</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows}
+      </tbody>
+    </table>
+  `
+}
 ```
-
-```{ojs}
-activite_debounce = debounce(viewof activite, 2000)
-urlApe = `https://codification-ape-test.lab.sspcloud.fr/predict?nb_echos_max=3&prob_min=0&text_feature=${activite_debounce}`
-```
-
-```{ojs}
-import {debounce} from "@mbostock/debouncing-input"
-```
-
 
 ## Diversification des données (4/4)
 
