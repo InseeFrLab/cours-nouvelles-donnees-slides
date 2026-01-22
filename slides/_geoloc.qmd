@@ -12,7 +12,7 @@
 - Recherche et statistique publique :
     + Intérêt ancien : enquêtes des sociologues du XIXe, école de Chicago (années 1920) mais données limitées
     + Années 2010 : quantification de masse de phénomènes <del>spatiaux</del> sociaux : déplacements, lieux fréquentés...
-    + Statistique publique s'adapte en publiant des données fines (données carroyées...)
+    + Statistique publique s'adapte en publiant des données fines ([données carroyées](https://www.insee.fr/fr/statistiques/6215168?sommaire=6215217)...)
 
 <br>
 
@@ -118,7 +118,7 @@ la librairie {{< fa brands js-square >}} `gridviz` (visible sur [Observable](htt
     - Pas de garantie sur la pérénité des formats, méthodes de collection des données. 
     - Donc, pas de garantie que les indicateurs restent comparables au cours du temps.
 
-## Exemple : enjeux
+## Exemple : enjeux {.smaller}
 
 - Questions d'[**éthique**]{.orange} : 
     - avant d'utiliser ces données personnelles, 
@@ -128,8 +128,9 @@ la librairie {{< fa brands js-square >}} `gridviz` (visible sur [Observable](htt
 . . .
 
 - Questions [**légales**]{.orange} : 
-    - Exemple : aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l'utilisation de données téléphoniques de signalisation pour la statistique publique.
-    - Modification du[ réglement européen 223/2009](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX%3A52023PC0402) à venir.
+    - Historiquement : accès limité aux données téléphoniques (et aux données privées en général) pour les statistiques
+    - [Révision du règlement 223/2009](https://www.casd.eu/modification-du-reglement-statistique-europeen-223-09-des-evolutions-importantes-pour-lacces-aux-sources-privees/) fin 2024 : accès désormais possible, sous conditions strictes
+    - Protection des données personnelles toujours requises (RGPD)
 
 
 ## Application
