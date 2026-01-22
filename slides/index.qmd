@@ -1,7 +1,7 @@
 ---
 title: Nouvelles sources de données pour la statistique publique
 subtitle: |
-  [**[Lino GALIANA (Insee), Julien PRAMIL (Insee)]{.orange}**]{.orange}
+  [**[Julien PRAMIL (Insee), Nicolas TOULEMONDE (Insee)]{.orange}**]{.orange}
 slide-number: true
 
 lang: fr-FR

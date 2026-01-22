@@ -31,6 +31,7 @@
     - [Boulanger](https://www.boulanger.com/)
     - [Rue du commerce](https://www.rueducommerce.fr/)
 - Scraping du [**site de la SNCF**]{.orange} : collecte quotidienne pour capter la volatilité des prix
+- Scrapping des offres d'emploi (projet [**Jocas**](https://dares.travail-emploi.gouv.fr/enquete-source/jocas)) par la Dares
 
 ## Utilisation d'API
 
