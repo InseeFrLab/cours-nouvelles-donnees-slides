@@ -179,7 +179,7 @@
     "href": "slides/index.html#webscraping-33",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Webscraping (3/3)",
-    "text": "Webscraping (3/3)\n\nPrix dans le domaine de l’hôtellerie : scraping du site Booking.com\nVente d’articles électroniques :\n\nBoulanger\nRue du commerce\n\nScraping du site de la SNCF : collecte quotidienne pour capter la volatilité des prix"
+    "text": "Webscraping (3/3)\n\nPrix dans le domaine de l’hôtellerie : scraping du site Booking.com\nVente d’articles électroniques :\n\nBoulanger\nRue du commerce\n\nScraping du site de la SNCF : collecte quotidienne pour capter la volatilité des prix\nScrapping des offres d’emploi (projet Jocas) par la Dares"
   },
   {
     "objectID": "slides/index.html#utilisation-dapi",
@@ -270,7 +270,7 @@
     "href": "slides/index.html#exemple-enjeux-1",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Exemple : enjeux",
-    "text": "Exemple : enjeux\n\nQuestions d’éthique :\n\navant d’utiliser ces données personnelles,\n\nusage proportionné ?\nvaleur ajoutée des statistiques produites pour la population ?\n\n\n\n\n\nQuestions légales :\n\nExemple : aujourd’hui la législation européenne et son application dans la loi française ne sont pas favorables à l’utilisation de données téléphoniques de signalisation pour la statistique publique.\nModification duréglement européen 223/2009 à venir."
+    "text": "Exemple : enjeux\n\nQuestions d’éthique :\n\navant d’utiliser ces données personnelles,\n\nusage proportionné ?\nvaleur ajoutée des statistiques produites pour la population ?\n\n\n\n\n\nQuestions légales :\n\nHistoriquement : accès limité aux données téléphoniques (et aux données privées en général) pour les statistiques\nRévision du règlement 223/2009 fin 2024 : accès désormais possible, sous conditions strictes\nProtection des données personnelles toujours requises (RGPD)"
   },
   {
     "objectID": "slides/index.html#application",
