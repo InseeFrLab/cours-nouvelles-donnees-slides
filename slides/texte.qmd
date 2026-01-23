@@ -9,94 +9,102 @@
     - Données [**privées**]{.blue2} mobilisables pour la statistique publique
 - Traitement automatique : fait référence à des tâches [**variées**]{.orange}
 
-## Modèles de langage (1/5) {.smaller}
+## Encoder du texte {.smaller}
 
 - Encoder [**l'information présente**]{.orange} dans un texte :
-    - [**Matrice document-terme**]{.blue2}. 
-    - Avec le corpus _"La pratique du tricot et du crochet"_, _"Transmettre la passion du timbre"_ et _"Vivre de sa passion"_ :
+    - Passage de données "non-structurées" à des valeurs numériques...
+    - ... et donc gérables par des modèles !
+
+
+- Outil classique et immédiat : la [**matrice document-terme**]{.blue2}.
+
+
+- Regardons sur un exemple, sur le corpus suivant : 
+    - _"La pratique du tricot et du crochet"_
+    - _"Transmettre la passion du timbre"_
+    - _"Vivre de sa passion"_
+
+
+## Exemple de "document-terme"{.smaller}
 
 
 <div style="overflow-x: auto; width: 100%;">
   <table style="border-collapse: collapse; width: 100%; text-align: center;">
     <thead>
       <tr>
-        <th style="text-align: center;"></th>
-        <th style="text-align: center;">crochet</th>
-        <th style="text-align: center;">de</th>
-        <th style="text-align: center;">du</th>
-        <th style="text-align: center;">et</th>
-        <th style="text-align: center;">la</th>
-        <th style="text-align: center;">passion</th>
-        <th style="text-align: center;">pratique</th>
-        <th style="text-align: center;">sa</th>
-        <th style="text-align: center;">timbre</th>
-        <th style="text-align: center;">transmettre</th>
-        <th style="text-align: center;">tricot</th>
-        <th style="text-align: center;">vivre</th>
+        <th></th>
+        <th>La pratique du tricot et du crochet</th>
+        <th>Transmettre la passion du timbre</th>
+        <th>Vivre de sa passion</th>
       </tr>
     </thead>
     <tbody>
+      <tr><td>crochet</td><td>1/7</td><td>0</td><td>0</td></tr>
+      <tr><td>de</td><td>0</td><td>0</td><td>1/4</td></tr>
+      <tr><td>du</td><td>2/7</td><td>1/5</td><td>0</td></tr>
+      <tr><td>et</td><td>1/7</td><td>0</td><td>0</td></tr>
+      <tr><td>la</td><td>1/7</td><td>1/5</td><td>0</td></tr>
+      <tr><td>passion</td><td>0</td><td>1/5</td><td>1/4</td></tr>
+      <tr><td>pratique</td><td>1/7</td><td>0</td><td>0</td></tr>
+      <tr><td>sa</td><td>0</td><td>0</td><td>1/4</td></tr>
+      <tr><td>timbre</td><td>0</td><td>1/5</td><td>0</td></tr>
+      <tr><td>transmettre</td><td>0</td><td>1/5</td><td>0</td></tr>
+      <tr><td>tricot</td><td>1/7</td><td>0</td><td>0</td></tr>
+      <tr><td>vivre</td><td>0</td><td>0</td><td>1/4</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+## Le TF-IDF {.smaller}
+
+[TF-IDF]{.orange} (_Term Frequency – Inverse Document Frequency_) : 
+  
+  - Quantifie l'importance d'un mot dans un document, relativement à un ensemble de documents (le corpus).
+  - Usage ancien en NLP (moteurs de recherche, analyses de similarités, etc.)
+
+
+[L’idée est simple]{.blue} :
+
+  - Un mot est important dans un document s’il :
+    - apparaît souvent dans ce document (TF),
+    - mais rarement dans l’ensemble des documents (IDF).
+
+- Forme très simple d'[**apprentissage**]{.blue2}
+- Mais représentation [**sparse**]{.blue2}, fléau de la dimension
+
+## Exemple de TF-IDF{.scrollable}
+
+<div style="overflow-x: auto; width: 100%;">
+  <table style="border-collapse: collapse; width: 100%; text-align: center;">
+    <thead>
       <tr>
-        <td style="text-align: center;">La pratique du tricot et du crochet</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">2</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
+        <th></th>
+        <th>La pratique du tricot et du crochet</th>
+        <th>Transmettre la passion du timbre</th>
+        <th>Vivre de sa passion</th>
       </tr>
-      <tr>
-        <td style="text-align: center;">Transmettre sa passion du timbre</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">0</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">Vivre de sa passion</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">0</td>
-        <td style="text-align: center;">1</td>
-      </tr>
+    </thead>
+    <tbody>
+      <tr><td>crochet</td><td>0.157</td><td>0</td><td>0</td></tr>
+      <tr><td>de</td><td>0</td><td>0</td><td>0.275</td></tr>
+      <tr><td>du</td><td>0.116</td><td>0.081</td><td>0</td></tr>
+      <tr><td>et</td><td>0.157</td><td>0</td><td>0</td></tr>
+      <tr><td>la</td><td>0.058</td><td>0.081</td><td>0</td></tr>
+      <tr><td>passion</td><td>0</td><td>0.081</td><td>0.101</td></tr>
+      <tr><td>pratique</td><td>0.157</td><td>0</td><td>0</td></tr>
+      <tr><td>sa</td><td>0</td><td>0</td><td>0.275</td></tr>
+      <tr><td>timbre</td><td>0</td><td>0.220</td><td>0</td></tr>
+      <tr><td>transmettre</td><td>0</td><td>0.220</td><td>0</td></tr>
+      <tr><td>tricot</td><td>0.157</td><td>0</td><td>0</td></tr>
+      <tr><td>vivre</td><td>0</td><td>0</td><td>0.275</td></tr>
     </tbody>
   </table>
 </div>
 
 
 
-## Modèles de langage (2/5) {.nostretch}
-
-<h4>Encoder [**l'information présente**]{.orange} dans un texte</h4>
-
-- Extension de la matrice document-terme : [**TF IDF**]{.blue2}
-    + _Term Frequency_ * _Inverse Document Frequency_
-- Forme très simple d'[**apprentissage**]{.blue2}
-- Mais représentation [**sparse**]{.blue2}, fléau de la dimension
-
-## Modèles de langage (3/5) {.nostretch}
+## Les embeddings W2V {.nostretch}
 
 - _Text embeddings_ : [**représentation dense**]{.orange}
 - Exemple de [**word2vec**]{.orange} (2013), apprentissage non-supervisé d'embeddings à l'aide d'une tâche de prédiction des mots à partir de leur contexte
@@ -108,11 +116,11 @@
 ![](img/word_embedding.png)
 
 
-## Modèles de langage (5/5) {.nostretch}
+## Les transformers {.nostretch}
 
 - Aujourd'hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone : le [**Transformer**]{.orange}
 - Embeddings des mots qui composent un texte deviennent [**contextuels**]{.orange}
-- Explosion des modèle de langage [**génératifs**]{.orange}
+- Explosion des modèles de langage [**génératifs**]{.orange}
 
 ## Applications pour la statistique publique
 
@@ -124,14 +132,14 @@
 - [**Extraction automatique**]{.orange} de contenu au sein de documents textuels
 - Modèles de langage [**génératifs**]{.orange} : assistants de code, RAG, etc.
 
-## Application 1
+## Application 2
 
 - Consignes sur [le site web](https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html)
 - Codification automatique des entreprises dans la nomenclature d'activités
 - Exploitation des données Sirene avec {{< fa brands python >}} et `Fasttext`
 - Ouverture à la problématique du MLOps appliquée au NLP
 
-<a href="https://datalab.sspcloud.fr/launcher/ide/jupyter-python?autoLaunch=true&amp;onyxia.friendlyName=%C2%ABpython-datascience%C2%BB&amp;init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Ftomseimandi%2Finit-scripts%2Fmain%2Fcours-ensai.sh%C2%BB&amp;security.allowlist.enabled=false" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSPcloud-Tester%20via%20SSP--cloud-informational&amp;color=yellow?logo=Python" alt="Onyxia"></a>
+- ✍🏻 [**Lien vers le TD**](https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html) 
 
 ## Application 2 (optionnelle)
 
