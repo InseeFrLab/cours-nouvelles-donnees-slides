@@ -1220,8 +1220,8 @@ Figure&nbsp;1
 <ul>
 <li>Application sur le <a href="https://inseefrlab.github.io/cours-nouvelles-donnees-site/geolocalized_data_exemples.html">site web du cours</a> sur données de transactions immobilières 💰💸🏠</li>
 <li>Manipuler les données spatiales DVF et les données carroyées de l’Insee avec <i class="fa-brands fa-r-project" aria-label="r-project"></i> et <code>DuckDB</code></li>
+<li>✍🏻 <a href="https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/application1.html"><strong>Lien vers le TD</strong></a></li>
 </ul>
-<p><a href="https://datalab.sspcloud.fr/launcher/ide/rstudio?autoLaunch=true&amp;onyxia.friendlyName=%C2%ABtp-geo%C2%BB&amp;persistence.size=%C2%AB30Gi%C2%BB&amp;security.allowlist.enabled=false" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSPcloud-Tester%20via%20SSP--cloud-informational&amp;color=yellow?logo=Rstudio" alt="Onyxia"></a></p>
 </section></section>
 <section>
 <section id="analyse-textuelle" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
@@ -1241,203 +1241,427 @@ Figure&nbsp;1
 <li>Traitement automatique : fait référence à des tâches <span class="orange"><strong>variées</strong></span></li>
 </ul>
 </section>
-<section id="modèles-de-langage-15" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
-<h2>Modèles de langage (1/5)</h2>
+<section id="encoder-du-texte" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Encoder du texte</h2>
 <ul>
-<li>Encoder <span class="orange"><strong>l’information présente</strong></span> dans un texte :
+<li><p>Encoder <span class="orange"><strong>l’information présente</strong></span> dans un texte :</p>
 <ul>
-<li><span class="blue2"><strong>Matrice document-terme</strong></span>.</li>
-<li>Avec le corpus <em>“La pratique du tricot et du crochet”</em>, <em>“Transmettre la passion du timbre”</em> et <em>“Vivre de sa passion”</em> :</li>
+<li>Passage de données “non-structurées” à des valeurs numériques…</li>
+<li>… et donc gérables par des modèles !</li>
+</ul></li>
+<li><p>Outil classique et immédiat : la <span class="blue2"><strong>matrice document-terme</strong></span>.</p></li>
+<li><p>Regardons sur un exemple, sur le corpus suivant :</p>
+<ul>
+<li><em>“La pratique du tricot et du crochet”</em></li>
+<li><em>“Transmettre la passion du timbre”</em></li>
+<li><em>“Vivre de sa passion”</em></li>
 </ul></li>
 </ul>
+</section>
+<section id="exemple-de-document-terme" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple de “document-terme”</h2>
 <div style="overflow-x: auto; width: 100%;">
 <table style="border-collapse: collapse; width: 100%; text-align: center;">
 <thead>
 <tr>
-<th style="text-align: center;">
+<th>
 </th>
-<th style="text-align: center;">
-crochet
+<th>
+La pratique du tricot et du crochet
 </th>
-<th style="text-align: center;">
-de
+<th>
+Transmettre la passion du timbre
 </th>
-<th style="text-align: center;">
-du
-</th>
-<th style="text-align: center;">
-et
-</th>
-<th style="text-align: center;">
-la
-</th>
-<th style="text-align: center;">
-passion
-</th>
-<th style="text-align: center;">
-pratique
-</th>
-<th style="text-align: center;">
-sa
-</th>
-<th style="text-align: center;">
-timbre
-</th>
-<th style="text-align: center;">
-transmettre
-</th>
-<th style="text-align: center;">
-tricot
-</th>
-<th style="text-align: center;">
-vivre
+<th>
+Vivre de sa passion
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">
-La pratique du tricot et du crochet
+<td>
+crochet
 </td>
-<td style="text-align: center;">
-1
+<td>
+1/7
 </td>
-<td style="text-align: center;">
+<td>
 0
 </td>
-<td style="text-align: center;">
-2
-</td>
-<td style="text-align: center;">
-1
-</td>
-<td style="text-align: center;">
-1
-</td>
-<td style="text-align: center;">
-0
-</td>
-<td style="text-align: center;">
-1
-</td>
-<td style="text-align: center;">
-0
-</td>
-<td style="text-align: center;">
-0
-</td>
-<td style="text-align: center;">
-0
-</td>
-<td style="text-align: center;">
-1
-</td>
-<td style="text-align: center;">
+<td>
 0
 </td>
 </tr>
 <tr>
-<td style="text-align: center;">
-Transmettre sa passion du timbre
+<td>
+de
 </td>
-<td style="text-align: center;">
+<td>
 0
 </td>
-<td style="text-align: center;">
+<td>
 0
 </td>
-<td style="text-align: center;">
-1
+<td>
+1/4
 </td>
-<td style="text-align: center;">
-0
+</tr>
+<tr>
+<td>
+du
 </td>
-<td style="text-align: center;">
-0
+<td>
+2/7
 </td>
-<td style="text-align: center;">
-1
+<td>
+1/5
 </td>
-<td style="text-align: center;">
-0
-</td>
-<td style="text-align: center;">
-1
-</td>
-<td style="text-align: center;">
-1
-</td>
-<td style="text-align: center;">
-1
-</td>
-<td style="text-align: center;">
-0
-</td>
-<td style="text-align: center;">
+<td>
 0
 </td>
 </tr>
 <tr>
-<td style="text-align: center;">
-Vivre de sa passion
+<td>
+et
 </td>
-<td style="text-align: center;">
+<td>
+1/7
+</td>
+<td>
 0
 </td>
-<td style="text-align: center;">
-1
-</td>
-<td style="text-align: center;">
+<td>
 0
 </td>
-<td style="text-align: center;">
+</tr>
+<tr>
+<td>
+la
+</td>
+<td>
+1/7
+</td>
+<td>
+1/5
+</td>
+<td>
 0
 </td>
-<td style="text-align: center;">
+</tr>
+<tr>
+<td>
+passion
+</td>
+<td>
 0
 </td>
-<td style="text-align: center;">
-1
+<td>
+1/5
 </td>
-<td style="text-align: center;">
+<td>
+1/4
+</td>
+</tr>
+<tr>
+<td>
+pratique
+</td>
+<td>
+1/7
+</td>
+<td>
 0
 </td>
-<td style="text-align: center;">
-1
-</td>
-<td style="text-align: center;">
+<td>
 0
 </td>
-<td style="text-align: center;">
+</tr>
+<tr>
+<td>
+sa
+</td>
+<td>
 0
 </td>
-<td style="text-align: center;">
+<td>
 0
 </td>
-<td style="text-align: center;">
-1
+<td>
+1/4
+</td>
+</tr>
+<tr>
+<td>
+timbre
+</td>
+<td>
+0
+</td>
+<td>
+1/5
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+transmettre
+</td>
+<td>
+0
+</td>
+<td>
+1/5
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+tricot
+</td>
+<td>
+1/7
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+vivre
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+1/4
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="modèles-de-langage-25" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
-<h2>Modèles de langage (2/5)</h2>
-<h4>
-Encoder <span class="orange"><strong>l’information présente</strong></span> dans un texte
-</h4>
+<section id="le-tf-idf" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Le TF-IDF</h2>
+<p><span class="orange">TF-IDF</span> (<em>Term Frequency – Inverse Document Frequency</em>) :</p>
 <ul>
-<li>Extension de la matrice document-terme : <span class="blue2"><strong>TF IDF</strong></span>
+<li>Quantifie l’importance d’un mot dans un document, relativement à un ensemble de documents (le corpus).</li>
+<li>Usage ancien en NLP (moteurs de recherche, analyses de similarités, etc.)</li>
+</ul>
+<p><span class="blue">L’idée est simple</span> :</p>
 <ul>
-<li><em>Term Frequency</em> * <em>Inverse Document Frequency</em></li>
+<li>Un mot est important dans un document s’il :
+<ul>
+<li>apparaît souvent dans ce document (TF),</li>
+<li>mais rarement dans l’ensemble des documents (IDF).</li>
 </ul></li>
 <li>Forme très simple d’<span class="blue2"><strong>apprentissage</strong></span></li>
 <li>Mais représentation <span class="blue2"><strong>sparse</strong></span>, fléau de la dimension</li>
 </ul>
 </section>
-<section id="modèles-de-langage-35" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
-<h2>Modèles de langage (3/5)</h2>
+<section id="exemple-de-tf-idf" class="slide level2 scrollable" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple de TF-IDF</h2>
+<div style="overflow-x: auto; width: 100%;">
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+La pratique du tricot et du crochet
+</th>
+<th>
+Transmettre la passion du timbre
+</th>
+<th>
+Vivre de sa passion
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+crochet
+</td>
+<td>
+0.157
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+de
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0.275
+</td>
+</tr>
+<tr>
+<td>
+du
+</td>
+<td>
+0.116
+</td>
+<td>
+0.081
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+et
+</td>
+<td>
+0.157
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+la
+</td>
+<td>
+0.058
+</td>
+<td>
+0.081
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+passion
+</td>
+<td>
+0
+</td>
+<td>
+0.081
+</td>
+<td>
+0.101
+</td>
+</tr>
+<tr>
+<td>
+pratique
+</td>
+<td>
+0.157
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+sa
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0.275
+</td>
+</tr>
+<tr>
+<td>
+timbre
+</td>
+<td>
+0
+</td>
+<td>
+0.220
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+transmettre
+</td>
+<td>
+0
+</td>
+<td>
+0.220
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+tricot
+</td>
+<td>
+0.157
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+vivre
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0.275
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="les-embeddings-w2v" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
+<h2>Les embeddings W2V</h2>
 <ul>
 <li><em>Text embeddings</em> : <span class="orange"><strong>représentation dense</strong></span></li>
 <li>Exemple de <span class="orange"><strong>word2vec</strong></span> (2013), apprentissage non-supervisé d’embeddings à l’aide d’une tâche de prédiction des mots à partir de leur contexte</li>
@@ -1452,12 +1676,12 @@ Encoder <span class="orange"><strong>l’information présente</strong></span> d
 <h2>Modèles de langage (4/5)</h2>
 
 <img data-src="img/word_embedding.png" class="r-stretch"></section>
-<section id="modèles-de-langage-55" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
-<h2>Modèles de langage (5/5)</h2>
+<section id="les-transformers" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
+<h2>Les transformers</h2>
 <ul>
 <li>Aujourd’hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone : le <span class="orange"><strong>Transformer</strong></span></li>
 <li>Embeddings des mots qui composent un texte deviennent <span class="orange"><strong>contextuels</strong></span></li>
-<li>Explosion des modèle de langage <span class="orange"><strong>génératifs</strong></span></li>
+<li>Explosion des modèles de langage <span class="orange"><strong>génératifs</strong></span></li>
 </ul>
 </section>
 <section id="applications-pour-la-statistique-publique" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -1474,15 +1698,15 @@ Encoder <span class="orange"><strong>l’information présente</strong></span> d
 <li>Modèles de langage <span class="orange"><strong>génératifs</strong></span> : assistants de code, RAG, etc.</li>
 </ul>
 </section>
-<section id="application-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Application 1</h2>
+<section id="application-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Application 2</h2>
 <ul>
-<li>Consignes sur <a href="https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html">le site web</a></li>
-<li>Codification automatique des entreprises dans la nomenclature d’activités</li>
-<li>Exploitation des données Sirene avec <i class="fa-brands fa-python" aria-label="python"></i> et <code>Fasttext</code></li>
-<li>Ouverture à la problématique du MLOps appliquée au NLP</li>
+<li><p>Consignes sur <a href="https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html">le site web</a></p></li>
+<li><p>Codification automatique des entreprises dans la nomenclature d’activités</p></li>
+<li><p>Exploitation des données Sirene avec <i class="fa-brands fa-python" aria-label="python"></i> et <code>Fasttext</code></p></li>
+<li><p>Ouverture à la problématique du MLOps appliquée au NLP</p></li>
+<li><p>✍🏻 <a href="https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html"><strong>Lien vers le TD</strong></a></p></li>
 </ul>
-<p><a href="https://datalab.sspcloud.fr/launcher/ide/jupyter-python?autoLaunch=true&amp;onyxia.friendlyName=%C2%ABpython-datascience%C2%BB&amp;init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Ftomseimandi%2Finit-scripts%2Fmain%2Fcours-ensai.sh%C2%BB&amp;security.allowlist.enabled=false" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSPcloud-Tester%20via%20SSP--cloud-informational&amp;color=yellow?logo=Python" alt="Onyxia"></a></p>
 </section>
 <section id="application-2-optionnelle" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Application 2 (optionnelle)</h2>

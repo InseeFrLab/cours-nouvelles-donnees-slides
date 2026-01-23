@@ -277,7 +277,7 @@
     "href": "slides/index.html#application",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Application",
-    "text": "Application\n\nApplication sur le site web du cours sur données de transactions immobilières 💰💸🏠\nManipuler les données spatiales DVF et les données carroyées de l’Insee avec  et DuckDB"
+    "text": "Application\n\nApplication sur le site web du cours sur données de transactions immobilières 💰💸🏠\nManipuler les données spatiales DVF et les données carroyées de l’Insee avec  et DuckDB\n✍🏻 Lien vers le TD"
   },
   {
     "objectID": "slides/index.html#introduction",
@@ -287,25 +287,39 @@
     "text": "Introduction\n\nUn des domaines de recherche les plus actifs en data science\nBeaucoup d’applications potentielles pour la statistique publique :\n\nDonnées d’enquête\nDonnées administratives\nDonnées privées mobilisables pour la statistique publique\n\nTraitement automatique : fait référence à des tâches variées"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-15",
-    "href": "slides/index.html#modèles-de-langage-15",
+    "objectID": "slides/index.html#encoder-du-texte",
+    "href": "slides/index.html#encoder-du-texte",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (1/5)",
-    "text": "Modèles de langage (1/5)\n\nEncoder l’information présente dans un texte :\n\nMatrice document-terme.\nAvec le corpus “La pratique du tricot et du crochet”, “Transmettre la passion du timbre” et “Vivre de sa passion” :\n\n\n\n\n\n\n\n\n\ncrochet\n\n\nde\n\n\ndu\n\n\net\n\n\nla\n\n\npassion\n\n\npratique\n\n\nsa\n\n\ntimbre\n\n\ntransmettre\n\n\ntricot\n\n\nvivre\n\n\n\n\n\n\nLa pratique du tricot et du crochet\n\n\n1\n\n\n0\n\n\n2\n\n\n1\n\n\n1\n\n\n0\n\n\n1\n\n\n0\n\n\n0\n\n\n0\n\n\n1\n\n\n0\n\n\n\n\nTransmettre sa passion du timbre\n\n\n0\n\n\n0\n\n\n1\n\n\n0\n\n\n0\n\n\n1\n\n\n0\n\n\n1\n\n\n1\n\n\n1\n\n\n0\n\n\n0\n\n\n\n\nVivre de sa passion\n\n\n0\n\n\n1\n\n\n0\n\n\n0\n\n\n0\n\n\n1\n\n\n0\n\n\n1\n\n\n0\n\n\n0\n\n\n0\n\n\n1"
+    "section": "Encoder du texte",
+    "text": "Encoder du texte\n\nEncoder l’information présente dans un texte :\n\nPassage de données “non-structurées” à des valeurs numériques…\n… et donc gérables par des modèles !\n\nOutil classique et immédiat : la matrice document-terme.\nRegardons sur un exemple, sur le corpus suivant :\n\n“La pratique du tricot et du crochet”\n“Transmettre la passion du timbre”\n“Vivre de sa passion”"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-25",
-    "href": "slides/index.html#modèles-de-langage-25",
+    "objectID": "slides/index.html#exemple-de-document-terme",
+    "href": "slides/index.html#exemple-de-document-terme",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (2/5)",
-    "text": "Modèles de langage (2/5)\n\nEncoder l’information présente dans un texte\n\n\nExtension de la matrice document-terme : TF IDF\n\nTerm Frequency * Inverse Document Frequency\n\nForme très simple d’apprentissage\nMais représentation sparse, fléau de la dimension"
+    "section": "Exemple de “document-terme”",
+    "text": "Exemple de “document-terme”\n\n\n\n\n\n\n\nLa pratique du tricot et du crochet\n\n\nTransmettre la passion du timbre\n\n\nVivre de sa passion\n\n\n\n\n\n\ncrochet\n\n\n1/7\n\n\n0\n\n\n0\n\n\n\n\nde\n\n\n0\n\n\n0\n\n\n1/4\n\n\n\n\ndu\n\n\n2/7\n\n\n1/5\n\n\n0\n\n\n\n\net\n\n\n1/7\n\n\n0\n\n\n0\n\n\n\n\nla\n\n\n1/7\n\n\n1/5\n\n\n0\n\n\n\n\npassion\n\n\n0\n\n\n1/5\n\n\n1/4\n\n\n\n\npratique\n\n\n1/7\n\n\n0\n\n\n0\n\n\n\n\nsa\n\n\n0\n\n\n0\n\n\n1/4\n\n\n\n\ntimbre\n\n\n0\n\n\n1/5\n\n\n0\n\n\n\n\ntransmettre\n\n\n0\n\n\n1/5\n\n\n0\n\n\n\n\ntricot\n\n\n1/7\n\n\n0\n\n\n0\n\n\n\n\nvivre\n\n\n0\n\n\n0\n\n\n1/4"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-35",
-    "href": "slides/index.html#modèles-de-langage-35",
+    "objectID": "slides/index.html#le-tf-idf",
+    "href": "slides/index.html#le-tf-idf",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (3/5)",
-    "text": "Modèles de langage (3/5)\n\nText embeddings : représentation dense\nExemple de word2vec (2013), apprentissage non-supervisé d’embeddings à l’aide d’une tâche de prédiction des mots à partir de leur contexte"
+    "section": "Le TF-IDF",
+    "text": "Le TF-IDF\nTF-IDF (Term Frequency – Inverse Document Frequency) :\n\nQuantifie l’importance d’un mot dans un document, relativement à un ensemble de documents (le corpus).\nUsage ancien en NLP (moteurs de recherche, analyses de similarités, etc.)\n\nL’idée est simple :\n\nUn mot est important dans un document s’il :\n\napparaît souvent dans ce document (TF),\nmais rarement dans l’ensemble des documents (IDF).\n\nForme très simple d’apprentissage\nMais représentation sparse, fléau de la dimension"
+  },
+  {
+    "objectID": "slides/index.html#exemple-de-tf-idf",
+    "href": "slides/index.html#exemple-de-tf-idf",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Exemple de TF-IDF",
+    "text": "Exemple de TF-IDF\n\n\n\n\n\n\n\nLa pratique du tricot et du crochet\n\n\nTransmettre la passion du timbre\n\n\nVivre de sa passion\n\n\n\n\n\n\ncrochet\n\n\n0.157\n\n\n0\n\n\n0\n\n\n\n\nde\n\n\n0\n\n\n0\n\n\n0.275\n\n\n\n\ndu\n\n\n0.116\n\n\n0.081\n\n\n0\n\n\n\n\net\n\n\n0.157\n\n\n0\n\n\n0\n\n\n\n\nla\n\n\n0.058\n\n\n0.081\n\n\n0\n\n\n\n\npassion\n\n\n0\n\n\n0.081\n\n\n0.101\n\n\n\n\npratique\n\n\n0.157\n\n\n0\n\n\n0\n\n\n\n\nsa\n\n\n0\n\n\n0\n\n\n0.275\n\n\n\n\ntimbre\n\n\n0\n\n\n0.220\n\n\n0\n\n\n\n\ntransmettre\n\n\n0\n\n\n0.220\n\n\n0\n\n\n\n\ntricot\n\n\n0.157\n\n\n0\n\n\n0\n\n\n\n\nvivre\n\n\n0\n\n\n0\n\n\n0.275"
+  },
+  {
+    "objectID": "slides/index.html#les-embeddings-w2v",
+    "href": "slides/index.html#les-embeddings-w2v",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Les embeddings W2V",
+    "text": "Les embeddings W2V\n\nText embeddings : représentation dense\nExemple de word2vec (2013), apprentissage non-supervisé d’embeddings à l’aide d’une tâche de prédiction des mots à partir de leur contexte"
   },
   {
     "objectID": "slides/index.html#modèles-de-langage-45",
@@ -315,11 +329,11 @@
     "text": "Modèles de langage (4/5)"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-55",
-    "href": "slides/index.html#modèles-de-langage-55",
+    "objectID": "slides/index.html#les-transformers",
+    "href": "slides/index.html#les-transformers",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (5/5)",
-    "text": "Modèles de langage (5/5)\n\nAujourd’hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone : le Transformer\nEmbeddings des mots qui composent un texte deviennent contextuels\nExplosion des modèle de langage génératifs"
+    "section": "Les transformers",
+    "text": "Les transformers\n\nAujourd’hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone : le Transformer\nEmbeddings des mots qui composent un texte deviennent contextuels\nExplosion des modèles de langage génératifs"
   },
   {
     "objectID": "slides/index.html#applications-pour-la-statistique-publique",
@@ -329,11 +343,11 @@
     "text": "Applications pour la statistique publique\n\nClassification dans des nomenclatures :\n\nProfession (enquêtes, recensement de la population)\nActivité des entreprises\nProduits de consommation\n\nAppariements\nExtraction automatique de contenu au sein de documents textuels\nModèles de langage génératifs : assistants de code, RAG, etc."
   },
   {
-    "objectID": "slides/index.html#application-1",
-    "href": "slides/index.html#application-1",
+    "objectID": "slides/index.html#application-2",
+    "href": "slides/index.html#application-2",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Application 1",
-    "text": "Application 1\n\nConsignes sur le site web\nCodification automatique des entreprises dans la nomenclature d’activités\nExploitation des données Sirene avec  et Fasttext\nOuverture à la problématique du MLOps appliquée au NLP"
+    "section": "Application 2",
+    "text": "Application 2\n\nConsignes sur le site web\nCodification automatique des entreprises dans la nomenclature d’activités\nExploitation des données Sirene avec  et Fasttext\nOuverture à la problématique du MLOps appliquée au NLP\n✍🏻 Lien vers le TD"
   },
   {
     "objectID": "slides/index.html#application-2-optionnelle",
