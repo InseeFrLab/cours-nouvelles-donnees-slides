@@ -19,7 +19,20 @@ bibliography: references.bib
 
 ## Lien vers le cours
 
+::: {.columns}
+
+::: {.column}
+**Lien vers les slides**
 {{< qrcode https://inseefrlab.github.io/cours-nouvelles-donnees-slides/ width=500 height=500 >}}
+:::
+
+::: {.column}
+**Lien vers le site du cours**
+{{< qrcode https://inseefrlab.github.io/cours-nouvelles-donnees-site/ width=500 height=500 >}}
+:::
+
+::: <!-- end columns -->
+
 
 {{< include "_intro.qmd" >}}
 
