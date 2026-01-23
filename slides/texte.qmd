@@ -9,7 +9,7 @@
     - Données [**privées**]{.blue2} mobilisables pour la statistique publique
 - Traitement automatique : fait référence à des tâches [**variées**]{.orange}
 
-## Modèles de langage (1/5) {.smaller}
+## Encoder du texte {.smaller}
 
 - Encoder [**l'information présente**]{.orange} dans un texte :
     - Passage de données "non-structurées" à des valeurs numériques...
@@ -60,7 +60,7 @@
 
 [TF-IDF]{.orange} (_Term Frequency – Inverse Document Frequency_) : 
   
-  - quantifie l'importance d'un mot dans un document, relativement à un ensemble de documents (le corpus).
+  - Quantifie l'importance d'un mot dans un document, relativement à un ensemble de documents (le corpus).
   - Usage ancien en NLP (moteurs de recherche, analyses de similarités, etc.)
 
 
@@ -104,7 +104,7 @@
 
 
 
-## Modèles de langage (3/5) {.nostretch}
+## Les embeddings W2V {.nostretch}
 
 - _Text embeddings_ : [**représentation dense**]{.orange}
 - Exemple de [**word2vec**]{.orange} (2013), apprentissage non-supervisé d'embeddings à l'aide d'une tâche de prédiction des mots à partir de leur contexte
@@ -116,11 +116,11 @@
 ![](img/word_embedding.png)
 
 
-## Modèles de langage (5/5) {.nostretch}
+## Les transformers {.nostretch}
 
 - Aujourd'hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone : le [**Transformer**]{.orange}
 - Embeddings des mots qui composent un texte deviennent [**contextuels**]{.orange}
-- Explosion des modèle de langage [**génératifs**]{.orange}
+- Explosion des modèles de langage [**génératifs**]{.orange}
 
 ## Applications pour la statistique publique
 
@@ -132,7 +132,7 @@
 - [**Extraction automatique**]{.orange} de contenu au sein de documents textuels
 - Modèles de langage [**génératifs**]{.orange} : assistants de code, RAG, etc.
 
-## Application 1
+## Application 2
 
 - Consignes sur [le site web](https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html)
 - Codification automatique des entreprises dans la nomenclature d'activités
