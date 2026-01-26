@@ -127,3 +127,8 @@ Le noyau (ou kernel),  en jaune, *glisse* sur la matrice de devant à traiter. U
 :::
 
 ::::
+
+## Pour aller plus loin (facultatif) ...
+
+- Application sur le [site web du cours](https://inseefrlab.github.io/cours-nouvelles-donnees-site/images_exemples.html) sur la classification d'oiseaux et le traitement d'images satellites 
+- Entraîner un modèle de classification d'oiseaux avant de traiter des images satellites pour effectuer de la reconnaissance de terrains, avec {{< fa brands python >}} et `scikit-learn`

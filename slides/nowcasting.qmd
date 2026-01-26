@@ -38,4 +38,7 @@
 - [**Données de téléphonie mobile**]{.orange} pour mesurer les déplacements de populations au moment des confinement et déconfinement [@galiana-20]
 - [**Prévisions : *nowcasting* versus approche ascendante**]{.orange} pour comparer les derniers modèles de *nowcasting* et l'approche ascendante utilisée par l'Insee [@BortoliCazenaveRoucher2025]
 
+## Pour aller plus loin (facultatif) ...
 
+- Application sur le [site web du cours](https://inseefrlab.github.io/cours-nouvelles-donnees-site/nowcasting_exemples.html) sur les données de réseaux sociaux 
+- Manipuler les API pour récupérer des tweets, analyser leur contenu et le ressenti des gens sur la statistique publique
