@@ -25,20 +25,17 @@
 - [**Données de réseaux sociaux**]{.orange}: par exemple données de Twitter pour prévoir du comportement des marchés financiers et du marché du travail
 - [**Risques**]{.orange}: données très biaisées, difficiles à modéliser
 
-## Nowcasting à l'Insee (1/3)
+## Nowcasting à l'Insee (1/2)
 
 - Chaire de recherche [**Mesures de l’économie, nowcasting ‐ au‐delà du PIB en 2021**]{.orange}
 - Travail sur [**l’amélioration des prévisions économiques**]{.orange} grâce à la mobilisation de nouvelles données
 - Actualités [@bortoli-18], médias sociaux, données satellitaires, réseaux professionnels et avis de consommateurs, données sur le commerce international, la consommation d’électricité et le transport routier [@fornaro-20], le transport maritime, l’immobilier, l’hôtellerie et les télécommunications
 - [**Nouveaux indicateurs**]{.orange} économiques, de bien-être ou de développement durable
 
-## Nowcasting à l'Insee (2/3)
+## Nowcasting à l'Insee (2/2)
 
 - [**Impact de la crise sanitaire**]{.orange} du Covid-19 sur l'activité économique: [**chute d’un tiers**]{.orange} pour la consommation (données de transactions par cartes bancaires)
 - [**Données de téléphonie mobile**]{.orange} pour mesurer les déplacements de populations au moment des confinement et déconfinement [@galiana-20]
+- [**Prévisions : *nowcasting* versus approche ascendante**]{.orange} pour comparer les derniers modèles de *nowcasting* et l'approche ascendante utilisée par l'Insee [@BortoliCazenaveRoucher2025]
 
-## Nowcasting à l'Insee (3/3)
 
-- [**Challenge nowcasting organisé par Eurostat**]{.orange}: prédictions mensuelles de la consommation de gaz, des livraisons de produits pétroliers et de disponibilité d'énergie électrique
-
-![](img/nowcasting.png){fig-align="center"}
