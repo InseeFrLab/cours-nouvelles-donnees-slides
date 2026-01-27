@@ -21,6 +21,7 @@ bibliography: references.bib
 
 {{< qrcode https://inseefrlab.github.io/cours-nouvelles-donnees-slides/ width=500 height=500 >}}
 
+. . .
 
 ## Lien vers le site
 
