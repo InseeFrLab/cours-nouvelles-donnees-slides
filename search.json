@@ -1,17 +1,31 @@
 [
   {
-    "objectID": "slides/index.html#lien-vers-le-cours",
-    "href": "slides/index.html#lien-vers-le-cours",
+    "objectID": "slides/index.html#lien-vers-les-slides",
+    "href": "slides/index.html#lien-vers-les-slides",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Lien vers le cours",
-    "text": "Lien vers le cours"
+    "section": "Lien vers les slides",
+    "text": "Lien vers les slides"
   },
   {
-    "objectID": "slides/index.html#prolifération-des-données",
-    "href": "slides/index.html#prolifération-des-données",
+    "objectID": "slides/index.html#lien-vers-le-site",
+    "href": "slides/index.html#lien-vers-le-site",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Prolifération des données",
-    "text": "Prolifération des données\n\nNumérisation et innovations technologiques ont réduit le coût de production de la donnée\n\nVolume de données produites en explosion :\n\n\n\n\nL’utilisation des statistiques n’est pas nouvelle (cf. Desrosières)…\n\n\n\n\n… mais une place accrue :\n\nDans le débat public et l’action publique (Supiot, Martin)\nDans les stratégies d’entreprise"
+    "section": "Lien vers le site",
+    "text": "Lien vers le site"
+  },
+  {
+    "objectID": "slides/index.html#les-données-denquête",
+    "href": "slides/index.html#les-données-denquête",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Les données d’enquête",
+    "text": "Les données d’enquête\n\nBase “historique” des statistiques\nPrésentent de nombreux avantages : finalité est la bonne, cadre et concept maîtrisé\nMais ce sont des données longues à récolter et coûteuses pour le répondant et l’Insee (plusieurs années)\nDans un contexte de demande de statistiques plus poussées avec des moyens stables"
+  },
+  {
+    "objectID": "slides/index.html#en-parallèle-prolifération-des-données",
+    "href": "slides/index.html#en-parallèle-prolifération-des-données",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "En parallèle, prolifération des données",
+    "text": "En parallèle, prolifération des données\n\nNumérisation et innovations technologiques ont réduit le coût de production de la donnée\n\nVolume de données produites en explosion\n\n\n\n\nL’utilisation des statistiques n’est pas nouvelle (cf. Desrosières)…\n\n\n\n\n… mais une place accrue :\n\nDans le débat public et l’action publique (Supiot, Martin)\nDans les stratégies d’entreprise"
   },
   {
     "objectID": "slides/index.html#diversification-des-données",
@@ -32,7 +46,7 @@
     "href": "slides/index.html#diversification-des-données-14-1",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Diversification des données (1/4)",
-    "text": "Diversification des données (1/4)\nDonnées administratives\n\nviewof info_mutations = Inputs.radio(\n  [\"Tableau\", \"Graphique\"], {value: \"Tableau\"}\n)\n\n\n\n\n\n\n\ninfo_mutations == \"Tableau\" ? html`&lt;div&gt;${table_mutations1}&lt;div&gt;` : html`&lt;div&gt;${plot_mutations}&lt;div&gt;`\n\n\n\n\n\n\n\nurl = \"https://minio.lab.sspcloud.fr/nicolastlm/diffusion/92049.csv\"  \ndvf = d3.csv(url)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntable_mutations1 = Inputs.table(dvf, {\"columns\": ['date_mutation', 'valeur_fonciere', 'adresse_nom_voie']})\nplot_mutations = Plot.plot({\n  y: {grid: true, label: \"Nombre de transactions\"},\n  x: {\n    ticks: 12,\n    transform: (d) =&gt; Math.pow(10, d),\n    type: \"log\",\n    tickFormat: \"~s\",\n    label: \"Prix (échelle log) →\"\n  },\n  marks: [\n    Plot.rectY(\n      dvf.filter(d =&gt; d.valeur_fonciere &gt; 10000),\n      Plot.binX({y: \"count\"},\n      {\n        x: d =&gt; Math.log10(d.valeur_fonciere),\n        tip: true\n      })\n    ),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot = require(\"https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.10/dist/plot.umd.min.js\")\n\n\n\n\n\n\nExemple : les données DVF"
+    "text": "Diversification des données (1/4)\nDonnées administratives\n\nviewof info_mutations = Inputs.radio(\n  [\"Tableau\", \"Graphique\"], {value: \"Tableau\"}\n)\n\n\n\n\n\n\n\ninfo_mutations == \"Tableau\" ? html`&lt;div&gt;${table_mutations1}&lt;div&gt;` : html`&lt;div&gt;${plot_mutations}&lt;div&gt;`\n\n\n\n\n\n\n\nurl = \"https://minio.lab.sspcloud.fr/nicolastlm/diffusion/92049.csv\"\ndvf = d3.csv(url)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntable_mutations1 = Inputs.table(dvf, {\"columns\": ['date_mutation', 'valeur_fonciere', 'adresse_nom_voie']})\nplot_mutations = Plot.plot({\n  y: {grid: true, label: \"Nombre de transactions\"},\n  x: {\n    ticks: 12,\n    transform: (d) =&gt; Math.pow(10, d),\n    type: \"log\",\n    tickFormat: \"~s\",\n    label: \"Prix (échelle log) →\"\n  },\n  marks: [\n    Plot.rectY(\n      dvf.filter(d =&gt; d.valeur_fonciere &gt; 10000),\n      Plot.binX({y: \"count\"},\n      {\n        x: d =&gt; Math.log10(d.valeur_fonciere),\n        tip: true\n      })\n    ),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot = require(\"https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.10/dist/plot.umd.min.js\")\n\n\n\n\n\n\nExemple : les données DVF"
   },
   {
     "objectID": "slides/index.html#diversification-des-données-24",
@@ -60,7 +74,7 @@
     "href": "slides/index.html#diversification-des-données-34-1",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Diversification des données (3/4)",
-    "text": "Diversification des données (3/4)\n\nDonnées textuelles et non structurées\n\n\nLes LLM bien sûr…\n… Mais pas que !\n\n\n\nClassification automatique de l’activité principale d’une entreprise :\n\n\nasync function transformToPost(description) {\n  // Base URL with query parameters\n  const baseUrl = `https://codification-ape2025-pytorch.lab.sspcloud.fr/predict/?nb_echos_max=5&prob_min=0.01&num_workers=0&batch_size=1`;\n\n  // Build the request body according to the expected schema\n  const body = {\n    forms: [\n      {\n        description_activity: description\n      }\n    ]\n  };\n\n  // Send the POST request\n  const response = await fetch(baseUrl, {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\"\n    },\n    body: JSON.stringify(body)\n  });\n\n  // Parse and return the JSON response\n  return response.json();\n}\n\n\n\n\n\n\n\nviewof activite = Inputs.text({\n  label: '',\n  value: 'data scientist',\n  width: 800\n})\n\nviewof prediction = Inputs.button(\"Run Prediction\", {\n  reduce: async () =&gt; {\n    return await transformToPost(activite);\n  }\n})\n\n// afficher les résultats joliment\nprediction_table = {\n  if (!prediction || !prediction.length) {\n    return html``\n  }\n\n  // la réponse est un tableau avec un seul objet\n  const result = prediction[0]\n  const { IC, MLversion, ...codes } = result\n\n  const rows = Object.values(codes).map(({ code, libelle, probabilite }) =&gt; {\n    return html`\n      &lt;tr&gt;\n        &lt;td&gt;${code} – ${libelle}&lt;/td&gt;\n        &lt;td style=\"text-align:right;\"&gt;${probabilite.toFixed(3)}&lt;/td&gt;\n      &lt;/tr&gt;\n    `\n  })\n\n  return html`\n    &lt;table style=\"border-collapse: collapse; width: 100%;\"&gt;\n      &lt;caption style=\"margin-bottom: 0.5em;\"&gt;\n        Confidence score : ${(+IC).toFixed(3)}\n      &lt;/caption&gt;\n      &lt;thead&gt;\n        &lt;tr&gt;\n          &lt;th style=\"text-align:left;\"&gt;Description (NA2008)&lt;/th&gt;\n          &lt;th style=\"text-align:right;\"&gt;Probability&lt;/th&gt;\n        &lt;/tr&gt;\n      &lt;/thead&gt;\n      &lt;tbody&gt;\n        ${rows}\n      &lt;/tbody&gt;\n    &lt;/table&gt;\n  `\n}"
+    "text": "Diversification des données (3/4)\n\nDonnées textuelles et non structurées\n\n\nLes LLM bien sûr…\n… Mais pas que !\n\n\n\nClassification automatique de l’activité principale d’une entreprise :\n\n\nasync function transformToPost(description) {\n  // Base URL with query parameters\n  const baseUrl = `https://codification-ape2025-pytorch.lab.sspcloud.fr/predict/?nb_echos_max=5&prob_min=0.01&num_workers=0&batch_size=1`;\n\n  // Build the request body according to the expected schema\n  const body = {\n    forms: [\n      {\n        description_activity: description\n      }\n    ]\n  };\n\n  // Send the POST request\n  const response = await fetch(baseUrl, {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\"\n    },\n    body: JSON.stringify(body)\n  });\n\n  // Parse and return the JSON response\n  return response.json();\n}\n\n\n\n\n\n\n\nviewof activite = Inputs.text({\n  label: '',\n  value: 'ma société fera du conseil en traitement de données',\n  width: 800\n})\n\nviewof prediction = Inputs.button(\"Run Prediction\", {\n  reduce: async () =&gt; {\n    return await transformToPost(activite);\n  }\n})\n\n// afficher les résultats joliment\nprediction_table = {\n  if (!prediction || !prediction.length) {\n    return html``\n  }\n\n  // la réponse est un tableau avec un seul objet\n  const result = prediction[0]\n  const { IC, MLversion, ...codes } = result\n\n  const rows = Object.values(codes).map(({ code, libelle, probabilite }) =&gt; {\n    return html`\n      &lt;tr&gt;\n        &lt;td&gt;${code} – ${libelle}&lt;/td&gt;\n        &lt;td style=\"text-align:right;\"&gt;${probabilite.toFixed(3)}&lt;/td&gt;\n      &lt;/tr&gt;\n    `\n  })\n\n  return html`\n    &lt;table style=\"border-collapse: collapse; width: 100%;\"&gt;\n      &lt;caption style=\"margin-bottom: 0.5em;\"&gt;\n        Confidence score : ${(+IC).toFixed(3)}\n      &lt;/caption&gt;\n      &lt;thead&gt;\n        &lt;tr&gt;\n          &lt;th style=\"text-align:left;\"&gt;Description (NA2008)&lt;/th&gt;\n          &lt;th style=\"text-align:right;\"&gt;Probability&lt;/th&gt;\n        &lt;/tr&gt;\n      &lt;/thead&gt;\n      &lt;tbody&gt;\n        ${rows}\n      &lt;/tbody&gt;\n    &lt;/table&gt;\n  `\n}"
   },
   {
     "objectID": "slides/index.html#diversification-des-données-44",
@@ -123,14 +137,14 @@
     "href": "slides/index.html#usage-de-la-donnée-administrative",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Usage de la donnée administrative",
-    "text": "Usage de la donnée administrative\n\nUsage à des fins de gestion (la finalité pour laquelle elles sont construites)\nUsage à des fins d’analyse (la finalité fortuite)\n\nExploitation directe pour productions ou études\nUtilisation pour des appariements\n\n\n\n\n\n\n\n\nLe CSNS\n\n\nCode statistique non signifiant (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique."
+    "text": "Usage de la donnée administrative\n\nUsage à des fins de gestion (la finalité pour laquelle elles sont construites)\nUsage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes (Pascal RIVIERE 2025)\n\nExploitation directe pour productions ou études\nUtilisation pour des appariements\nUtilisation pour expertiser des données d’enquêtes (MESLIN 2025)\n\n\n\n\n\n\n\n\nLe Code statistique non signifiant (CSNS)\n\n\nCode statistique non signifiant (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique."
   },
   {
-    "objectID": "slides/index.html#exemple-1-la-dsn",
-    "href": "slides/index.html#exemple-1-la-dsn",
+    "objectID": "slides/index.html#exemple-1-la-déclaration-sociale-nominative-dsn",
+    "href": "slides/index.html#exemple-1-la-déclaration-sociale-nominative-dsn",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Exemple 1 : la DSN",
-    "text": "Exemple 1 : la DSN\n\nDonnées issues des fiches de paie (Humbert-Bottin 2018)"
+    "section": "Exemple 1 : la déclaration sociale nominative (DSN)",
+    "text": "Exemple 1 : la déclaration sociale nominative (DSN)\n\nDonnées issues des fiches de paie (Humbert-Bottin 2018)"
   },
   {
     "objectID": "slides/index.html#exemple-2-sirene",
@@ -140,18 +154,18 @@
     "text": "Exemple 2 : SIRENE\n\nRépertoire d’entreprises administré par l’Insee :\n\nCentralise de l’information sur 32 millions d’établissements\nDont 13 millions d’établissements actifs\n\n\n\n\nMet à disposition des utilisateurs un code APE (pour activité principale exercée)\n\n\n\n\nBase de référence pour toutes les études et enquêtes statistiques sur les entreprises"
   },
   {
-    "objectID": "slides/index.html#exemple-3-fidéli",
-    "href": "slides/index.html#exemple-3-fidéli",
+    "objectID": "slides/index.html#exemple-3-fichiers-démographiques-sur-les-logements-et-les-individus-fidéli",
+    "href": "slides/index.html#exemple-3-fichiers-démographiques-sur-les-logements-et-les-individus-fidéli",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Exemple 3 : Fidéli",
-    "text": "Exemple 3 : Fidéli\n\nAssemblage de :\n\nDonnées d’origine fiscale : taxe d’habitation, fichier des propriétés bâties, déclarations de revenus, etc.\nDonnées d’origine sociale : prestations, etc.\nDonnées contextuelles sur le logement : nombre de pièces, etc.\n\n\n\n\nBase de référence pour études sociodémographiques fines"
+    "section": "Exemple 3 : Fichiers démographiques sur les logements et les individus (Fidéli)",
+    "text": "Exemple 3 : Fichiers démographiques sur les logements et les individus (Fidéli)\n\nAssemblage de :\n\nDonnées d’origine fiscale : taxe d’habitation, fichier des propriétés bâties, déclarations de revenus, etc.\nDonnées d’origine sociale : prestations, etc.\nDonnées contextuelles sur le logement : nombre de pièces, etc.\n\n\n\n\nBase de référence pour études sociodémographiques fines"
   },
   {
-    "objectID": "slides/index.html#exemple-4-le-snds",
-    "href": "slides/index.html#exemple-4-le-snds",
+    "objectID": "slides/index.html#exemple-4-le-système-national-des-données-de-santé-snds",
+    "href": "slides/index.html#exemple-4-le-système-national-des-données-de-santé-snds",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Exemple 4 : le SNDS",
-    "text": "Exemple 4 : le SNDS\n\nAppariement des grandes bases médico-administratives nationales, notamment :\n\nles données de l’assurance maladie (base SNIIRAM)\nles données des hôpitaux (base PMSI)\nles causes médicales de décès (base du CépiDC de l’Inserm)\n\n\n\n\nFlux massif :\n\n1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d’actes (plus de 3000 variables) qui représentent 450 To de données…\n\n\n\n\n\nLien entre médecine de ville et médecine hospitalière\n\nPermet reconstruction du parcours de soin complet (EDP-Santé)\n\n\n\n\n\nEnjeu de confidentialité"
+    "section": "Exemple 4 : le système national des données de santé (SNDS)",
+    "text": "Exemple 4 : le système national des données de santé (SNDS)\n\nAppariement des grandes bases médico-administratives nationales, notamment :\n\nles données de l’assurance maladie (base SNIIRAM)\nles données des hôpitaux (base PMSI)\nles causes médicales de décès (base du CépiDC de l’Inserm)\n\n\n\n\nFlux massif :\n\n1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d’actes (plus de 3000 variables) qui représentent 450 To de données…\n\n\n\n\n\nLien entre médecine de ville et médecine hospitalière\n\nPermet reconstruction du parcours de soin complet (EDP-Santé)\n\n\n\n\n\nEnjeu de confidentialité"
   },
   {
     "objectID": "slides/index.html#enjeux",
@@ -186,7 +200,7 @@
     "href": "slides/index.html#utilisation-dapi",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Utilisation d’API",
-    "text": "Utilisation d’API\n\nAPI : interface de programmation\nMode préférentiel de collecte de données :\n\nPlus de garanties sur la qualité\nReproductibité\n…\n\nAvec Python : requests"
+    "text": "Utilisation d’API\n\nAPI : interface de programmation\nMode préférentiel de collecte de données :\n\nPlus de garanties sur la qualité\nReproductibilité\n…\n\nAvec Python : requests"
   },
   {
     "objectID": "slides/index.html#loffre-crée-sa-propre-demande",
@@ -382,14 +396,14 @@
     "href": "slides/index.html#vision-par-ordinateur-22",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Vision par ordinateur (2/2)",
-    "text": "Vision par ordinateur (2/2)\n\nOn définit les images suivantes:\n\n\\[\nG_x = \\begin{bmatrix}\n+1 & 0 & -1\\\\\n+2 & 0 & -2\\\\\n+1 & 0 & -1\n\\end{bmatrix} \\star A \\quad \\text{et} \\quad G_y = \\begin{bmatrix}\n+1 & +2 & +1\\\\\n0 & 0 & 0\\\\\n-1 & -2 & -1\n\\end{bmatrix} \\star A\n\\]\navec \\(\\star\\) l’opérateur de convolution 2-dimensionnel en traitement du signal\n\nAlors \\(G = \\sqrt{G_x^2 + G_y^2}\\): représentation des contours de l’image \\(A\\)"
+    "text": "Vision par ordinateur (2/2)\n\nMathématiquement, repose sur le produit de convolution matriciel noté \\(A \\star B\\), qui est différent du produit matriciel\nLe produit de convolution de deux matrices \\(A \\star B\\) permet de faire une somme pondérée des éléments de la matrice \\(A\\) par ceux de \\(B\\).\nLa matrice \\(B\\) est la matrice de convolution (aussi appelé ** filtre**, noyau ou kernel), et permet d’extraire des informations de \\(A\\).\nPar exemple, ce filtre \\(B\\) permet d’extraire les contours : le résultat de \\(A \\star B\\) représentera les contours de \\(A\\). \\[\nB = \\begin{bmatrix}\n1 & 0 & -1\\\\\n0 & 0 & 0\\\\\n-1 & 0 & 1\n\\end{bmatrix}\n\\]"
   },
   {
     "objectID": "slides/index.html#opérateur-de-convolution",
     "href": "slides/index.html#opérateur-de-convolution",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Opérateur de convolution",
-    "text": "Opérateur de convolution\n\n\n\n\n\n\nIllustration de l’opérateur de convolution 2-dimensionnel \\(\\star\\). Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et glisse sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul \\(3 = 1*(-1) + 1*1 + 1*2 + 1*1\\).\n\n\n\n\nFigure 2"
+    "text": "Opérateur de convolution\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Illustration de l’opérateur de convolution 2-dimensionnel \\(\\star\\).\n\n\n\nLe noyau (ou kernel), en jaune, glisse sur la matrice de devant à traiter. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique."
   },
   {
     "objectID": "slides/index.html#réseaux-de-neurones-convolutifs",
@@ -406,11 +420,11 @@
     "text": "Segmentation sémantique, détection d’objets\n\nTâches classiques de vision"
   },
   {
-    "objectID": "slides/index.html#eo-data-13",
-    "href": "slides/index.html#eo-data-13",
+    "objectID": "slides/index.html#earth-observation-eo-data-13",
+    "href": "slides/index.html#earth-observation-eo-data-13",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "EO data (1/3)",
-    "text": "EO data (1/3)\n\nDonnées provenant de satellites, photographies prises depuis un avion, etc.\nBeaucoup de données ouvertes ou semi-ouvertes (NASA: Landsat, ESA: Sentinel, Airbus: Pleiades)\nRésolution spatiale variable (de haute: 10m, à très haute: 0.5m)\nRésolution spectrale variable\nCouverture régulière des territoires (par exemple tous les 5j pour Sentinel-2)\nRisques et difficultés: résultats robustes, disponibilité, temps de calcul, résolution adaptée"
+    "section": "Earth observation (EO) data (1/3)",
+    "text": "Earth observation (EO) data (1/3)\n\nDonnées provenant de satellites, photographies prises depuis un avion, etc.\nBeaucoup de données ouvertes ou semi-ouvertes (NASA: Landsat, ESA: Sentinel, Airbus: Pleiades)\nRésolution spatiale variable (de haute: 10m, à très haute: 0.5m)\nRésolution spectrale variable\nCouverture régulière des territoires (par exemple tous les 5j pour Sentinel-2)\nRisques et difficultés: résultats robustes, disponibilité, temps de calcul, résolution adaptée"
   },
   {
     "objectID": "slides/index.html#eo-data-23",
@@ -441,6 +455,13 @@
     "text": "OCR et extraction (2/2)"
   },
   {
+    "objectID": "slides/index.html#pour-aller-plus-loin-facultatif",
+    "href": "slides/index.html#pour-aller-plus-loin-facultatif",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Pour aller plus loin (facultatif) …",
+    "text": "Pour aller plus loin (facultatif) …\n\nApplication sur le site web du cours sur la classification d’oiseaux et le traitement d’images satellites\nEntraîner un modèle de classification d’oiseaux avant de traiter des images satellites pour effectuer de la reconnaissance de terrains, avec  et scikit-learn"
+  },
+  {
     "objectID": "slides/index.html#introduction-1",
     "href": "slides/index.html#introduction-1",
     "title": "Nouvelles sources de données pour la statistique publique",
@@ -469,31 +490,31 @@
     "text": "Données (2/2)\n\nStatistiques de recherches sur Internet: Google Trends\nDonnées de réseaux sociaux: par exemple données de Twitter pour prévoir du comportement des marchés financiers et du marché du travail\nRisques: données très biaisées, difficiles à modéliser"
   },
   {
-    "objectID": "slides/index.html#nowcasting-à-linsee-13",
-    "href": "slides/index.html#nowcasting-à-linsee-13",
+    "objectID": "slides/index.html#nowcasting-à-linsee-12",
+    "href": "slides/index.html#nowcasting-à-linsee-12",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Nowcasting à l’Insee (1/3)",
-    "text": "Nowcasting à l’Insee (1/3)\n\nChaire de recherche Mesures de l’économie, nowcasting ‐ au‐delà du PIB en 2021\nTravail sur l’amélioration des prévisions économiques grâce à la mobilisation de nouvelles données\nActualités (Bortoli, Combes, et Renault 2018), médias sociaux, données satellitaires, réseaux professionnels et avis de consommateurs, données sur le commerce international, la consommation d’électricité et le transport routier (Fornaro 2020), le transport maritime, l’immobilier, l’hôtellerie et les télécommunications\nNouveaux indicateurs économiques, de bien-être ou de développement durable"
+    "section": "Nowcasting à l’Insee (1/2)",
+    "text": "Nowcasting à l’Insee (1/2)\n\nChaire de recherche Mesures de l’économie, nowcasting ‐ au‐delà du PIB en 2021\nTravail sur l’amélioration des prévisions économiques grâce à la mobilisation de nouvelles données\nActualités (Bortoli, Combes, et Renault 2018), médias sociaux, données satellitaires, réseaux professionnels et avis de consommateurs, données sur le commerce international, la consommation d’électricité et le transport routier (Fornaro 2020), le transport maritime, l’immobilier, l’hôtellerie et les télécommunications\nNouveaux indicateurs économiques, de bien-être ou de développement durable"
   },
   {
-    "objectID": "slides/index.html#nowcasting-à-linsee-23",
-    "href": "slides/index.html#nowcasting-à-linsee-23",
+    "objectID": "slides/index.html#nowcasting-à-linsee-22",
+    "href": "slides/index.html#nowcasting-à-linsee-22",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Nowcasting à l’Insee (2/3)",
-    "text": "Nowcasting à l’Insee (2/3)\n\nImpact de la crise sanitaire du Covid-19 sur l’activité économique: chute d’un tiers pour la consommation (données de transactions par cartes bancaires)\nDonnées de téléphonie mobile pour mesurer les déplacements de populations au moment des confinement et déconfinement (Galiana, Suarez-Castillo, et al. 2020)"
+    "section": "Nowcasting à l’Insee (2/2)",
+    "text": "Nowcasting à l’Insee (2/2)\n\nImpact de la crise sanitaire du Covid-19 sur l’activité économique: chute d’un tiers pour la consommation (données de transactions par cartes bancaires)\nDonnées de téléphonie mobile pour mesurer les déplacements de populations au moment des confinement et déconfinement (Galiana, Suarez-Castillo, et al. 2020)\nPrévisions : nowcasting versus approche ascendante pour comparer les derniers modèles de nowcasting et l’approche ascendante utilisée par l’Insee (Bortoli, Cazenave-Lacrouts, et Roucher 2025)"
   },
   {
-    "objectID": "slides/index.html#nowcasting-à-linsee-33",
-    "href": "slides/index.html#nowcasting-à-linsee-33",
+    "objectID": "slides/index.html#pour-aller-plus-loin-facultatif-1",
+    "href": "slides/index.html#pour-aller-plus-loin-facultatif-1",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Nowcasting à l’Insee (3/3)",
-    "text": "Nowcasting à l’Insee (3/3)\n\nChallenge nowcasting organisé par Eurostat: prédictions mensuelles de la consommation de gaz, des livraisons de produits pétroliers et de disponibilité d’énergie électrique"
+    "section": "Pour aller plus loin (facultatif) …",
+    "text": "Pour aller plus loin (facultatif) …\n\nApplication sur le site web du cours sur les données de réseaux sociaux\nManipuler les API pour récupérer des tweets, analyser leur contenu et le ressenti des gens sur la statistique publique"
   },
   {
     "objectID": "slides/index.html#bibliographie",
     "href": "slides/index.html#bibliographie",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Bibliographie",
-    "text": "Bibliographie\n\n\n\n\nAndré, Mathias, et Olivier Meslin. 2021. « Et pour quelques appartements de plus : Étude de la propriété immobilière des ménages et du profil redistributif de la taxe foncière ».\n\n\nBeck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. « Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié ». Courrier des statistiques.\n\n\nBortoli, Clément, Stéphanie Combes, et Thomas Renault. 2018. « Nowcasting GDP Growth by Reading Newspapers ». Economie et Statistique / Economics and Statistics, Big Data et Statistics - Part 1, nᵒ 505-506: 17‑33. https://doi.org/10.24187/ecostat.2018.505d.1964.\n\n\nFornaro, Paolo. 2020. « Nowcasting Industrial Production Using Uncoventional Data Sources ». ETLA Working Papers 80. The Research Institute of the Finnish Economy. https://ideas.repec.org/p/rif/wpaper/80.html.\n\n\nGaliana, Lino, François Sémécurbe, Benjamin Sakarovitch, et Zbigniew Smoreda. 2020. « Residential segregation, daytime segregation and spatial frictions: an analysis from mobile phone data ».\n\n\nGaliana, Lino, Milena Suarez-Castillo, François Sémécurbe, Élise Coudin, et Marie-Pierre de Bellefon. 2020. « Retour partiel des mouvements de population avec le déconfinement ».\n\n\nHopp, Daniel. 2021. « Economic Nowcasting with Long Short-Term Memory Artificial Neural Networks (LSTM) ». arXiv. https://doi.org/10.48550/ARXIV.2106.08901.\n\n\nHumbert-Bottin, Élisabeth. 2018. « La déclaration sociale nominative: nouvelle référence pour les échanges de données sociales des entreprises vers les administrations ». Courrier des statistiques.\n\n\nLuiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. « Survey Nonresponse Trends and Fieldwork Effort in the 21st Century: Results of an International Study across Countries and Surveys ». Journal of Official Statistics 36 (3): 469‑87. https://doi.org/doi:10.2478/jos-2020-0025.\n\n\nPramil, Julien. 2020. « Des risques de cambriolages de logements élevés dans les centres-villes des agglomérations de Paris-Lyon-Marseille, mais plus faibles dans leurs quartiers de « grands-ensembles » ».\n\n\nRivière, Pascal. 2018. « Utiliser les déclarations administratives à des fins statistiques ». Courrier des statistiques.\n\n\nSchumacher, Christian. 2016. « A comparison of MIDAS and bridge equations ». International Journal of Forecasting 32 (2): 257‑70. https://EconPapers.repec.org/RePEc:eee:intfor:v:32:y:2016:i:2:p:257-270.\n\n\nStock, James, et Mark Watson. 2010. « Dynamic Factor Models ». In Oxford Handbook of Economic Forecasting, édité par Michael P. Clements et David F. Henry. Oxford: Oxford University Press; Oxford University Press. http://www.economics.harvard.edu/faculty/stock/files/dfm_oup_4.pdf."
+    "text": "Bibliographie\n\n\n\n\nAndré, Mathias, et Olivier Meslin. 2021. « Et pour quelques appartements de plus : Étude de la propriété immobilière des ménages et du profil redistributif de la taxe foncière ».\n\n\nBeck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. « Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié ». Courrier des statistiques.\n\n\nBortoli, Clément, Marie-Cécile Cazenave-Lacrouts, et Dorian Roucher. 2025. « Pas de confiance, un peu de croissance - Comment se comparent les approches directe et ascendante pour prévoir le PIB du trimestre courant ? » Note de conjoncture. https://www.insee.fr/fr/statistiques/8638815?sommaire=8638823#.\n\n\nBortoli, Clément, Stéphanie Combes, et Thomas Renault. 2018. « Nowcasting GDP Growth by Reading Newspapers ». Economie et Statistique / Economics and Statistics, Big Data et Statistics - Part 1, nᵒ 505-506: 17‑33. https://doi.org/10.24187/ecostat.2018.505d.1964.\n\n\nFornaro, Paolo. 2020. « Nowcasting Industrial Production Using Uncoventional Data Sources ». ETLA Working Papers 80. The Research Institute of the Finnish Economy. https://ideas.repec.org/p/rif/wpaper/80.html.\n\n\nGaliana, Lino, François Sémécurbe, Benjamin Sakarovitch, et Zbigniew Smoreda. 2020. « Residential segregation, daytime segregation and spatial frictions: an analysis from mobile phone data ».\n\n\nGaliana, Lino, Milena Suarez-Castillo, François Sémécurbe, Élise Coudin, et Marie-Pierre de Bellefon. 2020. « Retour partiel des mouvements de population avec le déconfinement ».\n\n\nHopp, Daniel. 2021. « Economic Nowcasting with Long Short-Term Memory Artificial Neural Networks (LSTM) ». arXiv. https://doi.org/10.48550/ARXIV.2106.08901.\n\n\nHumbert-Bottin, Élisabeth. 2018. « La déclaration sociale nominative: nouvelle référence pour les échanges de données sociales des entreprises vers les administrations ». Courrier des statistiques.\n\n\nLuiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. « Survey Nonresponse Trends and Fieldwork Effort in the 21st Century: Results of an International Study across Countries and Surveys ». Journal of Official Statistics 36 (3): 469‑87. https://doi.org/doi:10.2478/jos-2020-0025.\n\n\nMESLIN, Olivier. 2025. « What’s Wrong with Survey-based Top Wealth Shares? Evidence from Housing Wealth of French Households ». https://www.insee.fr/fr/statistiques/8706722.\n\n\nPascal RIVIERE, Heidi KOUMARIANOS et. 2025. « Statistiques fondées sur des données administratives : esquisse d’un cadre général ». https://doi.org/hal-05382380.\n\n\nPramil, Julien. 2020. « Des risques de cambriolages de logements élevés dans les centres-villes des agglomérations de Paris-Lyon-Marseille, mais plus faibles dans leurs quartiers de « grands-ensembles » ».\n\n\nRivière, Pascal. 2018. « Utiliser les déclarations administratives à des fins statistiques ». Courrier des statistiques.\n\n\nSchumacher, Christian. 2016. « A comparison of MIDAS and bridge equations ». International Journal of Forecasting 32 (2): 257‑70. https://EconPapers.repec.org/RePEc:eee:intfor:v:32:y:2016:i:2:p:257-270.\n\n\nStock, James, et Mark Watson. 2010. « Dynamic Factor Models ». In Oxford Handbook of Economic Forecasting, édité par Michael P. Clements et David F. Henry. Oxford: Oxford University Press; Oxford University Press. http://www.economics.harvard.edu/faculty/stock/files/dfm_oup_4.pdf."
   }
 ]

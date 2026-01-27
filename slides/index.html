@@ -229,11 +229,19 @@
 </div>
 
 </section>
-<section id="lien-vers-le-cours" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Lien vers le cours</h2>
+<section id="lien-vers-les-slides" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Lien vers les slides</h2>
 <div id="qrcode" class="qrcode"></div>
 <script type="text/javascript">
 var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff","height":"500","text":"https://inseefrlab.github.io/cours-nouvelles-donnees-slides/","width":"500"});
+</script>
+    
+</section>
+<section id="lien-vers-le-site" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Lien vers le site</h2>
+<div id="qrcode" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff","height":"500","text":"https://inseefrlab.github.io/cours-nouvelles-donnees-site/","width":"500"});
 </script>
     
 </section>
@@ -242,12 +250,21 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff",
 <h1>Contexte</h1>
 
 </section>
-<section id="prolifération-des-données" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Prolifération des données</h2>
+<section id="les-données-denquête" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les données d’enquête</h2>
+<ul>
+<li>Base “historique” des statistiques</li>
+<li>Présentent de nombreux avantages : finalité est la bonne, cadre et concept maîtrisé</li>
+<li>Mais ce sont des données longues à récolter et coûteuses pour le répondant et l’Insee (plusieurs années)</li>
+<li>Dans un contexte de demande de statistiques plus poussées avec des moyens stables</li>
+</ul>
+</section>
+<section id="en-parallèle-prolifération-des-données" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>En parallèle, prolifération des données</h2>
 <ul>
 <li>Numérisation et innovations technologiques ont réduit le coût de production de la donnée
 <ul>
-<li>Volume de données produites en explosion :</li>
+<li>Volume de données produites en explosion</li>
 </ul></li>
 </ul>
 <div class="fragment">
@@ -334,7 +351,7 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff",
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="3" data-source-offset="-137"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 2;"><span id="cb3-3"><a></a>url <span class="op">=</span> <span class="st">"https://minio.lab.sspcloud.fr/nicolastlm/diffusion/92049.csv"</span>  </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="3" data-source-offset="-137"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 2;"><span id="cb3-3"><a></a>url <span class="op">=</span> <span class="st">"https://minio.lab.sspcloud.fr/nicolastlm/diffusion/92049.csv"</span></span>
 <span id="cb3-4"><a></a>dvf <span class="op">=</span> d3<span class="op">.</span><span class="fu">csv</span>(url)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -586,7 +603,7 @@ Données textuelles et non structurées
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="0" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb10-0"><a></a>viewof activite <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">text</span>({</span>
 <span id="cb10-1"><a></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">''</span><span class="op">,</span></span>
-<span id="cb10-2"><a></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">'data scientist'</span><span class="op">,</span></span>
+<span id="cb10-2"><a></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">'ma société fera du conseil en traitement de données'</span><span class="op">,</span></span>
 <span id="cb10-3"><a></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">800</span></span>
 <span id="cb10-4"><a></a>})</span>
 <span id="cb10-5"><a></a></span>
@@ -870,10 +887,11 @@ Données textuelles et non structurées
 <h2>Usage de la donnée administrative</h2>
 <ol type="1">
 <li>Usage à des fins de gestion (la finalité pour laquelle elles sont construites)</li>
-<li>Usage à des fins d’analyse (la finalité fortuite)
+<li>Usage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes <span class="citation" data-cites="RiviereKOUMARIANOS">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Pascal RIVIERE 2025</a>)</span>
 <ul>
 <li>Exploitation directe pour productions ou études</li>
 <li>Utilisation pour des appariements</li>
+<li>Utilisation pour expertiser des données d’enquêtes <span class="citation" data-cites="Meslin2025">(<a href="#/bibliographie" role="doc-biblioref" onclick="">MESLIN 2025</a>)</span></li>
 </ul></li>
 </ol>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -882,7 +900,7 @@ Données textuelles et non structurées
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Le CSNS</strong></p>
+<p><strong>Le Code statistique non signifiant (CSNS)</strong></p>
 </div>
 <div class="callout-content">
 <p><a href="https://www.insee.fr/fr/information/5388962">Code statistique non signifiant</a> (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.</p>
@@ -890,8 +908,8 @@ Données textuelles et non structurées
 </div>
 </div>
 </section>
-<section id="exemple-1-la-dsn" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Exemple 1 : la DSN</h2>
+<section id="exemple-1-la-déclaration-sociale-nominative-dsn" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple 1 : la déclaration sociale nominative (DSN)</h2>
 <ul>
 <li>Données issues des fiches de paie <span class="citation" data-cites="Humbert2018">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Humbert-Bottin 2018</a>)</span></li>
 </ul>
@@ -917,8 +935,8 @@ Données textuelles et non structurées
 </ul>
 </div>
 </section>
-<section id="exemple-3-fidéli" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Exemple 3 : Fidéli</h2>
+<section id="exemple-3-fichiers-démographiques-sur-les-logements-et-les-individus-fidéli" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple 3 : Fichiers démographiques sur les logements et les individus (Fidéli)</h2>
 <ul>
 <li>Assemblage de :
 <ul>
@@ -933,8 +951,8 @@ Données textuelles et non structurées
 </ul>
 </div>
 </section>
-<section id="exemple-4-le-snds" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
-<h2>Exemple 4 : le SNDS</h2>
+<section id="exemple-4-le-système-national-des-données-de-santé-snds" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Exemple 4 : le système national des données de santé (SNDS)</h2>
 <ul>
 <li>Appariement des grandes bases médico-administratives nationales, notamment :
 <ul>
@@ -1022,7 +1040,7 @@ Données textuelles et non structurées
 <li>Mode <span class="orange"><strong>préférentiel</strong></span> de collecte de données :
 <ul>
 <li>Plus de garanties sur <span class="blue2"><strong>la qualité</strong></span></li>
-<li><span class="blue2"><strong>Reproductibité</strong></span></li>
+<li><span class="blue2"><strong>Reproductibilité</strong></span></li>
 <li>…</li>
 </ul></li>
 <li>Avec <code>Python</code> : <code>requests</code></li>
@@ -1754,44 +1772,41 @@ vivre
 <p><img data-src="./img/bike_sobel.jpg"></p>
 </div></div>
 </section>
-<section id="vision-par-ordinateur-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<section id="vision-par-ordinateur-22" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Vision par ordinateur (2/2)</h2>
 <ul>
-<li>On définit les images suivantes:</li>
-</ul>
-<p><span class="math display">\[
-G_x = \begin{bmatrix}
-+1 &amp; 0 &amp; -1\\
-+2 &amp; 0 &amp; -2\\
-+1 &amp; 0 &amp; -1
-\end{bmatrix} \star A \quad \text{et} \quad G_y = \begin{bmatrix}
-+1 &amp; +2 &amp; +1\\
+<li><p>Mathématiquement, repose sur le <span class="orange"><strong>produit de convolution</strong></span> matriciel noté <span class="math inline">\(A \star B\)</span>, qui est différent du <strong>produit matriciel</strong></p></li>
+<li><p>Le produit de convolution de deux matrices <span class="math inline">\(A \star B\)</span> permet de faire une <strong>somme pondérée</strong> des éléments de la matrice <span class="math inline">\(A\)</span> par ceux de <span class="math inline">\(B\)</span>.</p></li>
+<li><p>La matrice <span class="math inline">\(B\)</span> est <span class="orange"><strong>la matrice de convolution</strong></span> (aussi appelé <span class="orange">** filtre**</span>, noyau ou kernel), et permet <strong>d’extraire</strong> des informations de <span class="math inline">\(A\)</span>.</p></li>
+<li><p>Par exemple, ce filtre <span class="math inline">\(B\)</span> permet d’extraire les contours : le résultat de <span class="math inline">\(A \star B\)</span> représentera les contours de <span class="math inline">\(A\)</span>. <span class="math display">\[
+B = \begin{bmatrix}
+1 &amp; 0 &amp; -1\\
 0 &amp; 0 &amp; 0\\
--1 &amp; -2 &amp; -1
-\end{bmatrix} \star A
-\]</span></p>
-<p>avec <span class="math inline">\(\star\)</span> l’opérateur de <span class="orange"><strong>convolution</strong></span> 2-dimensionnel en traitement du signal</p>
-<ul>
-<li>Alors <span class="math inline">\(G = \sqrt{G_x^2 + G_y^2}\)</span>: représentation des <span class="orange"><strong>contours</strong></span> de l’image <span class="math inline">\(A\)</span></li>
+-1 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</span></p></li>
 </ul>
 </section>
-<section id="opérateur-de-convolution" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
+<section id="opérateur-de-convolution" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
 <h2>Opérateur de convolution</h2>
-<div id="fig-convol" class="quarto-float quarto-figure quarto-figure-center">
+<div id="fig-convol" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-convol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/convol.png" style="width:80.0%"></p>
-<figcaption>Illustration de l’opérateur de convolution 2-dimensionnel <span class="math inline">\(\star\)</span>. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et <em>glisse</em> sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul <span class="math inline">\(3 = 1*(-1) + 1*1 + 1*2 + 1*1\)</span>.</figcaption>
-</figure>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="img/convol_gen.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="img/convol_calc.png"></p>
 </div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-convol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-convol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Illustration de l’opérateur de convolution 2-dimensionnel <span class="math inline">\(\star\)</span>.
 </figcaption>
 </figure>
 </div>
+<p>Le noyau (ou kernel), en jaune, <em>glisse</em> sur la matrice de devant à traiter. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique.</p>
 </section>
 <section id="réseaux-de-neurones-convolutifs" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
 <h2>Réseaux de neurones convolutifs</h2>
@@ -1801,7 +1816,7 @@ Figure&nbsp;2
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://editor.analyticsvidhya.com/uploads/59954intro%20to%20CNN.JPG" style="width:80.0%"></p>
-<figcaption>Illustration d’une succession de séquences d’un réseau convolutionnel. Emprunté à https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/</figcaption>
+<figcaption>Illustration d’une succession de séquences d’un réseau convolutionnel. Emprunté à <a href="https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/" class="uri">https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/</a></figcaption>
 </figure>
 </div>
 </div>
@@ -1815,8 +1830,8 @@ Figure&nbsp;3
 <h2>Segmentation sémantique, détection d’objets</h2>
 
 <img data-src="https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg" class="r-stretch quarto-figure-center" id="fig-vision-tasks"><p class="caption">Tâches classiques de vision</p></section>
-<section id="eo-data-13" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>EO data (1/3)</h2>
+<section id="earth-observation-eo-data-13" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Earth observation (EO) data (1/3)</h2>
 <ul>
 <li>Données <span class="orange"><strong>provenant de satellites</strong></span>, photographies prises depuis un avion, etc.</li>
 <li><span class="orange"><strong>Beaucoup de données ouvertes</strong></span> ou semi-ouvertes (NASA: Landsat, ESA: Sentinel, Airbus: Pleiades)</li>
@@ -1868,6 +1883,13 @@ Figure&nbsp;3
 </div><div class="column" style="width:50%;">
 <p><img data-src="./img/annotation_example.png"></p>
 </div></div>
+</section>
+<section id="pour-aller-plus-loin-facultatif" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Pour aller plus loin (facultatif) …</h2>
+<ul>
+<li>Application sur le <a href="https://inseefrlab.github.io/cours-nouvelles-donnees-site/images_exemples.html">site web du cours</a> sur la classification d’oiseaux et le traitement d’images satellites</li>
+<li>Entraîner un modèle de classification d’oiseaux avant de traiter des images satellites pour effectuer de la reconnaissance de terrains, avec <i class="fa-brands fa-python" aria-label="python"></i> et <code>scikit-learn</code></li>
+</ul>
 </section></section>
 <section>
 <section id="nowcasting" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
@@ -1907,8 +1929,8 @@ Figure&nbsp;3
 <li><span class="orange"><strong>Risques</strong></span>: données très biaisées, difficiles à modéliser</li>
 </ul>
 </section>
-<section id="nowcasting-à-linsee-13" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Nowcasting à l’Insee (1/3)</h2>
+<section id="nowcasting-à-linsee-12" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Nowcasting à l’Insee (1/2)</h2>
 <ul>
 <li>Chaire de recherche <span class="orange"><strong>Mesures de l’économie, nowcasting ‐ au‐delà du PIB en 2021</strong></span></li>
 <li>Travail sur <span class="orange"><strong>l’amélioration des prévisions économiques</strong></span> grâce à la mobilisation de nouvelles données</li>
@@ -1916,20 +1938,21 @@ Figure&nbsp;3
 <li><span class="orange"><strong>Nouveaux indicateurs</strong></span> économiques, de bien-être ou de développement durable</li>
 </ul>
 </section>
-<section id="nowcasting-à-linsee-23" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Nowcasting à l’Insee (2/3)</h2>
+<section id="nowcasting-à-linsee-22" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Nowcasting à l’Insee (2/2)</h2>
 <ul>
 <li><span class="orange"><strong>Impact de la crise sanitaire</strong></span> du Covid-19 sur l’activité économique: <span class="orange"><strong>chute d’un tiers</strong></span> pour la consommation (données de transactions par cartes bancaires)</li>
 <li><span class="orange"><strong>Données de téléphonie mobile</strong></span> pour mesurer les déplacements de populations au moment des confinement et déconfinement <span class="citation" data-cites="galiana-20">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Galiana, Suarez-Castillo, et al. 2020</a>)</span></li>
+<li><span class="orange"><strong>Prévisions : <em>nowcasting</em> versus approche ascendante</strong></span> pour comparer les derniers modèles de <em>nowcasting</em> et l’approche ascendante utilisée par l’Insee <span class="citation" data-cites="BortoliCazenaveRoucher2025">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Bortoli, Cazenave-Lacrouts, et Roucher 2025</a>)</span></li>
 </ul>
 </section>
-<section id="nowcasting-à-linsee-33" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Nowcasting à l’Insee (3/3)</h2>
+<section id="pour-aller-plus-loin-facultatif-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Pour aller plus loin (facultatif) …</h2>
 <ul>
-<li><span class="orange"><strong>Challenge nowcasting organisé par Eurostat</strong></span>: prédictions mensuelles de la consommation de gaz, des livraisons de produits pétroliers et de disponibilité d’énergie électrique</li>
+<li>Application sur le <a href="https://inseefrlab.github.io/cours-nouvelles-donnees-site/nowcasting_exemples.html">site web du cours</a> sur les données de réseaux sociaux</li>
+<li>Manipuler les API pour récupérer des tweets, analyser leur contenu et le ressenti des gens sur la statistique publique</li>
 </ul>
-
-<img data-src="img/nowcasting.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+</section>
 <section id="bibliographie" class="slide level2 smaller scrollable" data-background-image="background.svg" data-background-size="contain">
 <h2>Bibliographie</h2>
 
@@ -1940,6 +1963,9 @@ André, Mathias, et Olivier Meslin. 2021. <span>«&nbsp;Et pour quelques apparte
 </div>
 <div id="ref-beck2022" class="csl-entry" role="listitem">
 Beck, François, Laura Castell, Stéphane Legleye, et Amandine Schreiber. 2022. <span>«&nbsp;Le multimode dans les enquêtes auprès des ménages : une collecte modernisée, un processus complexifié&nbsp;»</span>. <em>Courrier des statistiques</em>.
+</div>
+<div id="ref-BortoliCazenaveRoucher2025" class="csl-entry" role="listitem">
+Bortoli, Clément, Marie-Cécile Cazenave-Lacrouts, et Dorian Roucher. 2025. <span>«&nbsp;Pas de confiance, un peu de croissance - Comment se comparent les approches directe et ascendante pour prévoir le PIB du trimestre courant ?&nbsp;»</span> <em>Note de conjoncture</em>. <a href="https://www.insee.fr/fr/statistiques/8638815?sommaire=8638823#">https://www.insee.fr/fr/statistiques/8638815?sommaire=8638823#</a>.
 </div>
 <div id="ref-bortoli-18" class="csl-entry" role="listitem">
 Bortoli, Clément, Stéphanie Combes, et Thomas Renault. 2018. <span>«&nbsp;<span>Nowcasting GDP Growth by Reading Newspapers</span>&nbsp;»</span>. <em><span>Economie et Statistique / Economics and Statistics</span></em>, Big Data et Statistics - Part 1, nᵒ 505-506: 17‑33. <a href="https://doi.org/10.24187/ecostat.2018.505d.1964">https://doi.org/10.24187/ecostat.2018.505d.1964</a>.
@@ -1961,6 +1987,12 @@ Humbert-Bottin, Élisabeth. 2018. <span>«&nbsp;La déclaration sociale nominati
 </div>
 <div id="ref-LuitenHoxde" class="csl-entry" role="listitem">
 Luiten, Annemieke, Joop Hox, et Edith de Leeuw. 2020. <span>«&nbsp;Survey Nonresponse Trends and Fieldwork Effort in the 21st Century: Results of an International Study across Countries and Surveys&nbsp;»</span>. <em>Journal of Official Statistics</em> 36 (3): 469‑87. <a href="https://doi.org/doi:10.2478/jos-2020-0025">https://doi.org/doi:10.2478/jos-2020-0025</a>.
+</div>
+<div id="ref-Meslin2025" class="csl-entry" role="listitem">
+MESLIN, Olivier. 2025. <span>«&nbsp;What’s Wrong with Survey-based Top Wealth Shares? Evidence from Housing Wealth of French Households&nbsp;»</span>. <a href="https://www.insee.fr/fr/statistiques/8706722">https://www.insee.fr/fr/statistiques/8706722</a>.
+</div>
+<div id="ref-RiviereKOUMARIANOS" class="csl-entry" role="listitem">
+Pascal RIVIERE, Heidi KOUMARIANOS et. 2025. <span>«&nbsp;Statistiques fondées sur des données administratives : esquisse d’un cadre général&nbsp;»</span>. <a href="https://doi.org/hal-05382380">https://doi.org/hal-05382380</a>.
 </div>
 <div id="ref-pramil2020cambri" class="csl-entry" role="listitem">
 Pramil, Julien. 2020. <span>«&nbsp;Des risques de cambriolages de logements élevés dans les centres-villes des agglomérations de Paris-Lyon-Marseille, mais plus faibles dans leurs quartiers de « grands-ensembles »&nbsp;»</span>.
@@ -2194,7 +2226,7 @@ Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»<
       });
     </script>
     <script type="ojs-module-contents">
-    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBpbmZvX211dGF0aW9ucyA9IElucHV0cy5yYWRpbyhcbiAgW1wiVGFibGVhdVwiLCBcIkdyYXBoaXF1ZVwiXSwge3ZhbHVlOiBcIlRhYmxlYXVcIn1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImluZm9fbXV0YXRpb25zID09IFwiVGFibGVhdVwiID8gaHRtbGA8ZGl2PiR7dGFibGVfbXV0YXRpb25zMX08ZGl2PmAgOiBodG1sYDxkaXY+JHtwbG90X211dGF0aW9uc308ZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIGRhdGEgY29taW5nIGZyb20gXCJodHRwczovL2ZpbGVzLmRhdGEuZ291di5mci9nZW8tZHZmL2xhdGVzdC9jc3YvMjAyMC9jb21tdW5lcy85Mi85MjA0OS5jc3ZcIlxuLy8gZmV0Y2hlZCBtYW51YWxseSBiZWNhdXNlIG9mIENPUlMgaXNzdWVcbnVybCA9IFwiaHR0cHM6Ly9taW5pby5sYWIuc3NwY2xvdWQuZnIvbmljb2xhc3RsbS9kaWZmdXNpb24vOTIwNDkuY3N2XCIgIFxuZHZmID0gZDMuY3N2KHVybClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRhYmxlX211dGF0aW9uczEgPSBJbnB1dHMudGFibGUoZHZmLCB7XCJjb2x1bW5zXCI6IFsnZGF0ZV9tdXRhdGlvbicsICd2YWxldXJfZm9uY2llcmUnLCAnYWRyZXNzZV9ub21fdm9pZSddfSlcbnBsb3RfbXV0YXRpb25zID0gUGxvdC5wbG90KHtcbiAgeToge2dyaWQ6IHRydWUsIGxhYmVsOiBcIk5vbWJyZSBkZSB0cmFuc2FjdGlvbnNcIn0sXG4gIHg6IHtcbiAgICB0aWNrczogMTIsXG4gICAgdHJhbnNmb3JtOiAoZCkgPT4gTWF0aC5wb3coMTAsIGQpLFxuICAgIHR5cGU6IFwibG9nXCIsXG4gICAgdGlja0Zvcm1hdDogXCJ+c1wiLFxuICAgIGxhYmVsOiBcIlByaXggKMOpY2hlbGxlIGxvZykg4oaSXCJcbiAgfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LnJlY3RZKFxuICAgICAgZHZmLmZpbHRlcihkID0+IGQudmFsZXVyX2ZvbmNpZXJlID4gMTAwMDApLFxuICAgICAgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LFxuICAgICAge1xuICAgICAgICB4OiBkID0+IE1hdGgubG9nMTAoZC52YWxldXJfZm9uY2llcmUpLFxuICAgICAgICB0aXA6IHRydWVcbiAgICAgIH0pXG4gICAgKSxcbiAgICBQbG90LnJ1bGVZKFswXSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QgPSByZXF1aXJlKFwiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9Ab2JzZXJ2YWJsZWhxL3Bsb3RAMC42LjEwL2Rpc3QvcGxvdC51bWQubWluLmpzXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgaW5mb19wb3dlcl9wbGFudHMgPSBJbnB1dHMucmFkaW8oXG4gIFtcIlRhYmxlYXVcIiwgXCJDYXJ0ZVwiXSwge3ZhbHVlOiBcIlRhYmxlYXVcIn1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImluZm9fcG93ZXJfcGxhbnRzID09IFwiVGFibGVhdVwiID8gaHRtbGA8ZGl2PiR7dGFibGVfcG93ZXJfcGxhbnRzfTxkaXY+YCA6IGh0bWxgPGRpdj4ke3Bsb3RfcG93ZXJfcGxhbnRzfTxkaXY+YFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaW1wb3J0IHt1c19wb3dlcl9wbGFudHMsIHN0YXRlc30gZnJvbSBcIkBvYnNlcnZhYmxlaHEvYnVpbGQteW91ci1maXJzdC1tYXAtd2l0aC1vYnNlcnZhYmxlLXBsb3RcIlxuXG50YWJsZV9wb3dlcl9wbGFudHMgPSBJbnB1dHMudGFibGUoXG4gIHVzX3Bvd2VyX3BsYW50c1xuKVxuXG5wbG90X3Bvd2VyX3BsYW50cyA9IFBsb3QucGxvdCh7XG4gIHByb2plY3Rpb246IFwiYWxiZXJzLXVzYVwiLFxuICBtYXJrczogW1xuICAgIFBsb3QuZ2VvKHN0YXRlcywgeyBmaWxsOiBcIndoaXRlXCIsIHN0cm9rZTogXCIjZTJlMmUyXCIgIH0pLFxuICAgIFBsb3QuZG90KHVzX3Bvd2VyX3BsYW50cywge1xuICAgICAgeDogXCJsb25naXR1ZGVcIixcbiAgICAgIHk6IFwibGF0aXR1ZGVcIixcbiAgICAgIHI6IFwiVG90YWxfTVdcIixcbiAgICAgIGZpbGw6IFwiUHJpbVNvdXJjZVwiLFxuICAgICAgb3BhY2l0eTogMC43LFxuICAgICAgdGlwOiB0cnVlXG4gICAgfSksXG4gICAgUGxvdC5kb3QodXNfcG93ZXJfcGxhbnRzLCB7IC8vIENhbiB5b3UgZmlndXJlIG91dCB3aGF0IHRoaXMgYWRkaXRpb25hbCBQbG90LmRvdCBsYXllciBhZGRzP1xuICAgICAgeDogXCJsb25naXR1ZGVcIixcbiAgICAgIHk6IFwibGF0aXR1ZGVcIixcbiAgICAgIHI6IFwiVG90YWxfTVdcIixcbiAgICAgIGZpbGw6IFwiUHJpbVNvdXJjZVwiLFxuICAgICAgc3Ryb2tlOiBcImJsYWNrXCIsXG4gICAgICBmaWx0ZXI6IGQgPT4gZC5Ub3RhbF9NVyA+IDM1MDAsXG4gICAgfSksXG4gICAgUGxvdC50ZXh0KHVzX3Bvd2VyX3BsYW50cywgeyAvLyBBZGQgdGV4dCB0byB0aGUgbWFwIHVzaW5nIGRhdGEgZnJvbSB1c19wb3dlcl9wbGFudHNcbiAgICAgIHg6IFwibG9uZ2l0dWRlXCIsIC8vIFBsYWNlIHRleHQgaG9yaXpvbnRhbGx5IGF0IHBsYW50IGxvbmdpdHVkZVxuICAgICAgeTogXCJsYXRpdHVkZVwiLCAvLyBQbGFjZSB0ZXh0IHZlcnRpY2FsbHkgYXQgcGxhbnQgbGF0aXR1ZGVcbiAgICAgIHRleHQ6IFwiUGxhbnRfTmFtZVwiLCAvLyBUaGUgdGV4dCB0aGF0IGFwcGVhcnMgaXMgdGhlIHZhbHVlIGZyb20gdGhlIFBsYW50X05hbWUgY29sdW1uLFxuICAgICAgZmlsdGVyOiAoZCkgPT4gZC5Ub3RhbF9NVyA+IDM1MDAsIC8vIE9ubHkgYWRkIHRleHQgZm9yIHBsYW50cyB3aXRoIGNhcGFjaXR5IGV4Y2VlZGluZyAzNTAwIE1XXG4gICAgICBmb250U2l6ZTogMTIsIC8vIEluY3JlYXNlZCBmb250IHNpemVcbiAgICAgIGZvbnRXZWlnaHQ6IDYwMCwgLy8gSW5jcmVhc2VkIGZvbnQgd2VpZ2h0XG4gICAgICBzdHJva2U6IFwid2hpdGVcIiwgLy8gQWRkcyB3aGl0ZSBvdXRlciBzdHJva2UgdG8gdGV4dCAoZm9yIHJlYWRhYmlsaXR5KVxuICAgICAgZmlsbDogXCJibGFja1wiLCAvLyBUZXh0IGZpbGwgY29sb3JcbiAgICAgIHRleHRBbmNob3I6IFwic3RhcnRcIiwgLy8gTGVmdCBhbGlnbiB0ZXh0IHdpdGggdGhlIHgtIGFuZCB5LWNvb3JkaW5hdGVzXG4gICAgICBkeDogMTUgLy8gU2hpZnRzIHRleHQgdG8gdGhlIHJpZ2h0IChzdGFydGluZyBmcm9tIGxlZnQgYWxpZ25tZW50IHdpdGggY29vcmRpbmF0ZSlcbiAgICB9KVxuICBdLFxuICByOiB7IHJhbmdlOiBbMSwgMTVdIH0sXG4gIGNvbG9yOiB7IGxlZ2VuZDogdHJ1ZSB9LFxuICBoZWlnaHQ6IDUwMCxcbiAgd2lkdGg6IDgwMCxcbiAgbWFyZ2luOiA1MFxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImFzeW5jIGZ1bmN0aW9uIHRyYW5zZm9ybVRvUG9zdChkZXNjcmlwdGlvbikge1xuICAvLyBCYXNlIFVSTCB3aXRoIHF1ZXJ5IHBhcmFtZXRlcnNcbiAgY29uc3QgYmFzZVVybCA9IGBodHRwczovL2NvZGlmaWNhdGlvbi1hcGUyMDI1LXB5dG9yY2gubGFiLnNzcGNsb3VkLmZyL3ByZWRpY3QvP25iX2VjaG9zX21heD01JnByb2JfbWluPTAuMDEmbnVtX3dvcmtlcnM9MCZiYXRjaF9zaXplPTFgO1xuXG4gIC8vIEJ1aWxkIHRoZSByZXF1ZXN0IGJvZHkgYWNjb3JkaW5nIHRvIHRoZSBleHBlY3RlZCBzY2hlbWFcbiAgY29uc3QgYm9keSA9IHtcbiAgICBmb3JtczogW1xuICAgICAge1xuICAgICAgICBkZXNjcmlwdGlvbl9hY3Rpdml0eTogZGVzY3JpcHRpb25cbiAgICAgIH1cbiAgICBdXG4gIH07XG5cbiAgLy8gU2VuZCB0aGUgUE9TVCByZXF1ZXN0XG4gIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goYmFzZVVybCwge1xuICAgIG1ldGhvZDogXCJQT1NUXCIsXG4gICAgaGVhZGVyczoge1xuICAgICAgXCJDb250ZW50LVR5cGVcIjogXCJhcHBsaWNhdGlvbi9qc29uXCJcbiAgICB9LFxuICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KGJvZHkpXG4gIH0pO1xuXG4gIC8vIFBhcnNlIGFuZCByZXR1cm4gdGhlIEpTT04gcmVzcG9uc2VcbiAgcmV0dXJuIHJlc3BvbnNlLmpzb24oKTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgYWN0aXZpdGUgPSBJbnB1dHMudGV4dCh7XG4gIGxhYmVsOiAnJyxcbiAgdmFsdWU6ICdkYXRhIHNjaWVudGlzdCcsXG4gIHdpZHRoOiA4MDBcbn0pXG5cbnZpZXdvZiBwcmVkaWN0aW9uID0gSW5wdXRzLmJ1dHRvbihcIlJ1biBQcmVkaWN0aW9uXCIsIHtcbiAgcmVkdWNlOiBhc3luYyAoKSA9PiB7XG4gICAgcmV0dXJuIGF3YWl0IHRyYW5zZm9ybVRvUG9zdChhY3Rpdml0ZSk7XG4gIH1cbn0pXG5cbi8vIGFmZmljaGVyIGxlcyByw6lzdWx0YXRzIGpvbGltZW50XG5wcmVkaWN0aW9uX3RhYmxlID0ge1xuICBpZiAoIXByZWRpY3Rpb24gfHwgIXByZWRpY3Rpb24ubGVuZ3RoKSB7XG4gICAgcmV0dXJuIGh0bWxgYFxuICB9XG5cbiAgLy8gbGEgcsOpcG9uc2UgZXN0IHVuIHRhYmxlYXUgYXZlYyB1biBzZXVsIG9iamV0XG4gIGNvbnN0IHJlc3VsdCA9IHByZWRpY3Rpb25bMF1cbiAgY29uc3QgeyBJQywgTUx2ZXJzaW9uLCAuLi5jb2RlcyB9ID0gcmVzdWx0XG5cbiAgY29uc3Qgcm93cyA9IE9iamVjdC52YWx1ZXMoY29kZXMpLm1hcCgoeyBjb2RlLCBsaWJlbGxlLCBwcm9iYWJpbGl0ZSB9KSA9PiB7XG4gICAgcmV0dXJuIGh0bWxgXG4gICAgICA8dHI+XG4gICAgICAgIDx0ZD4ke2NvZGV9IOKAkyAke2xpYmVsbGV9PC90ZD5cbiAgICAgICAgPHRkIHN0eWxlPVwidGV4dC1hbGlnbjpyaWdodDtcIj4ke3Byb2JhYmlsaXRlLnRvRml4ZWQoMyl9PC90ZD5cbiAgICAgIDwvdHI+XG4gICAgYFxuICB9KVxuXG4gIHJldHVybiBodG1sYFxuICAgIDx0YWJsZSBzdHlsZT1cImJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7IHdpZHRoOiAxMDAlO1wiPlxuICAgICAgPGNhcHRpb24gc3R5bGU9XCJtYXJnaW4tYm90dG9tOiAwLjVlbTtcIj5cbiAgICAgICAgQ29uZmlkZW5jZSBzY29yZSA6ICR7KCtJQykudG9GaXhlZCgzKX1cbiAgICAgIDwvY2FwdGlvbj5cbiAgICAgIDx0aGVhZD5cbiAgICAgICAgPHRyPlxuICAgICAgICAgIDx0aCBzdHlsZT1cInRleHQtYWxpZ246bGVmdDtcIj5EZXNjcmlwdGlvbiAoTkEyMDA4KTwvdGg+XG4gICAgICAgICAgPHRoIHN0eWxlPVwidGV4dC1hbGlnbjpyaWdodDtcIj5Qcm9iYWJpbGl0eTwvdGg+XG4gICAgICAgIDwvdHI+XG4gICAgICA8L3RoZWFkPlxuICAgICAgPHRib2R5PlxuICAgICAgICAke3Jvd3N9XG4gICAgICA8L3Rib2R5PlxuICAgIDwvdGFibGU+XG4gIGBcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaW5mb19tdXRhdGlvbnMnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaW5mb19wb3dlcl9wbGFudHMnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnYWN0aXZpdGUnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncHJlZGljdGlvbicpIn1dfQ==
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBpbmZvX211dGF0aW9ucyA9IElucHV0cy5yYWRpbyhcbiAgW1wiVGFibGVhdVwiLCBcIkdyYXBoaXF1ZVwiXSwge3ZhbHVlOiBcIlRhYmxlYXVcIn1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImluZm9fbXV0YXRpb25zID09IFwiVGFibGVhdVwiID8gaHRtbGA8ZGl2PiR7dGFibGVfbXV0YXRpb25zMX08ZGl2PmAgOiBodG1sYDxkaXY+JHtwbG90X211dGF0aW9uc308ZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIGRhdGEgY29taW5nIGZyb20gXCJodHRwczovL2ZpbGVzLmRhdGEuZ291di5mci9nZW8tZHZmL2xhdGVzdC9jc3YvMjAyMC9jb21tdW5lcy85Mi85MjA0OS5jc3ZcIlxuLy8gZmV0Y2hlZCBtYW51YWxseSBiZWNhdXNlIG9mIENPUlMgaXNzdWVcbnVybCA9IFwiaHR0cHM6Ly9taW5pby5sYWIuc3NwY2xvdWQuZnIvbmljb2xhc3RsbS9kaWZmdXNpb24vOTIwNDkuY3N2XCJcbmR2ZiA9IGQzLmNzdih1cmwpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ0YWJsZV9tdXRhdGlvbnMxID0gSW5wdXRzLnRhYmxlKGR2Ziwge1wiY29sdW1uc1wiOiBbJ2RhdGVfbXV0YXRpb24nLCAndmFsZXVyX2ZvbmNpZXJlJywgJ2FkcmVzc2Vfbm9tX3ZvaWUnXX0pXG5wbG90X211dGF0aW9ucyA9IFBsb3QucGxvdCh7XG4gIHk6IHtncmlkOiB0cnVlLCBsYWJlbDogXCJOb21icmUgZGUgdHJhbnNhY3Rpb25zXCJ9LFxuICB4OiB7XG4gICAgdGlja3M6IDEyLFxuICAgIHRyYW5zZm9ybTogKGQpID0+IE1hdGgucG93KDEwLCBkKSxcbiAgICB0eXBlOiBcImxvZ1wiLFxuICAgIHRpY2tGb3JtYXQ6IFwifnNcIixcbiAgICBsYWJlbDogXCJQcml4ICjDqWNoZWxsZSBsb2cpIOKGklwiXG4gIH0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5yZWN0WShcbiAgICAgIGR2Zi5maWx0ZXIoZCA9PiBkLnZhbGV1cl9mb25jaWVyZSA+IDEwMDAwKSxcbiAgICAgIFBsb3QuYmluWCh7eTogXCJjb3VudFwifSxcbiAgICAgIHtcbiAgICAgICAgeDogZCA9PiBNYXRoLmxvZzEwKGQudmFsZXVyX2ZvbmNpZXJlKSxcbiAgICAgICAgdGlwOiB0cnVlXG4gICAgICB9KVxuICAgICksXG4gICAgUGxvdC5ydWxlWShbMF0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90ID0gcmVxdWlyZShcImh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vQG9ic2VydmFibGVocS9wbG90QDAuNi4xMC9kaXN0L3Bsb3QudW1kLm1pbi5qc1wiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGluZm9fcG93ZXJfcGxhbnRzID0gSW5wdXRzLnJhZGlvKFxuICBbXCJUYWJsZWF1XCIsIFwiQ2FydGVcIl0sIHt2YWx1ZTogXCJUYWJsZWF1XCJ9XG4pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbmZvX3Bvd2VyX3BsYW50cyA9PSBcIlRhYmxlYXVcIiA/IGh0bWxgPGRpdj4ke3RhYmxlX3Bvd2VyX3BsYW50c308ZGl2PmAgOiBodG1sYDxkaXY+JHtwbG90X3Bvd2VyX3BsYW50c308ZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7dXNfcG93ZXJfcGxhbnRzLCBzdGF0ZXN9IGZyb20gXCJAb2JzZXJ2YWJsZWhxL2J1aWxkLXlvdXItZmlyc3QtbWFwLXdpdGgtb2JzZXJ2YWJsZS1wbG90XCJcblxudGFibGVfcG93ZXJfcGxhbnRzID0gSW5wdXRzLnRhYmxlKFxuICB1c19wb3dlcl9wbGFudHNcbilcblxucGxvdF9wb3dlcl9wbGFudHMgPSBQbG90LnBsb3Qoe1xuICBwcm9qZWN0aW9uOiBcImFsYmVycy11c2FcIixcbiAgbWFya3M6IFtcbiAgICBQbG90LmdlbyhzdGF0ZXMsIHsgZmlsbDogXCJ3aGl0ZVwiLCBzdHJva2U6IFwiI2UyZTJlMlwiICB9KSxcbiAgICBQbG90LmRvdCh1c19wb3dlcl9wbGFudHMsIHtcbiAgICAgIHg6IFwibG9uZ2l0dWRlXCIsXG4gICAgICB5OiBcImxhdGl0dWRlXCIsXG4gICAgICByOiBcIlRvdGFsX01XXCIsXG4gICAgICBmaWxsOiBcIlByaW1Tb3VyY2VcIixcbiAgICAgIG9wYWNpdHk6IDAuNyxcbiAgICAgIHRpcDogdHJ1ZVxuICAgIH0pLFxuICAgIFBsb3QuZG90KHVzX3Bvd2VyX3BsYW50cywgeyAvLyBDYW4geW91IGZpZ3VyZSBvdXQgd2hhdCB0aGlzIGFkZGl0aW9uYWwgUGxvdC5kb3QgbGF5ZXIgYWRkcz9cbiAgICAgIHg6IFwibG9uZ2l0dWRlXCIsXG4gICAgICB5OiBcImxhdGl0dWRlXCIsXG4gICAgICByOiBcIlRvdGFsX01XXCIsXG4gICAgICBmaWxsOiBcIlByaW1Tb3VyY2VcIixcbiAgICAgIHN0cm9rZTogXCJibGFja1wiLFxuICAgICAgZmlsdGVyOiBkID0+IGQuVG90YWxfTVcgPiAzNTAwLFxuICAgIH0pLFxuICAgIFBsb3QudGV4dCh1c19wb3dlcl9wbGFudHMsIHsgLy8gQWRkIHRleHQgdG8gdGhlIG1hcCB1c2luZyBkYXRhIGZyb20gdXNfcG93ZXJfcGxhbnRzXG4gICAgICB4OiBcImxvbmdpdHVkZVwiLCAvLyBQbGFjZSB0ZXh0IGhvcml6b250YWxseSBhdCBwbGFudCBsb25naXR1ZGVcbiAgICAgIHk6IFwibGF0aXR1ZGVcIiwgLy8gUGxhY2UgdGV4dCB2ZXJ0aWNhbGx5IGF0IHBsYW50IGxhdGl0dWRlXG4gICAgICB0ZXh0OiBcIlBsYW50X05hbWVcIiwgLy8gVGhlIHRleHQgdGhhdCBhcHBlYXJzIGlzIHRoZSB2YWx1ZSBmcm9tIHRoZSBQbGFudF9OYW1lIGNvbHVtbixcbiAgICAgIGZpbHRlcjogKGQpID0+IGQuVG90YWxfTVcgPiAzNTAwLCAvLyBPbmx5IGFkZCB0ZXh0IGZvciBwbGFudHMgd2l0aCBjYXBhY2l0eSBleGNlZWRpbmcgMzUwMCBNV1xuICAgICAgZm9udFNpemU6IDEyLCAvLyBJbmNyZWFzZWQgZm9udCBzaXplXG4gICAgICBmb250V2VpZ2h0OiA2MDAsIC8vIEluY3JlYXNlZCBmb250IHdlaWdodFxuICAgICAgc3Ryb2tlOiBcIndoaXRlXCIsIC8vIEFkZHMgd2hpdGUgb3V0ZXIgc3Ryb2tlIHRvIHRleHQgKGZvciByZWFkYWJpbGl0eSlcbiAgICAgIGZpbGw6IFwiYmxhY2tcIiwgLy8gVGV4dCBmaWxsIGNvbG9yXG4gICAgICB0ZXh0QW5jaG9yOiBcInN0YXJ0XCIsIC8vIExlZnQgYWxpZ24gdGV4dCB3aXRoIHRoZSB4LSBhbmQgeS1jb29yZGluYXRlc1xuICAgICAgZHg6IDE1IC8vIFNoaWZ0cyB0ZXh0IHRvIHRoZSByaWdodCAoc3RhcnRpbmcgZnJvbSBsZWZ0IGFsaWdubWVudCB3aXRoIGNvb3JkaW5hdGUpXG4gICAgfSlcbiAgXSxcbiAgcjogeyByYW5nZTogWzEsIDE1XSB9LFxuICBjb2xvcjogeyBsZWdlbmQ6IHRydWUgfSxcbiAgaGVpZ2h0OiA1MDAsXG4gIHdpZHRoOiA4MDAsXG4gIG1hcmdpbjogNTBcbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJhc3luYyBmdW5jdGlvbiB0cmFuc2Zvcm1Ub1Bvc3QoZGVzY3JpcHRpb24pIHtcbiAgLy8gQmFzZSBVUkwgd2l0aCBxdWVyeSBwYXJhbWV0ZXJzXG4gIGNvbnN0IGJhc2VVcmwgPSBgaHR0cHM6Ly9jb2RpZmljYXRpb24tYXBlMjAyNS1weXRvcmNoLmxhYi5zc3BjbG91ZC5mci9wcmVkaWN0Lz9uYl9lY2hvc19tYXg9NSZwcm9iX21pbj0wLjAxJm51bV93b3JrZXJzPTAmYmF0Y2hfc2l6ZT0xYDtcblxuICAvLyBCdWlsZCB0aGUgcmVxdWVzdCBib2R5IGFjY29yZGluZyB0byB0aGUgZXhwZWN0ZWQgc2NoZW1hXG4gIGNvbnN0IGJvZHkgPSB7XG4gICAgZm9ybXM6IFtcbiAgICAgIHtcbiAgICAgICAgZGVzY3JpcHRpb25fYWN0aXZpdHk6IGRlc2NyaXB0aW9uXG4gICAgICB9XG4gICAgXVxuICB9O1xuXG4gIC8vIFNlbmQgdGhlIFBPU1QgcmVxdWVzdFxuICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGZldGNoKGJhc2VVcmwsIHtcbiAgICBtZXRob2Q6IFwiUE9TVFwiLFxuICAgIGhlYWRlcnM6IHtcbiAgICAgIFwiQ29udGVudC1UeXBlXCI6IFwiYXBwbGljYXRpb24vanNvblwiXG4gICAgfSxcbiAgICBib2R5OiBKU09OLnN0cmluZ2lmeShib2R5KVxuICB9KTtcblxuICAvLyBQYXJzZSBhbmQgcmV0dXJuIHRoZSBKU09OIHJlc3BvbnNlXG4gIHJldHVybiByZXNwb25zZS5qc29uKCk7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGFjdGl2aXRlID0gSW5wdXRzLnRleHQoe1xuICBsYWJlbDogJycsXG4gIHZhbHVlOiAnbWEgc29jacOpdMOpIGZlcmEgZHUgY29uc2VpbCBlbiB0cmFpdGVtZW50IGRlIGRvbm7DqWVzJyxcbiAgd2lkdGg6IDgwMFxufSlcblxudmlld29mIHByZWRpY3Rpb24gPSBJbnB1dHMuYnV0dG9uKFwiUnVuIFByZWRpY3Rpb25cIiwge1xuICByZWR1Y2U6IGFzeW5jICgpID0+IHtcbiAgICByZXR1cm4gYXdhaXQgdHJhbnNmb3JtVG9Qb3N0KGFjdGl2aXRlKTtcbiAgfVxufSlcblxuLy8gYWZmaWNoZXIgbGVzIHLDqXN1bHRhdHMgam9saW1lbnRcbnByZWRpY3Rpb25fdGFibGUgPSB7XG4gIGlmICghcHJlZGljdGlvbiB8fCAhcHJlZGljdGlvbi5sZW5ndGgpIHtcbiAgICByZXR1cm4gaHRtbGBgXG4gIH1cblxuICAvLyBsYSByw6lwb25zZSBlc3QgdW4gdGFibGVhdSBhdmVjIHVuIHNldWwgb2JqZXRcbiAgY29uc3QgcmVzdWx0ID0gcHJlZGljdGlvblswXVxuICBjb25zdCB7IElDLCBNTHZlcnNpb24sIC4uLmNvZGVzIH0gPSByZXN1bHRcblxuICBjb25zdCByb3dzID0gT2JqZWN0LnZhbHVlcyhjb2RlcykubWFwKCh7IGNvZGUsIGxpYmVsbGUsIHByb2JhYmlsaXRlIH0pID0+IHtcbiAgICByZXR1cm4gaHRtbGBcbiAgICAgIDx0cj5cbiAgICAgICAgPHRkPiR7Y29kZX0g4oCTICR7bGliZWxsZX08L3RkPlxuICAgICAgICA8dGQgc3R5bGU9XCJ0ZXh0LWFsaWduOnJpZ2h0O1wiPiR7cHJvYmFiaWxpdGUudG9GaXhlZCgzKX08L3RkPlxuICAgICAgPC90cj5cbiAgICBgXG4gIH0pXG5cbiAgcmV0dXJuIGh0bWxgXG4gICAgPHRhYmxlIHN0eWxlPVwiYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsgd2lkdGg6IDEwMCU7XCI+XG4gICAgICA8Y2FwdGlvbiBzdHlsZT1cIm1hcmdpbi1ib3R0b206IDAuNWVtO1wiPlxuICAgICAgICBDb25maWRlbmNlIHNjb3JlIDogJHsoK0lDKS50b0ZpeGVkKDMpfVxuICAgICAgPC9jYXB0aW9uPlxuICAgICAgPHRoZWFkPlxuICAgICAgICA8dHI+XG4gICAgICAgICAgPHRoIHN0eWxlPVwidGV4dC1hbGlnbjpsZWZ0O1wiPkRlc2NyaXB0aW9uIChOQTIwMDgpPC90aD5cbiAgICAgICAgICA8dGggc3R5bGU9XCJ0ZXh0LWFsaWduOnJpZ2h0O1wiPlByb2JhYmlsaXR5PC90aD5cbiAgICAgICAgPC90cj5cbiAgICAgIDwvdGhlYWQ+XG4gICAgICA8dGJvZHk+XG4gICAgICAgICR7cm93c31cbiAgICAgIDwvdGJvZHk+XG4gICAgPC90YWJsZT5cbiAgYFxufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdpbmZvX211dGF0aW9ucycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdpbmZvX3Bvd2VyX3BsYW50cycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdhY3Rpdml0ZScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdwcmVkaWN0aW9uJykifV19
     </script>
     <script type="module">
     if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
