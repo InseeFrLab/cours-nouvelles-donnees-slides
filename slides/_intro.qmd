@@ -1,9 +1,16 @@
 # Contexte
 
-## Prolifération des données
+## Les données d'enquête
+
+- Base "historique" des statistiques
+- Présentent de nombreux avantages : finalité est la bonne, cadre et concept maîtrisé
+- Mais ce sont des données longues à récolter et coûteuses pour le répondant et l'Insee (plusieurs années)
+- Dans un contexte de demande de statistiques plus poussées avec des moyens stables
+
+## En parallèle, prolifération des données
 
 - Numérisation et innovations technologiques ont réduit le coût de production de la donnée
-    + Volume de données produites en explosion :
+    + Volume de données produites en explosion
 
 . . .
 
@@ -47,7 +54,7 @@
 ![Source : [Hadley Wickham, _R for data science_](https://r4ds.hadley.nz/data-tidy.html)](https://r4ds.hadley.nz/images/tidy-1.png)
 
 
-## Diversification des données (1/4) 
+## Diversification des données (1/4)
 
 ### Données administratives
 
@@ -65,7 +72,7 @@ info_mutations == "Tableau" ? html`<div>${table_mutations1}<div>` : html`<div>${
 //| echo: false
 // data coming from "https://files.data.gouv.fr/geo-dvf/latest/csv/2020/communes/92/92049.csv"
 // fetched manually because of CORS issue
-url = "https://minio.lab.sspcloud.fr/nicolastlm/diffusion/92049.csv"  
+url = "https://minio.lab.sspcloud.fr/nicolastlm/diffusion/92049.csv"
 dvf = d3.csv(url)
 ```
 
@@ -206,7 +213,7 @@ plot_power_plants = Plot.plot({
 
 <br>
 
-- Classification automatique de l'activité principale d'une entreprise : 
+- Classification automatique de l'activité principale d'une entreprise :
 
 ```{ojs}
 async function transformToPost(description) {
@@ -240,7 +247,7 @@ async function transformToPost(description) {
 ```{ojs}
 viewof activite = Inputs.text({
   label: '',
-  value: 'data scientist',
+  value: 'ma société fera du conseil en traitement de données',
   width: 800
 })
 

@@ -38,6 +38,6 @@
 - [**API**]{.orange} : interface de programmation
 - Mode [**préférentiel**]{.orange} de collecte de données :
     - Plus de garanties sur [**la qualité**]{.blue2}
-    - [**Reproductibité**]{.blue2}
+    - [**Reproductibilité**]{.blue2}
     - ...
 - Avec `Python` : `requests`

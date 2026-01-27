@@ -42,7 +42,7 @@
 
 ### Les déclarations administratives
 
-<br> 
+<br>
 
 - Pouvoir coercitif pouvant aller jusqu'aux poursuites judiciaires
     + Réduit le risque de non-déclaration ou de déclaration faussée
@@ -55,7 +55,7 @@
 
 Obligation est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.
 
-Par exemple, les déclarations fiscales des ménages sont annuelles, avec un calendrier déterminé à l’avance (qui dépend du format, papier ou internet). 
+Par exemple, les déclarations fiscales des ménages sont annuelles, avec un calendrier déterminé à l’avance (qui dépend du format, papier ou internet).
 :::
 
 
@@ -106,7 +106,7 @@ McKinsey définissait les propriétés du _big data_ selon 5V :
 . . .
 
 - Données administratives :
-    + Information moins précise... 
+    + Information moins précise...
     + ... mais réidentification facilitée en combinant plusieurs sources de données
     + Champ de recherche : _differential privacy_
 
@@ -123,23 +123,24 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
 
 | Donnée | Autorité centralisatrice |
 |------|------|
-| DSN    |  Gip-MDS     | 
+| DSN    |  Gip-MDS     |
 | Données hospitalières    | ATIH-10    |
 | SI gestion des eaux    | SANDRE12   |
 
 ## Usage de la donnée administrative
 
 1. Usage à des fins de gestion (la finalité pour laquelle elles sont construites)
-2. Usage à des fins d’analyse (la finalité fortuite)
+2. Usage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes [@RiviereKOUMARIANOS]
     + Exploitation directe pour productions ou études
     + Utilisation pour des appariements
+    + Utilisation pour expertiser des données d'enquêtes [@Meslin2025]
 
 :::{.callout-note}
-## Le CSNS
+## Le Code statistique non signifiant (CSNS)
 [Code statistique non signifiant](https://www.insee.fr/fr/information/5388962) (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.
 :::
 
-## Exemple 1 : la DSN
+## Exemple 1 : la déclaration sociale nominative (DSN)
 
 - Données issues des fiches de paie [@Humbert2018]
 
@@ -160,7 +161,7 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
 - Base de référence pour toutes les études et enquêtes statistiques sur les entreprises
 
 
-## Exemple 3 : Fidéli
+## Exemple 3 : Fichiers démographiques sur les logements et les individus (Fidéli)
 
 - Assemblage de :
     + Données d'origine fiscale : taxe d'habitation, fichier des propriétés bâties, déclarations de revenus, etc.
@@ -171,7 +172,7 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
 
 - Base de référence pour études sociodémographiques fines
 
-## Exemple 4 : le SNDS {.smaller}
+## Exemple 4 : le système national des données de santé (SNDS) {.smaller}
 
 - Appariement des grandes bases médico-administratives nationales, notamment :
     + les données de l’assurance maladie (base SNIIRAM)
@@ -180,7 +181,7 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
 
 . . .
 
-- Flux massif : 
+- Flux massif :
     + 1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d’actes (plus de 3000 variables) qui représentent 450 To de données...
 
 . . .
