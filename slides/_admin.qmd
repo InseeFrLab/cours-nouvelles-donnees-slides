@@ -127,7 +127,7 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
 | Données hospitalières    | ATIH-10    |
 | SI gestion des eaux    | SANDRE12   |
 
-## Usage de la donnée administrative
+## Usage de la donnée administrative {.smaller}
 
 1. Usage à des fins de gestion (la finalité pour laquelle elles sont construites)
 2. Usage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes [@RiviereKOUMARIANOS]
