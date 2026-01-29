@@ -228,11 +228,18 @@
     "href": "slides/index.html#un-enjeu-actuel",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Un enjeu actuel",
-    "text": "Un enjeu actuel\n\nCarte des densités de population sur des carreaux de largeur d’un kilomètre à Lyon et ses alentours en 2017 (calculées à partir de Filosofi). Source : géoportail.Voir geoportail, statistiques-locales.insee.fr ou France Pixel par Etienne Côme"
+    "text": "Un enjeu actuel\n\nIllustration de l’effet MAUP (modifiable areal unit problem)"
   },
   {
     "objectID": "slides/index.html#un-enjeu-actuel-1",
     "href": "slides/index.html#un-enjeu-actuel-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Un enjeu actuel",
+    "text": "Un enjeu actuel\n\nCarte des densités de population sur des carreaux de largeur d’un kilomètre à Lyon et ses alentours en 2017 (calculées à partir de Filosofi). Source : géoportail.Voir geoportail, statistiques-locales.insee.fr ou France Pixel par Etienne Côme"
+  },
+  {
+    "objectID": "slides/index.html#un-enjeu-actuel-2",
+    "href": "slides/index.html#un-enjeu-actuel-2",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Un enjeu actuel",
     "text": "Un enjeu actuel\n\n\nUn exemple de visualisation express des données Filosofi grâce à la librairie  gridviz (visible sur Observable)"
@@ -278,6 +285,13 @@
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Exemple : enjeux",
     "text": "Exemple : enjeux\n\nQuestions d’éthique :\n\navant d’utiliser ces données personnelles,\n\nusage proportionné ?\nvaleur ajoutée des statistiques produites pour la population ?\n\n\n\n\n\nQuestions légales :\n\nHistoriquement : accès limité aux données téléphoniques (et aux données privées en général) pour les statistiques\nRévision du règlement 223/2009 fin 2024 : accès désormais possible, sous conditions strictes\nProtection des données personnelles toujours requises (RGPD)"
+  },
+  {
+    "objectID": "slides/index.html#autres-exemples-de-données-géolocalisées",
+    "href": "slides/index.html#autres-exemples-de-données-géolocalisées",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Autres exemples de données géolocalisées",
+    "text": "Autres exemples de données géolocalisées\n\nFideli (Fichier démographique sur les logements et les individus)\nFilosofi (Fichier localisé social et fiscal)\nBPE (Base permanente des équipements)\nSirene (répertoire des entreprises)\nRP (Recensement de la Population)\nGénéralement, RIL et Cadastre comme source première de la géolocalisation"
   },
   {
     "objectID": "slides/index.html#application",
