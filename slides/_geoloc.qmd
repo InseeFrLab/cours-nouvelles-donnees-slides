@@ -43,6 +43,10 @@
 
 :::
 
+## Un enjeu actuel {.smaller}
+
+![Illustration de l'effet MAUP (modifiable areal unit problem)](img/Maup_rate_numbers.png)
+
 
 ## Un enjeu actuel {.smaller}
 
@@ -132,6 +136,16 @@ la librairie {{< fa brands js-square >}} `gridviz` (visible sur [Observable](htt
     - [Révision du règlement 223/2009](https://www.casd.eu/modification-du-reglement-statistique-europeen-223-09-des-evolutions-importantes-pour-lacces-aux-sources-privees/) fin 2024 : accès désormais possible, sous conditions strictes
     - Protection des données personnelles toujours requises (RGPD)
 
+
+## Autres exemples de données géolocalisées
+
+- `Fideli` (Fichier démographique sur les logements et les individus)
+- `Filosofi` (Fichier localisé social et fiscal)
+- `BPE` (Base permanente des équipements)
+- `Sirene` (répertoire des entreprises)
+- `RP` (Recensement de la Population)
+
+- Généralement, `RIL` et `Cadastre` comme [source première de la géolocalisation]{.orange}
 
 ## Application
 
