@@ -9,15 +9,18 @@
     - Données [**privées**]{.blue2} mobilisables pour la statistique publique
 - Traitement automatique : fait référence à des tâches [**variées**]{.orange}
 
-## Encoder du texte {.smaller}
+## Encoder du texte
 
-- Encoder [**l'information présente**]{.orange} dans un texte :
-    - Passage de données "non-structurées" à des valeurs numériques...
-    - ... et donc gérables par des modèles !
+- Idée de l'[**encodding**]{.orange} :
+    - Transformer une information de très haute dimension (éminemment complexe)...
+    - ... en information à dimension plus limitée...
+    - ... qui peut être exploitée par un ordinateur !
 
+## Première approche : Bag of Words
+
+- Idée : texte = ensemble de mots que l'on pioche plus ou moins fréquemment
 
 - Outil classique et immédiat : la [**matrice document-terme**]{.blue2}.
-
 
 - Regardons sur un exemple, sur le corpus suivant : 
     - _"La pratique du tricot et du crochet"_
@@ -103,21 +106,22 @@
 </div>
 
 
-
 ## Les embeddings W2V {.nostretch}
 
-- _Text embeddings_ : [**représentation dense**]{.orange}
-- Exemple de [**word2vec**]{.orange} (2013), apprentissage non-supervisé d'embeddings à l'aide d'une tâche de prédiction des mots à partir de leur contexte
+- _Text embeddings_ : [**représentation dense**]{.orange} qui capture les grandes structures d'un corpus.
+- Projection du corpus dans le meilleur espace vectoriel possible pour rapprocher les termes sémantiquement proches. 
+- Exemple de [**word2vec**]{.orange} (2013), apprentissage d'embeddings à l'aide d'une tâche de prédiction des mots à partir de leur contexte
 
 ![](https://minio.lab.sspcloud.fr/lgaliana/generative-art/pythonds/w2v_vecto.png){width="70%" fig-align="center"}
 
-## Modèles de langage (4/5)
+## Les embeddings W2V
 
 ![](img/word_embedding.png)
 
 
 ## Les transformers {.nostretch}
 
+- « [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762) »
 - Aujourd'hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone : le [**Transformer**]{.orange}
 - Embeddings des mots qui composent un texte deviennent [**contextuels**]{.orange}
 - Explosion des modèles de langage [**génératifs**]{.orange}
@@ -136,7 +140,7 @@
 
 - Consignes sur [le site web](https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html)
 - Codification automatique des entreprises dans la nomenclature d'activités
-- Exploitation des données Sirene avec {{< fa brands python >}} et `Fasttext`
+- Exploitation des données Sirene avec {{< fa brands python >}} et `TorchTextClassifiers` (méthode Fasttext)
 - Ouverture à la problématique du MLOps appliquée au NLP
 
 - ✍🏻 [**Lien vers le TD**](https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html) 
