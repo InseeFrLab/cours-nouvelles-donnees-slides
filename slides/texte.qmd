@@ -119,6 +119,23 @@
 ![](img/word_embedding.png)
 
 
+## FastText (2016)
+
+- Modèle de **Facebook AI Research**, extension de **Word2Vec**
+- Représentations basées sur :
+  - [**mots**]{.orange} 
+  - [**n-grams de caractères**]{.orange}  (ex. « tar », « art », « rte »)
+  - [**n-grams de mots**]{.orange} 
+- Avantages :
+  - robuste aux [**variations morphologiques**]{.blue} 
+  - gère **fautes**, **mots rares**, **multi-mots**
+- **Entraînement rapide** sur grands corpus
+
+
+## FastText (2016)
+
+![](img/fasttext_shema.png){.lightbox}
+
 ## Les transformers {.nostretch}
 
 - « [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762) »
