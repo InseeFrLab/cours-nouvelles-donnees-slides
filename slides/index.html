@@ -1266,14 +1266,21 @@ Figure&nbsp;1
 <li>Traitement automatique : fait référence à des tâches <span class="orange"><strong>variées</strong></span></li>
 </ul>
 </section>
-<section id="encoder-du-texte" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<section id="encoder-du-texte" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Encoder du texte</h2>
 <ul>
-<li><p>Encoder <span class="orange"><strong>l’information présente</strong></span> dans un texte :</p>
+<li>Idée de l’<span class="orange"><strong>encodding</strong></span> :
 <ul>
-<li>Passage de données “non-structurées” à des valeurs numériques…</li>
-<li>… et donc gérables par des modèles !</li>
+<li>Transformer une information de très haute dimension (éminemment complexe)…</li>
+<li>… en information à dimension plus limitée…</li>
+<li>… qui peut être exploitée par un ordinateur !</li>
 </ul></li>
+</ul>
+</section>
+<section id="première-approche-bag-of-words" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Première approche : Bag of Words</h2>
+<ul>
+<li><p>Idée : texte = ensemble de mots que l’on pioche plus ou moins fréquemment</p></li>
 <li><p>Outil classique et immédiat : la <span class="blue2"><strong>matrice document-terme</strong></span>.</p></li>
 <li><p>Regardons sur un exemple, sur le corpus suivant :</p>
 <ul>
@@ -1688,8 +1695,9 @@ vivre
 <section id="les-embeddings-w2v" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
 <h2>Les embeddings W2V</h2>
 <ul>
-<li><em>Text embeddings</em> : <span class="orange"><strong>représentation dense</strong></span></li>
-<li>Exemple de <span class="orange"><strong>word2vec</strong></span> (2013), apprentissage non-supervisé d’embeddings à l’aide d’une tâche de prédiction des mots à partir de leur contexte</li>
+<li><em>Text embeddings</em> : <span class="orange"><strong>représentation dense</strong></span> qui capture les grandes structures d’un corpus.</li>
+<li>Projection du corpus dans le meilleur espace vectoriel possible pour rapprocher les termes sémantiquement proches.</li>
+<li>Exemple de <span class="orange"><strong>word2vec</strong></span> (2013), apprentissage d’embeddings à l’aide d’une tâche de prédiction des mots à partir de leur contexte</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1697,13 +1705,14 @@ vivre
 </figure>
 </div>
 </section>
-<section id="modèles-de-langage-45" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Modèles de langage (4/5)</h2>
+<section id="les-embeddings-w2v-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les embeddings W2V</h2>
 
 <img data-src="img/word_embedding.png" class="r-stretch"></section>
 <section id="les-transformers" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
 <h2>Les transformers</h2>
 <ul>
+<li>« <a href="https://arxiv.org/abs/1706.03762"><em>Attention Is All You Need</em></a> »</li>
 <li>Aujourd’hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone : le <span class="orange"><strong>Transformer</strong></span></li>
 <li>Embeddings des mots qui composent un texte deviennent <span class="orange"><strong>contextuels</strong></span></li>
 <li>Explosion des modèles de langage <span class="orange"><strong>génératifs</strong></span></li>
@@ -1728,7 +1737,7 @@ vivre
 <ul>
 <li><p>Consignes sur <a href="https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html">le site web</a></p></li>
 <li><p>Codification automatique des entreprises dans la nomenclature d’activités</p></li>
-<li><p>Exploitation des données Sirene avec <i class="fa-brands fa-python" aria-label="python"></i> et <code>Fasttext</code></p></li>
+<li><p>Exploitation des données Sirene avec <i class="fa-brands fa-python" aria-label="python"></i> et <code>TorchTextClassifiers</code> (méthode Fasttext)</p></li>
 <li><p>Ouverture à la problématique du MLOps appliquée au NLP</p></li>
 <li><p>✍🏻 <a href="https://inseefrlab.github.io/cours-nouvelles-donnees-site/applications/ape.html"><strong>Lien vers le TD</strong></a></p></li>
 </ul>

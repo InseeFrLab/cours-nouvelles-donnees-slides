@@ -312,7 +312,14 @@
     "href": "slides/index.html#encoder-du-texte",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Encoder du texte",
-    "text": "Encoder du texte\n\nEncoder l’information présente dans un texte :\n\nPassage de données “non-structurées” à des valeurs numériques…\n… et donc gérables par des modèles !\n\nOutil classique et immédiat : la matrice document-terme.\nRegardons sur un exemple, sur le corpus suivant :\n\n“La pratique du tricot et du crochet”\n“Transmettre la passion du timbre”\n“Vivre de sa passion”"
+    "text": "Encoder du texte\n\nIdée de l’encodding :\n\nTransformer une information de très haute dimension (éminemment complexe)…\n… en information à dimension plus limitée…\n… qui peut être exploitée par un ordinateur !"
+  },
+  {
+    "objectID": "slides/index.html#première-approche-bag-of-words",
+    "href": "slides/index.html#première-approche-bag-of-words",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Première approche : Bag of Words",
+    "text": "Première approche : Bag of Words\n\nIdée : texte = ensemble de mots que l’on pioche plus ou moins fréquemment\nOutil classique et immédiat : la matrice document-terme.\nRegardons sur un exemple, sur le corpus suivant :\n\n“La pratique du tricot et du crochet”\n“Transmettre la passion du timbre”\n“Vivre de sa passion”"
   },
   {
     "objectID": "slides/index.html#exemple-de-document-terme",
@@ -340,21 +347,21 @@
     "href": "slides/index.html#les-embeddings-w2v",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Les embeddings W2V",
-    "text": "Les embeddings W2V\n\nText embeddings : représentation dense\nExemple de word2vec (2013), apprentissage non-supervisé d’embeddings à l’aide d’une tâche de prédiction des mots à partir de leur contexte"
+    "text": "Les embeddings W2V\n\nText embeddings : représentation dense qui capture les grandes structures d’un corpus.\nProjection du corpus dans le meilleur espace vectoriel possible pour rapprocher les termes sémantiquement proches.\nExemple de word2vec (2013), apprentissage d’embeddings à l’aide d’une tâche de prédiction des mots à partir de leur contexte"
   },
   {
-    "objectID": "slides/index.html#modèles-de-langage-45",
-    "href": "slides/index.html#modèles-de-langage-45",
+    "objectID": "slides/index.html#les-embeddings-w2v-1",
+    "href": "slides/index.html#les-embeddings-w2v-1",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Modèles de langage (4/5)",
-    "text": "Modèles de langage (4/5)"
+    "section": "Les embeddings W2V",
+    "text": "Les embeddings W2V"
   },
   {
     "objectID": "slides/index.html#les-transformers",
     "href": "slides/index.html#les-transformers",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Les transformers",
-    "text": "Les transformers\n\nAujourd’hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone : le Transformer\nEmbeddings des mots qui composent un texte deviennent contextuels\nExplosion des modèles de langage génératifs"
+    "text": "Les transformers\n\n« Attention Is All You Need »\nAujourd’hui, les meilleurs modèles de langage reposent sur une même architecture de réseaux de neurone : le Transformer\nEmbeddings des mots qui composent un texte deviennent contextuels\nExplosion des modèles de langage génératifs"
   },
   {
     "objectID": "slides/index.html#applications-pour-la-statistique-publique",
@@ -368,7 +375,7 @@
     "href": "slides/index.html#application-2",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Application 2",
-    "text": "Application 2\n\nConsignes sur le site web\nCodification automatique des entreprises dans la nomenclature d’activités\nExploitation des données Sirene avec  et Fasttext\nOuverture à la problématique du MLOps appliquée au NLP\n✍🏻 Lien vers le TD"
+    "text": "Application 2\n\nConsignes sur le site web\nCodification automatique des entreprises dans la nomenclature d’activités\nExploitation des données Sirene avec  et TorchTextClassifiers (méthode Fasttext)\nOuverture à la problématique du MLOps appliquée au NLP\n✍🏻 Lien vers le TD"
   },
   {
     "objectID": "slides/index.html#application-2-optionnelle",
