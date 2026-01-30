@@ -357,6 +357,20 @@
     "text": "Les embeddings W2V"
   },
   {
+    "objectID": "slides/index.html#fasttext-2016",
+    "href": "slides/index.html#fasttext-2016",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "FastText (2016)",
+    "text": "FastText (2016)\n\nModèle de Facebook AI Research, extension de Word2Vec\nReprésentations basées sur :\n\nmots\nn-grams de caractères (ex. « tar », « art », « rte »)\nn-grams de mots\n\nAvantages :\n\nrobuste aux variations morphologiques\ngère fautes, mots rares, multi-mots\n\nEntraînement rapide sur grands corpus"
+  },
+  {
+    "objectID": "slides/index.html#fasttext-2016-1",
+    "href": "slides/index.html#fasttext-2016-1",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "FastText (2016)",
+    "text": "FastText (2016)"
+  },
+  {
     "objectID": "slides/index.html#les-transformers",
     "href": "slides/index.html#les-transformers",
     "title": "Nouvelles sources de données pour la statistique publique",

@@ -9,7 +9,10 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script>
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
   <title>Nouvelles sources de données pour la statistique publique</title>
@@ -1709,6 +1712,28 @@ vivre
 <h2>Les embeddings W2V</h2>
 
 <img data-src="img/word_embedding.png" class="r-stretch"></section>
+<section id="fasttext-2016" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>FastText (2016)</h2>
+<ul>
+<li>Modèle de <strong>Facebook AI Research</strong>, extension de <strong>Word2Vec</strong></li>
+<li>Représentations basées sur :
+<ul>
+<li><span class="orange"><strong>mots</strong></span></li>
+<li><span class="orange"><strong>n-grams de caractères</strong></span> (ex. « tar », « art », « rte »)</li>
+<li><span class="orange"><strong>n-grams de mots</strong></span></li>
+</ul></li>
+<li>Avantages :
+<ul>
+<li>robuste aux <span class="blue"><strong>variations morphologiques</strong></span></li>
+<li>gère <strong>fautes</strong>, <strong>mots rares</strong>, <strong>multi-mots</strong></li>
+</ul></li>
+<li><strong>Entraînement rapide</strong> sur grands corpus</li>
+</ul>
+</section>
+<section id="fasttext-2016-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>FastText (2016)</h2>
+<p><a href="img/fasttext_shema.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="img/fasttext_shema.png"></a></p>
+</section>
 <section id="les-transformers" class="slide level2 nostretch" data-background-image="background.svg" data-background-size="contain">
 <h2>Les transformers</h2>
 <ul>
@@ -2420,6 +2445,38 @@ Stock, James, et Mark Watson. 2010. <span>«&nbsp;Dynamic Factor Models&nbsp;»<
         }
       });
       </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>
