@@ -248,7 +248,7 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff",
 <section id="les-données-denquête" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les données d’enquête</h2>
 <ul>
-<li>Base “historique” des statistiques</li>
+<li>Base “historique” privilégiée des statistiques</li>
 <li>Présentent de nombreux avantages : finalité est la bonne, cadre et concept maîtrisé</li>
 <li>Mais ce sont des données longues à récolter et coûteuses pour le répondant et l’Insee (plusieurs années)</li>
 <li>Dans un contexte de demande de statistiques plus poussées avec des moyens stables</li>
@@ -795,7 +795,7 @@ Données textuelles et non structurées
 <h2>Aparté : les 5V s’appliquent aussi aux données administratives</h2>
 <p>McKinsey définissait les propriétés du <em>big data</em> selon 5V :</p>
 <ol type="1">
-<li>Volume : DSN &gt; 1To de données par an</li>
+<li>Volume : DSN &gt; 1To de données par an, SNDS &gt; 450To</li>
 </ol>
 <div class="fragment">
 <ol start="2" type="1">
@@ -847,6 +847,80 @@ Données textuelles et non structurées
 </div>
 </div>
 </section>
+<section id="usage-de-la-donnée-administrative" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
+<h2>Usage de la donnée administrative</h2>
+<ol type="1">
+<li>Usage à des fins de gestion (la finalité pour laquelle elles sont construites)</li>
+<li>Usage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes <span class="citation" data-cites="RiviereKOUMARIANOS">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Pascal RIVIERE 2025</a>)</span>
+<ul>
+<li>Exploitation directe pour productions ou études</li>
+<li>Utilisation pour des appariements</li>
+<li>Utilisation pour expertiser des données d’enquêtes <span class="citation" data-cites="Meslin2025">(<a href="#/bibliographie" role="doc-biblioref" onclick="">MESLIN 2025</a>)</span></li>
+</ul></li>
+</ol>
+</section>
+<section id="la-spécificité-des-données-de-répertoire" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>La spécificité des données de répertoire</h2>
+<ul>
+<li>les répertoires permettent d’identifier de manière unique et stable des unités statistiques</li>
+<li>rôle clé dans le processus statistique pour effectuer des appariements</li>
+<li>source de données administratives mais sans finalité de gestion</li>
+</ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 21%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Répertoire</th>
+<th>Responsable</th>
+<th>Finalité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>répertoire national d’identification des personnes physiques (RNIPP)</td>
+<td>Insee</td>
+<td>identification des personnes physiques nées en France</td>
+</tr>
+<tr class="even">
+<td>Système national de gestion des identifiants (SNGI)</td>
+<td>CNAV</td>
+<td>identification des personnes physiques</td>
+</tr>
+<tr class="odd">
+<td>ayants droit de la sécurité sociale</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>répertoire Sirene</td>
+<td>Insee</td>
+<td>identification des personnes morales françaises</td>
+</tr>
+<tr class="odd">
+<td>l’identifiant national élève (INE)</td>
+<td>SSM Enseignement supérieur (SIES)</td>
+<td>Identifier les étudiants</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Le Code statistique non signifiant (CSNS)</strong></p>
+</div>
+<div class="callout-content">
+<p><a href="https://www.insee.fr/fr/information/5388962">Code statistique non signifiant</a> (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.</p>
+</div>
+</div>
+</div>
+</section>
 <section id="processus-de-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Processus de production</h2>
 <ul>
@@ -878,30 +952,17 @@ Données textuelles et non structurées
 </tbody>
 </table>
 </section>
-<section id="usage-de-la-donnée-administrative" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
-<h2>Usage de la donnée administrative</h2>
-<ol type="1">
-<li>Usage à des fins de gestion (la finalité pour laquelle elles sont construites)</li>
-<li>Usage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes <span class="citation" data-cites="RiviereKOUMARIANOS">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Pascal RIVIERE 2025</a>)</span>
+<section id="le-rôle-différent-du-statisticien-data-scientist" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le rôle différent du statisticien / <em>data scientist</em></h2>
 <ul>
-<li>Exploitation directe pour productions ou études</li>
-<li>Utilisation pour des appariements</li>
-<li>Utilisation pour expertiser des données d’enquêtes <span class="citation" data-cites="Meslin2025">(<a href="#/bibliographie" role="doc-biblioref" onclick="">MESLIN 2025</a>)</span></li>
+<li>plus le rôle de producteur des données sources mais un rôle différent</li>
+<li>centré sur 3 phases proposées dans <span class="citation" data-cites="RiviereKOUMARIANOS">(<a href="#/bibliographie" role="doc-biblioref" onclick="">Pascal RIVIERE 2025</a>)</span>
+<ul>
+<li>acquisition : réception des fichiers de la DSN, vérification de leur intégrité, complétude et figement</li>
+<li>transformation pour retrouver les notions statistiques recherchées : reconstituer le salaire global annuel d’un employé à partir des DSN annuelles</li>
+<li>traitement statistique : agrégation des données pour produire des indicateurs statistiques cohérents et validés (masse salariale totale etc) avant leur diffusion</li>
 </ul></li>
-</ol>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Le Code statistique non signifiant (CSNS)</strong></p>
-</div>
-<div class="callout-content">
-<p><a href="https://www.insee.fr/fr/information/5388962">Code statistique non signifiant</a> (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.</p>
-</div>
-</div>
-</div>
+</ul>
 </section>
 <section id="exemple-1-la-déclaration-sociale-nominative-dsn" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Exemple 1 : la déclaration sociale nominative (DSN)</h2>

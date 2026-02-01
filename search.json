@@ -11,7 +11,7 @@
     "href": "slides/index.html#les-données-denquête",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Les données d’enquête",
-    "text": "Les données d’enquête\n\nBase “historique” des statistiques\nPrésentent de nombreux avantages : finalité est la bonne, cadre et concept maîtrisé\nMais ce sont des données longues à récolter et coûteuses pour le répondant et l’Insee (plusieurs années)\nDans un contexte de demande de statistiques plus poussées avec des moyens stables"
+    "text": "Les données d’enquête\n\nBase “historique” privilégiée des statistiques\nPrésentent de nombreux avantages : finalité est la bonne, cadre et concept maîtrisé\nMais ce sont des données longues à récolter et coûteuses pour le répondant et l’Insee (plusieurs années)\nDans un contexte de demande de statistiques plus poussées avec des moyens stables"
   },
   {
     "objectID": "slides/index.html#en-parallèle-prolifération-des-données",
@@ -109,7 +109,7 @@
     "href": "slides/index.html#aparté-les-5v-sappliquent-aussi-aux-données-administratives",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Aparté : les 5V s’appliquent aussi aux données administratives",
-    "text": "Aparté : les 5V s’appliquent aussi aux données administratives\nMcKinsey définissait les propriétés du big data selon 5V :\n\nVolume : DSN &gt; 1To de données par an\n\n\n\nVélocité : Données assurance maladie ou GIE CB sont à haute fréquence\n\n\n\n\nVariété : l’État collecte et exploite des données de natures très différentes\n\n\n\n\nVéracité : erreurs (volontaires ou non) coûteuses permet des données de meilleure qualité que celles auto-déclarées sans contrôle ex-post\n\n\n\n\nValeur : données collectées par l’État sont d’une grande valeur même si elles ne sont pas monétisées (bien public, sans valeur de marché mais avec une valeur sociale)"
+    "text": "Aparté : les 5V s’appliquent aussi aux données administratives\nMcKinsey définissait les propriétés du big data selon 5V :\n\nVolume : DSN &gt; 1To de données par an, SNDS &gt; 450To\n\n\n\nVélocité : Données assurance maladie ou GIE CB sont à haute fréquence\n\n\n\n\nVariété : l’État collecte et exploite des données de natures très différentes\n\n\n\n\nVéracité : erreurs (volontaires ou non) coûteuses permet des données de meilleure qualité que celles auto-déclarées sans contrôle ex-post\n\n\n\n\nValeur : données collectées par l’État sont d’une grande valeur même si elles ne sont pas monétisées (bien public, sans valeur de marché mais avec une valeur sociale)"
   },
   {
     "objectID": "slides/index.html#une-donnée-plus-sensible",
@@ -119,6 +119,20 @@
     "text": "Une donnée plus sensible\n\nEnquête : réidentification après la phase d’anonymisation est compliquée\n\n\n\nDonnées administratives :\n\nInformation moins précise…\n… mais réidentification facilitée en combinant plusieurs sources de données\nChamp de recherche : differential privacy\n\n\n\n\n\n\n\n\nLe secret statistique (article 7bis de la loi de 1951)\n\n\nLe secret statistique crée une obligation spéciale dans le cas de données confidentielles collectées, détenues ou produites pour des usages statistiques. Il interdit strictement la communication de données individuelles ou susceptibles d’identifier les personnes, issues de traitements à finalités statistiques, que ces traitements proviennent d’enquêtes ou de bases de données. En dérogation aux règles communes applicables au secret professionnel, le secret statistique est en effet opposable à toute réquisition judiciaire ou émanant d’autorités administratives (fiscale ou douanière par exemple)."
   },
   {
+    "objectID": "slides/index.html#usage-de-la-donnée-administrative",
+    "href": "slides/index.html#usage-de-la-donnée-administrative",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "Usage de la donnée administrative",
+    "text": "Usage de la donnée administrative\n\nUsage à des fins de gestion (la finalité pour laquelle elles sont construites)\nUsage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes (Pascal RIVIERE 2025)\n\nExploitation directe pour productions ou études\nUtilisation pour des appariements\nUtilisation pour expertiser des données d’enquêtes (MESLIN 2025)"
+  },
+  {
+    "objectID": "slides/index.html#la-spécificité-des-données-de-répertoire",
+    "href": "slides/index.html#la-spécificité-des-données-de-répertoire",
+    "title": "Nouvelles sources de données pour la statistique publique",
+    "section": "La spécificité des données de répertoire",
+    "text": "La spécificité des données de répertoire\n\nles répertoires permettent d’identifier de manière unique et stable des unités statistiques\nrôle clé dans le processus statistique pour effectuer des appariements\nsource de données administratives mais sans finalité de gestion\n\n\n\n\n\n\n\n\n\nRépertoire\nResponsable\nFinalité\n\n\n\n\nrépertoire national d’identification des personnes physiques (RNIPP)\nInsee\nidentification des personnes physiques nées en France\n\n\nSystème national de gestion des identifiants (SNGI)\nCNAV\nidentification des personnes physiques\n\n\nayants droit de la sécurité sociale\n\n\n\n\nrépertoire Sirene\nInsee\nidentification des personnes morales françaises\n\n\nl’identifiant national élève (INE)\nSSM Enseignement supérieur (SIES)\nIdentifier les étudiants\n\n\n\n\n\n\n\n\n\nLe Code statistique non signifiant (CSNS)\n\n\nCode statistique non signifiant (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique."
+  },
+  {
     "objectID": "slides/index.html#processus-de-production",
     "href": "slides/index.html#processus-de-production",
     "title": "Nouvelles sources de données pour la statistique publique",
@@ -126,11 +140,11 @@
     "text": "Processus de production\n\nPlace centrale d’une autorité gestionnaire, qui centralise la donnée\n\nDistingué de l’administration qui exploite le flux (à des fins de gestion ou d’exploitation statistique)\n\n\n\n\n\nDonnée\nAutorité centralisatrice\n\n\n\n\nDSN\nGip-MDS\n\n\nDonnées hospitalières\nATIH-10\n\n\nSI gestion des eaux\nSANDRE12"
   },
   {
-    "objectID": "slides/index.html#usage-de-la-donnée-administrative",
-    "href": "slides/index.html#usage-de-la-donnée-administrative",
+    "objectID": "slides/index.html#le-rôle-différent-du-statisticien-data-scientist",
+    "href": "slides/index.html#le-rôle-différent-du-statisticien-data-scientist",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Usage de la donnée administrative",
-    "text": "Usage de la donnée administrative\n\nUsage à des fins de gestion (la finalité pour laquelle elles sont construites)\nUsage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes (Pascal RIVIERE 2025)\n\nExploitation directe pour productions ou études\nUtilisation pour des appariements\nUtilisation pour expertiser des données d’enquêtes (MESLIN 2025)\n\n\n\n\n\n\n\n\nLe Code statistique non signifiant (CSNS)\n\n\nCode statistique non signifiant (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique."
+    "section": "Le rôle différent du statisticien / data scientist",
+    "text": "Le rôle différent du statisticien / data scientist\n\nplus le rôle de producteur des données sources mais un rôle différent\ncentré sur 3 phases proposées dans (Pascal RIVIERE 2025)\n\nacquisition : réception des fichiers de la DSN, vérification de leur intégrité, complétude et figement\ntransformation pour retrouver les notions statistiques recherchées : reconstituer le salaire global annuel d’un employé à partir des DSN annuelles\ntraitement statistique : agrégation des données pour produire des indicateurs statistiques cohérents et validés (masse salariale totale etc) avant leur diffusion"
   },
   {
     "objectID": "slides/index.html#exemple-1-la-déclaration-sociale-nominative-dsn",
