@@ -81,7 +81,7 @@ Par exemple, les déclarations fiscales des ménages sont annuelles, avec un cal
 
 McKinsey définissait les propriétés du _big data_ selon 5V :
 
-1. Volume : DSN > 1To de données par an
+1. Volume : DSN > 1To de données par an, SNDS > 450To
 
 . . .
 
@@ -116,6 +116,35 @@ McKinsey définissait les propriétés du _big data_ selon 5V :
 Le secret statistique crée une obligation spéciale dans le cas de données confidentielles collectées, détenues ou produites pour des usages statistiques. Il interdit strictement la communication de données individuelles ou susceptibles d'identifier les personnes, issues de traitements à finalités statistiques, que ces traitements proviennent d’enquêtes ou de bases de données. En dérogation aux règles communes applicables au secret professionnel, le secret statistique est en effet opposable à toute réquisition judiciaire ou émanant d’autorités administratives (fiscale ou douanière par exemple).
 :::
 
+
+## Usage de la donnée administrative {.smaller}
+
+1. Usage à des fins de gestion (la finalité pour laquelle elles sont construites)
+2. Usage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes [@RiviereKOUMARIANOS]
+    + Exploitation directe pour productions ou études
+    + Utilisation pour des appariements
+    + Utilisation pour expertiser des données d'enquêtes [@Meslin2025]
+
+## La spécificité des données de répertoire
+
+- les répertoires permettent d'identifier de manière unique et stable des unités statistiques
+- rôle clé dans le processus statistique pour effectuer des appariements
+- source de données administratives mais sans finalité de gestion
+
+| Répertoire | Responsable | Finalité |
+|------|---|-----|
+| répertoire national d'identification des personnes physiques (RNIPP)    |  Insee   | identification des personnes physiques nées en France |
+| Système national de gestion des identifiants (SNGI)    |  CNAV   | identification des personnes physiques
+ayants droit de la sécurité sociale |
+|  répertoire Sirene   | Insee   | identification des personnes morales françaises |
+| l'identifiant national élève (INE)    | SSM Enseignement supérieur (SIES)   | Identifier les étudiants |
+
+
+:::{.callout-note}
+## Le Code statistique non signifiant (CSNS)
+[Code statistique non signifiant](https://www.insee.fr/fr/information/5388962) (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.
+:::
+
 ## Processus de production
 
 - Place centrale d’une autorité gestionnaire, qui centralise la donnée
@@ -127,18 +156,13 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
 | Données hospitalières    | ATIH-10    |
 | SI gestion des eaux    | SANDRE12   |
 
-## Usage de la donnée administrative {.smaller}
+## Le rôle différent du statisticien / *data scientist*
 
-1. Usage à des fins de gestion (la finalité pour laquelle elles sont construites)
-2. Usage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes [@RiviereKOUMARIANOS]
-    + Exploitation directe pour productions ou études
-    + Utilisation pour des appariements
-    + Utilisation pour expertiser des données d'enquêtes [@Meslin2025]
-
-:::{.callout-note}
-## Le Code statistique non signifiant (CSNS)
-[Code statistique non signifiant](https://www.insee.fr/fr/information/5388962) (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.
-:::
+- plus le rôle de producteur des données sources mais un rôle différent
+- centré sur 3 phases proposées dans [@RiviereKOUMARIANOS]
+    - acquisition : réception des fichiers de la DSN, vérification de leur intégrité, complétude et figement
+    - transformation pour retrouver les notions statistiques recherchées : reconstituer le salaire global annuel d'un employé à partir des DSN annuelles
+    - traitement statistique : agrégation des données pour produire des indicateurs statistiques cohérents et validés (masse salariale totale etc) avant leur diffusion
 
 ## Exemple 1 : la déclaration sociale nominative (DSN)
 
