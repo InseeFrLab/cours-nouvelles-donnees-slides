@@ -2,7 +2,7 @@
 
 ## Les données d'enquête
 
-- Base "historique" des statistiques
+- Base "historique" privilégiée des statistiques
 - Présentent de nombreux avantages : finalité est la bonne, cadre et concept maîtrisé
 - Mais ce sont des données longues à récolter et coûteuses pour le répondant et l'Insee (plusieurs années)
 - Dans un contexte de demande de statistiques plus poussées avec des moyens stables
