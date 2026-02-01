@@ -123,14 +123,14 @@
     "href": "slides/index.html#usage-de-la-donnée-administrative",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Usage de la donnée administrative",
-    "text": "Usage de la donnée administrative\n\nUsage à des fins de gestion (la finalité pour laquelle elles sont construites)\nUsage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes (Pascal RIVIERE 2025)\n\nExploitation directe pour productions ou études\nUtilisation pour des appariements\nUtilisation pour expertiser des données d’enquêtes (MESLIN 2025)"
+    "text": "Usage de la donnée administrative\n\nUsage à des fins de gestion (la finalité pour laquelle elles sont construites)\nUsage à des fins d’analyse (la finalité fortuite) nécessite un cadre méthodologique différent de celui des enquêtes (Pascal RIVIERE 2025)\n\nExploitation directe pour productions ou études\nUtilisation pour des appariements\nUtilisation pour expertiser des données d’enquêtes (MESLIN 2025)\n\n\n\n\n\n\n\n\nLe Code statistique non signifiant (CSNS)\n\n\nCode statistique non signifiant (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique."
   },
   {
-    "objectID": "slides/index.html#la-spécificité-des-données-de-répertoire",
-    "href": "slides/index.html#la-spécificité-des-données-de-répertoire",
+    "objectID": "slides/index.html#la-spécificité-des-répertoires",
+    "href": "slides/index.html#la-spécificité-des-répertoires",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "La spécificité des données de répertoire",
-    "text": "La spécificité des données de répertoire\n\nles répertoires permettent d’identifier de manière unique et stable des unités statistiques\nrôle clé dans le processus statistique pour effectuer des appariements\nsource de données administratives mais sans finalité de gestion\n\n\n\n\n\n\n\n\n\nRépertoire\nResponsable\nFinalité\n\n\n\n\nrépertoire national d’identification des personnes physiques (RNIPP)\nInsee\nidentification des personnes physiques nées en France\n\n\nSystème national de gestion des identifiants (SNGI)\nCNAV\nidentification des personnes physiques\n\n\nayants droit de la sécurité sociale\n\n\n\n\nrépertoire Sirene\nInsee\nidentification des personnes morales françaises\n\n\nl’identifiant national élève (INE)\nSSM Enseignement supérieur (SIES)\nIdentifier les étudiants\n\n\n\n\n\n\n\n\n\nLe Code statistique non signifiant (CSNS)\n\n\nCode statistique non signifiant (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique."
+    "section": "La spécificité des répertoires",
+    "text": "La spécificité des répertoires\n\nles répertoires permettent d’identifier de manière unique et stable des unités statistiques\nrôle clé dans le processus statistique pour effectuer des appariements\nsource de données administratives mais sans finalité de gestion\n\n\n\n\n\n\n\n\n\nRépertoire\nResponsable\nFinalité\n\n\n\n\nrépertoire national d’identification des personnes physiques (RNIPP)\nInsee\nidentification des personnes physiques nées en France\n\n\nSystème national de gestion des identifiants (SNGI)\nCNAV\nidentification des personnes physiques\n\n\nayants droit de la sécurité sociale\n\n\n\n\nrépertoire Sirene\nInsee\nidentification des personnes morales françaises\n\n\nl’identifiant national élève (INE)\nSSM Enseignement supérieur (SIES)\nIdentifier les étudiants"
   },
   {
     "objectID": "slides/index.html#processus-de-production",
@@ -140,11 +140,11 @@
     "text": "Processus de production\n\nPlace centrale d’une autorité gestionnaire, qui centralise la donnée\n\nDistingué de l’administration qui exploite le flux (à des fins de gestion ou d’exploitation statistique)\n\n\n\n\n\nDonnée\nAutorité centralisatrice\n\n\n\n\nDSN\nGip-MDS\n\n\nDonnées hospitalières\nATIH-10\n\n\nSI gestion des eaux\nSANDRE12"
   },
   {
-    "objectID": "slides/index.html#le-rôle-différent-du-statisticien-data-scientist",
-    "href": "slides/index.html#le-rôle-différent-du-statisticien-data-scientist",
+    "objectID": "slides/index.html#un-rôle-différent-pour-le-data-scientist",
+    "href": "slides/index.html#un-rôle-différent-pour-le-data-scientist",
     "title": "Nouvelles sources de données pour la statistique publique",
-    "section": "Le rôle différent du statisticien / data scientist",
-    "text": "Le rôle différent du statisticien / data scientist\n\nplus le rôle de producteur des données sources mais un rôle différent\ncentré sur 3 phases proposées dans (Pascal RIVIERE 2025)\n\nacquisition : réception des fichiers de la DSN, vérification de leur intégrité, complétude et figement\ntransformation pour retrouver les notions statistiques recherchées : reconstituer le salaire global annuel d’un employé à partir des DSN annuelles\ntraitement statistique : agrégation des données pour produire des indicateurs statistiques cohérents et validés (masse salariale totale etc) avant leur diffusion"
+    "section": "Un rôle différent pour le data scientist",
+    "text": "Un rôle différent pour le data scientist\n\nplus le rôle de producteur des données sources mais un rôle différent\ncentré sur 3 phases proposées dans (Pascal RIVIERE 2025)\n\nacquisition : réception des fichiers de la DSN, vérification de leur intégrité, complétude et figement\ntransformation pour retrouver les notions statistiques recherchées : reconstituer le salaire global annuel d’un employé à partir des DSN annuelles\ntraitement statistique : agrégation des données pour produire des indicateurs statistiques cohérents et validés (masse salariale totale etc) avant leur diffusion"
   },
   {
     "objectID": "slides/index.html#exemple-1-la-déclaration-sociale-nominative-dsn",
