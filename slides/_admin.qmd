@@ -125,25 +125,25 @@ Le secret statistique crée une obligation spéciale dans le cas de données con
     + Utilisation pour des appariements
     + Utilisation pour expertiser des données d'enquêtes [@Meslin2025]
 
-## La spécificité des données de répertoire
+:::{.callout-note}
+## Le Code statistique non signifiant (CSNS)
+[Code statistique non signifiant](https://www.insee.fr/fr/information/5388962) (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.
+:::
+
+## La spécificité des répertoires {.smaller}
 
 - les répertoires permettent d'identifier de manière unique et stable des unités statistiques
 - rôle clé dans le processus statistique pour effectuer des appariements
 - source de données administratives mais sans finalité de gestion
 
 | Répertoire | Responsable | Finalité |
-|------|---|-----|
+|--------|---|-------|
 | répertoire national d'identification des personnes physiques (RNIPP)    |  Insee   | identification des personnes physiques nées en France |
 | Système national de gestion des identifiants (SNGI)    |  CNAV   | identification des personnes physiques
 ayants droit de la sécurité sociale |
 |  répertoire Sirene   | Insee   | identification des personnes morales françaises |
 | l'identifiant national élève (INE)    | SSM Enseignement supérieur (SIES)   | Identifier les étudiants |
 
-
-:::{.callout-note}
-## Le Code statistique non signifiant (CSNS)
-[Code statistique non signifiant](https://www.insee.fr/fr/information/5388962) (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique.
-:::
 
 ## Processus de production
 
@@ -156,7 +156,7 @@ ayants droit de la sécurité sociale |
 | Données hospitalières    | ATIH-10    |
 | SI gestion des eaux    | SANDRE12   |
 
-## Le rôle différent du statisticien / *data scientist*
+## Un rôle différent pour le *data scientist* {.smaller}
 
 - plus le rôle de producteur des données sources mais un rôle différent
 - centré sur 3 phases proposées dans [@RiviereKOUMARIANOS]
