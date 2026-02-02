@@ -11,7 +11,7 @@
 
 ## Encoder du texte
 
-- Idée de l'[**encodding**]{.orange} :
+- Idée de l'[**encoding**]{.orange} :
     - Transformer une information de très haute dimension (éminemment complexe)...
     - ... en information à dimension plus limitée...
     - ... qui peut être exploitée par un ordinateur !
