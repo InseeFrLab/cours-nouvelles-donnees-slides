@@ -326,7 +326,7 @@
     "href": "slides/index.html#encoder-du-texte",
     "title": "Nouvelles sources de données pour la statistique publique",
     "section": "Encoder du texte",
-    "text": "Encoder du texte\n\nIdée de l’encodding :\n\nTransformer une information de très haute dimension (éminemment complexe)…\n… en information à dimension plus limitée…\n… qui peut être exploitée par un ordinateur !"
+    "text": "Encoder du texte\n\nIdée de l’encoding :\n\nTransformer une information de très haute dimension (éminemment complexe)…\n… en information à dimension plus limitée…\n… qui peut être exploitée par un ordinateur !"
   },
   {
     "objectID": "slides/index.html#première-approche-bag-of-words",
